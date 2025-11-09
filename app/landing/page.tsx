@@ -5,6 +5,7 @@ import FeaturesSection from '@/components/FeaturesSection';
 import PatentSection from '@/components/PatentSection';
 import PremiumSection from '@/components/PremiumSection';
 import ProgramSection from '@/components/ProgramSection';
+import SlimmingProgramSection from '@/components/SlimmingProgramSection';
 
 export default function LandingPage() {
   return (
@@ -19,6 +20,7 @@ export default function LandingPage() {
       <PremiumSection />
       <Footer />
       <ProgramSection />
+      <SlimmingProgramSection />
     </>
   );
 }
