@@ -6,6 +6,12 @@ import PatentSection from '@/components/PatentSection';
 import PremiumSection from '@/components/PremiumSection';
 import ProgramSection from '@/components/ProgramSection';
 import SlimmingProgramSection from '@/components/SlimmingProgramSection';
+import MuscleFitSection from '@/components/MuscleFitSection';
+import WellnessBodyTherapySection from '@/components/WellnessBodyTherapySection';
+import PriceSection from '@/components/PriceSection';
+import ProcessSection from '@/components/ProcessSection';
+import LocationSection from '@/components/LocationSection';
+import CTASection from '@/components/CTASection';
 
 export default function LandingPage() {
   return (
@@ -21,6 +27,12 @@ export default function LandingPage() {
       <Footer />
       <ProgramSection />
       <SlimmingProgramSection />
+      <MuscleFitSection />
+      <WellnessBodyTherapySection />
+      <PriceSection />
+      <ProcessSection />
+      <LocationSection />
+      <CTASection />
     </>
   );
 }
