@@ -1,0 +1,64 @@
+# Project Guidelines for Responsive Landing Page
+
+## Responsive Design Requirements
+- Always use mobile-first approach
+- Standard breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px), 2xl (1536px)
+- Test components on multiple screen sizes
+- Use Tailwind responsive utilities (sm:, md:, lg:, xl:, 2xl:)
+- Implement container queries for component-level responsiveness
+- Ensure all images are responsive using Next.js Image component
+
+## Animation & Transition Best Practices
+- Use Tailwind CSS for simple transitions (hover, focus, color changes)
+- Use Framer Motion for complex animations (page transitions, scroll animations, complex sequences)
+- Always respect `prefers-reduced-motion` media query for accessibility
+- Use `will-change` and `transform` properties for GPU acceleration
+- Lazy load animations using Intersection Observer for scroll-triggered animations
+- Keep animations performant on mobile devices
+- Create reusable animation variants in `lib/animations.ts`
+
+## Language
+- Site is in Korean (한국어)
+- All text content should be in Korean
+- Use Korean fonts (Noto Sans KR) for proper rendering
+
+## SEO Standards
+- All pages must have proper metadata (title, description)
+- Include Open Graph tags for social sharing
+- Include Twitter Card metadata
+- Add structured data (JSON-LD) where appropriate
+- Use proper HTML lang attribute based on locale
+- Include responsive viewport meta tag
+- Use semantic HTML elements
+
+## Accessibility (a11y)
+- Support `prefers-reduced-motion` for animations
+- Ensure keyboard navigation works on all interactive elements
+- Add proper ARIA labels where needed
+- Maintain proper color contrast ratios
+- Use semantic HTML elements
+- Ensure focus management for animations
+
+## Code Style
+- Use TypeScript for all files
+- Use server components by default, client components only when needed ('use client')
+- Follow Next.js App Router conventions
+- Use Tailwind CSS utility classes
+- Keep components small and reusable
+- Use consistent naming conventions (camelCase for variables, PascalCase for components)
+
+## Theme & Design System
+- Use design tokens from theme configuration
+- Maintain consistent typography scale
+- Use consistent spacing scale
+- Follow color palette (primary, secondary, accent, neutral)
+- Support dark mode using existing CSS variables
+- Use theme utilities for consistent styling
+
+## Performance
+- Optimize images with Next.js Image component
+- Implement lazy loading for below-the-fold content
+- Use code splitting appropriately
+- Monitor bundle size with bundle analyzer
+- Implement proper error boundaries
+
