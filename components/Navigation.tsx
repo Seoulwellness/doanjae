@@ -6,7 +6,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu } from 'lucide-react';
 import { fadeInDown } from '@/lib/animations';
 
-export default function Navigation() {
+interface NavigationProps {
+  align?: 'left' | 'center';
+  fixed?: boolean;
+}
+
+export default function Navigation({ align = 'center', fixed = true }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
@@ -15,7 +20,7 @@ export default function Navigation() {
         initial="hidden"
         animate="visible"
         variants={fadeInDown}
-        className="fixed left-0 right-0 z-50 top-10 md:hidden"
+        className={`${fixed ? 'fixed' : 'absolute'} left-0 right-0 z-50 ${fixed ? 'top-10' : 'top-0'} md:hidden`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -54,10 +59,14 @@ export default function Navigation() {
         initial="hidden"
         animate="visible"
         variants={fadeInDown}
-        className="hidden md:block fixed left-1/2 -translate-x-1/2 z-50 top-12"
+        className={`hidden md:block ${fixed ? 'fixed' : 'absolute'} z-50 ${fixed ? 'top-12' : 'top-10'} ${
+          align === 'left' ? 'left-32' : fixed ? 'left-1/2 -translate-x-1/2' : 'left-32'
+        }`}
       >
         <div className="rounded-lg px-6 md:px-8 lg:px-12 py-3 md:py-4">
-          <div className="flex items-center justify-between gap-8 md:gap-12 lg:gap-16">
+          <div className={`flex items-center gap-8 md:gap-12 lg:gap-16 ${
+            align === 'left' ? 'justify-start' : 'justify-between'
+          }`}>
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -77,25 +86,33 @@ export default function Navigation() {
             <div className="flex items-center gap-6 md:gap-8 lg:gap-10">
               <a
                 href="#brand"
-                className="text-black font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity"
+                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity ${
+                  align === 'left' ? 'text-[#3b2415]' : 'text-black'
+                }`}
               >
                 BRAND
               </a>
               <a
                 href="#program"
-                className="text-black font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity"
+                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity ${
+                  align === 'left' ? 'text-[#3b2415]' : 'text-black'
+                }`}
               >
                 PROGRAM
               </a>
               <a
                 href="#price"
-                className="text-black font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity"
+                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity ${
+                  align === 'left' ? 'text-[#3b2415]' : 'text-black'
+                }`}
               >
                 PRICE
               </a>
               <a
                 href="#contact"
-                className="text-black font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity"
+                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity ${
+                  align === 'left' ? 'text-[#3b2415]' : 'text-black'
+                }`}
               >
                 CONTACT
               </a>
