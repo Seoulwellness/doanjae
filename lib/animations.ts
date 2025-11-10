@@ -8,11 +8,11 @@ export const prefersReducedMotion = () => {
 
 // Common transition presets
 export const transitions = {
-  fast: { duration: 0.15, ease: 'easeOut' },
-  base: { duration: 0.2, ease: 'easeOut' },
-  slow: { duration: 0.3, ease: 'easeOut' },
-  spring: { type: 'spring', stiffness: 300, damping: 30 },
-  springGentle: { type: 'spring', stiffness: 200, damping: 25 },
+  fast: { duration: 0.4, ease: 'easeOut' },
+  base: { duration: 0.8, ease: 'easeOut' },
+  slow: { duration: 1.0, ease: 'easeOut' },
+  spring: { type: 'spring', stiffness: 150, damping: 20 },
+  springGentle: { type: 'spring', stiffness: 100, damping: 15 },
 };
 
 // Fade animations
