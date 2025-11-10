@@ -37,11 +37,11 @@ export default function Landing() {
 
           {/* Text Content - Right */}
           <motion.div
-            variants={fadeInUp}
+            variants={fadeInLeft}
             className="space-y-4 md:space-y-6 lg:space-y-8 flex flex-col justify-center order-2 lg:order-2 text-center lg:text-left"
           >
             <motion.h1
-              variants={fadeInUp}
+              variants={fadeInLeft}
               className="text-base sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight"
               style={{ color: '#3b2415' }}
             >
@@ -49,7 +49,7 @@ export default function Landing() {
             </motion.h1>
 
             <motion.p
-              variants={fadeInUp}
+              variants={fadeInLeft}
               className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed"
               style={{ color: '#3b2415' }}
             >
@@ -57,7 +57,7 @@ export default function Landing() {
             </motion.p>
 
             <motion.div
-              variants={fadeInUp}
+              variants={fadeInLeft}
               className="space-y-1 md:space-y-2"
             >
               <p
