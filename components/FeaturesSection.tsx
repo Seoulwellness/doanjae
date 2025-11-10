@@ -7,7 +7,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from '@/lib/animations';
 export default function FeaturesSection() {
   return (
     <section
-      className="py-8 md:py-32 px-24 sm:px-10 lg:px-8"
+      className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
       style={{ backgroundColor: '#e4dbd2' }}
     >
       <div className="container mx-auto max-w-7xl space-y-12">

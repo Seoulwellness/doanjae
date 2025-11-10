@@ -7,7 +7,7 @@ import { fadeInUp, fadeInLeft, fadeInRight } from '@/lib/animations';
 export default function ProcessSection() {
   return (
     <section
-      className="py-8 md:py-32 px-24 sm:px-10 lg:px-8 relative"
+      className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">

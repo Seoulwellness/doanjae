@@ -45,7 +45,7 @@ export default function CTASection() {
         </div>
       </motion.div>
 
-      <div className="container px-32 pb-20">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 pb-8 md:pb-20">
         {/* Bottom Section: Logo and Image 20 */}
         <motion.div
           initial="hidden"
