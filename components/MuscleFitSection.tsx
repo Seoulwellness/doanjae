@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { fadeInUp, fadeInLeft, fadeInRight } from '@/lib/animations';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations";
 
 export default function MuscleFitSection() {
   return (
     <section
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: '#D8CEBA' }}
+      style={{ backgroundColor: "#D8CEBA" }}
     >
       <div className="container mx-auto max-w-7xl">
         {/* Title and Text Section */}
@@ -21,7 +21,7 @@ export default function MuscleFitSection() {
         >
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
             Muscle fit Program
           </h2>
@@ -29,19 +29,19 @@ export default function MuscleFitSection() {
           <div className="space-y-2 md:space-y-3">
             <p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              운동만으로는 채울 수 없는 '핏(FIT)'을 원하신다면,
+              운동만으로는 채울 수 없는 &apos;핏(FIT)&apos;을 원하신다면,
             </p>
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               운동없이 완성하는,
             </p>
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               고강도 머슬핏 케어
             </p>
@@ -55,7 +55,7 @@ export default function MuscleFitSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInLeft}
+            variants={fadeInUp}
             className="relative w-full"
           >
             <Image
@@ -74,20 +74,21 @@ export default function MuscleFitSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={fadeInRight}
             className="space-y-6 mx-16 text-center lg:text-left"
           >
             <h3
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               고강도 머슬핏 케어
             </h3>
             <p
               className="text-lg sm:text-xl leading-relaxed"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              운동 없이도 근육의 탄력과 힘을 강화하여 완벽한 바디 라인을 완성합니다.
+              운동 없이도 근육의 탄력과 힘을 강화하여 완벽한 바디 라인을
+              완성합니다.
             </p>
           </motion.div>
         </div>
@@ -99,20 +100,21 @@ export default function MuscleFitSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={fadeInLeft}
             className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
             <h3
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               전문 케어 솔루션
             </h3>
             <p
               className="text-lg sm:text-xl leading-relaxed"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              개인 맞춤형 프로그램으로 목표하는 체형을 효율적으로 달성할 수 있습니다.
+              개인 맞춤형 프로그램으로 목표하는 체형을 효율적으로 달성할 수
+              있습니다.
             </p>
           </motion.div>
 
@@ -121,7 +123,7 @@ export default function MuscleFitSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInRight}
+            variants={fadeInUp}
             className="relative w-full order-1 lg:order-2"
           >
             <Image
@@ -146,13 +148,13 @@ export default function MuscleFitSection() {
         >
           <p
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
             운동 후 지친 근육을 위한
           </p>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
             도안재만의 힐링 케어
           </p>
@@ -161,4 +163,3 @@ export default function MuscleFitSection() {
     </section>
   );
 }
-

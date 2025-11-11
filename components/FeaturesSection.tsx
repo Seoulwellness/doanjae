@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { fadeInUp, fadeInLeft, fadeInRight } from '@/lib/animations';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations";
 
 export default function FeaturesSection() {
   return (
     <section
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: '#e4dbd2' }}
+      style={{ backgroundColor: "#e4dbd2" }}
     >
       <div className="container mx-auto max-w-7xl space-y-12">
         {/* First Row: Image Left, Text Right */}
@@ -18,7 +18,7 @@ export default function FeaturesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInLeft}
+            variants={fadeInUp}
             className="relative w-full"
           >
             <Image
@@ -37,22 +37,22 @@ export default function FeaturesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={fadeInRight}
             className="space-y-6 mx-16 text-center lg:text-left"
           >
-        
             <h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              인체에 가장 유효한 '근적외선' 파장
+              인체에 가장 유효한 &apos;근적외선&apos; 파장
             </h2>
-            
+
             <p
               className="text-lg sm:text-xl leading-relaxed"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              피부 표면이 아닌, 깊은 곳의 '체지방'에 직접 도달하여 스스로 타오르는 힘을 만듭니다.
+              피부 표면이 아닌, 깊은 곳의 &apos;체지방&apos;에 직접 도달하여
+              스스로 타오르는 힘을 만듭니다.
             </p>
           </motion.div>
         </div>
@@ -64,23 +64,22 @@ export default function FeaturesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={fadeInLeft}
             className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
-          
-            
             <h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              동의보감의 '온열요법'
+              동의보감의 &apos;온열요법&apos;
             </h2>
-            
+
             <p
               className="text-lg sm:text-xl leading-relaxed"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              몸 속 깊은 곳부터 따뜻하게 데워 불필요한 노폐물과 독소가 땀과 함께 자연스럽게 배출되도록 돕습니다.
+              몸 속 깊은 곳부터 따뜻하게 데워 불필요한 노폐물과 독소가 땀과 함께
+              자연스럽게 배출되도록 돕습니다.
             </p>
           </motion.div>
 
@@ -89,7 +88,7 @@ export default function FeaturesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInRight}
+            variants={fadeInUp}
             className="relative w-full order-1 lg:order-2"
           >
             <Image
@@ -107,4 +106,3 @@ export default function FeaturesSection() {
     </section>
   );
 }
-

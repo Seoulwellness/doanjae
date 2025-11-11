@@ -1,14 +1,12 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { fadeInUp } from '@/lib/animations';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInLeft, fadeInRight, fadeInUp } from "@/lib/animations";
 
 export default function WellnessBodyTherapySection() {
   return (
-    <section
-      className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative"
-    >
+    <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -32,7 +30,7 @@ export default function WellnessBodyTherapySection() {
         >
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
             Wellness Body Therapy
           </h2>
@@ -40,25 +38,25 @@ export default function WellnessBodyTherapySection() {
           <div className="space-y-2 md:space-y-3">
             <p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              당신의 '오늘'을 확인하고
+              당신의 &apos;오늘&apos;을 확인하고
             </p>
             <p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              '내일'의 균형을 준비합니다.
+              &apos;내일&apos;의 균형을 준비합니다.
             </p>
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 md:mt-6"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               단순한 체형관리에서
             </p>
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               끝나지 않는 도안재의 웰니스 테라피
             </p>
@@ -72,7 +70,7 @@ export default function WellnessBodyTherapySection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={fadeInLeft}
             className="relative w-full"
           >
             <Image
@@ -86,13 +84,14 @@ export default function WellnessBodyTherapySection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 p-16 text-center"
-              style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
+              style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
                 className="text-base sm:text-lg md:text-xl font-medium"
-                style={{ color: '#ffffff' }}
+                style={{ color: "#ffffff" }}
               >
-                모든 관리가 끝나면 인바디 재측정을 통해<br />
+                모든 관리가 끝나면 인바디 재측정을 통해
+                <br />
                 변화된 수치를 눈으로 직접 확인 합니다.
               </p>
             </div>
@@ -103,7 +102,7 @@ export default function WellnessBodyTherapySection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={fadeInRight}
             className="relative w-full"
           >
             <Image
@@ -117,14 +116,16 @@ export default function WellnessBodyTherapySection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 p-16 text-center"
-              style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
+              style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
                 className="text-base sm:text-lg md:text-xl font-medium"
-                style={{ color: '#ffffff' }}
+                style={{ color: "#ffffff" }}
               >
-                디지털 체질 테스트 결과에 따라 특별히<br />
-                블렌딩된 맞춤 한방 애프터티를 제공하여,<br />
+                디지털 체질 테스트 결과에 따라 특별히
+                <br />
+                블렌딩된 맞춤 한방 애프터티를 제공하여,
+                <br />
                 몸속까지 완벽한 힐링을 완성합니다.
               </p>
             </div>
@@ -141,17 +142,20 @@ export default function WellnessBodyTherapySection() {
         >
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
-            "<br />
-            도안재는 무너진 균형의 원인을 발견하고<br />
-            우리 몸에 맞는 이상적인 아름다움을<br />
-            함께 찾아 갑니다.<br />
-            "
+            &quot;
+            <br />
+            도안재는 무너진 균형의 원인을 발견하고
+            <br />
+            우리 몸에 맞는 이상적인 아름다움을
+            <br />
+            함께 찾아 갑니다.
+            <br />
+            &quot;
           </p>
         </motion.div>
       </div>
     </section>
   );
 }
-
