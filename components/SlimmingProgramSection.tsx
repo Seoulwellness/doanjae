@@ -100,7 +100,7 @@ export default function SlimmingProgramSection() {
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold"
             style={{ color: '#3b2415' }}
           >
-            도안재의 기술이 '체지방'과 '독소'에 집중합니다.
+            도안재의 기술이 <strong> '체지방'과 '독소' </strong>에 집중합니다.
           </p>
 
           {/* Descriptive Paragraphs */}

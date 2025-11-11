@@ -29,31 +29,36 @@ export default function WellnessBodyTherapySection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
             style={{ color: "#3b2415" }}
           >
             Wellness Body Therapy
           </h2>
 
-          <div className="space-y-2 md:space-y-3">
+          <div>
             <p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
             >
               당신의 &apos;오늘&apos;을 확인하고
             </p>
+            <br />
             <p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
             >
               &apos;내일&apos;의 균형을 준비합니다.
             </p>
+            <br />
+            <br />
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 md:mt-6"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
               style={{ color: "#3b2415" }}
             >
               단순한 체형관리에서
             </p>
+            <br />
+            <br />
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
               style={{ color: "#3b2415" }}
@@ -83,7 +88,7 @@ export default function WellnessBodyTherapySection() {
               quality={90}
             />
             <div
-              className="absolute bottom-0 left-0 right-0 p-16 text-center"
+              className="absolute bottom-0 left-0 right-0 p-16 text-center flex items-center justify-center h-[200px]"
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
@@ -91,6 +96,7 @@ export default function WellnessBodyTherapySection() {
                 style={{ color: "#ffffff" }}
               >
                 모든 관리가 끝나면 인바디 재측정을 통해
+        
                 <br />
                 변화된 수치를 눈으로 직접 확인 합니다.
               </p>
@@ -115,7 +121,7 @@ export default function WellnessBodyTherapySection() {
               quality={90}
             />
             <div
-              className="absolute bottom-0 left-0 right-0 p-16 text-center"
+              className="absolute bottom-0 left-0 right-0 p-16 text-center flex items-center justify-center h-[200px]"
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
@@ -123,6 +129,7 @@ export default function WellnessBodyTherapySection() {
                 style={{ color: "#ffffff" }}
               >
                 디지털 체질 테스트 결과에 따라 특별히
+        
                 <br />
                 블렌딩된 맞춤 한방 애프터티를 제공하여,
                 <br />
@@ -151,6 +158,7 @@ export default function WellnessBodyTherapySection() {
             우리 몸에 맞는 이상적인 아름다움을
             <br />
             함께 찾아 갑니다.
+            <br />
             <br />
             &quot;
           </p>

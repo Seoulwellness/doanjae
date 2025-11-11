@@ -20,7 +20,7 @@ export default function MuscleFitSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
             style={{ color: "#3b2415" }}
           >
             Muscle fit Program
@@ -77,18 +77,17 @@ export default function MuscleFitSection() {
             variants={fadeInRight}
             className="space-y-6 mx-16 text-center lg:text-left"
           >
-            <h3
+            {/* <h3
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
               style={{ color: "#3b2415" }}
             >
               고강도 머슬핏 케어
-            </h3>
+            </h3> */}
             <p
-              className="text-lg sm:text-xl leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
             >
-              운동 없이도 근육의 탄력과 힘을 강화하여 완벽한 바디 라인을
-              완성합니다.
+            <strong >근육 강화, 림프 순환, 지방 감소 3종 프로그램</strong>으로 <br /> 탄탄한 바디라인을 완성합니다.
             </p>
           </motion.div>
         </div>
@@ -103,18 +102,21 @@ export default function MuscleFitSection() {
             variants={fadeInLeft}
             className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
-            <h3
+            {/* <h3
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
               style={{ color: "#3b2415" }}
             >
               전문 케어 솔루션
-            </h3>
+            </h3> */}
             <p
-              className="text-lg sm:text-xl leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
             >
-              개인 맞춤형 프로그램으로 목표하는 체형을 효율적으로 달성할 수
-              있습니다.
+              '고강도 전자기장 기술'을 기반으로 <br />
+일반적인 운동으로는 <br />
+자극하기 어려운 깊은 근육까지 <br />
+<strong>직접 자극하고 강화하여,</strong> <br />
+원하는 부위를 집중 관리합니다.
             </p>
           </motion.div>
 

@@ -21,17 +21,27 @@ export default function LocationSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
             style={{ color: '#3b2415' }}
           >
             Location
           </h2>
-          <p
-            className="text-lg sm:text-xl md:text-2xl"
-            style={{ color: '#3b2415' }}
-          >
-            도안재는 가장 편안한 공간에서 당신을 기다립니다.
-          </p>
+          <div>
+            <p
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
+              style={{ color: '#3b2415' }}
+            >
+              도안재는 가장 편안한 공간에서
+            </p>
+            <p
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
+              style={{ color: '#3b2415' }}
+            >
+              당신을 기다립니다.
+            </p>
+            <br />
+            <br />
+          </div>
         </motion.div>
 
         {/* Map Image */}
@@ -69,8 +79,7 @@ export default function LocationSection() {
             className="text-base sm:text-lg md:text-xl leading-relaxed text-center"
             style={{ color: '#3b2415' }}
           >
-            서울특별시 광진구 동이로 212,<br />
-            아늑호텔 앤 스파 서울 성수 건대점 B1
+            서울특별시 광진구 동이로 212, <br /> 아늑호텔 앤 스파 서울 성수 건대점 B1
           </p>
         </motion.div>
 
@@ -80,7 +89,7 @@ export default function LocationSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center space-y-3"
+          className="text-center"
         >
           <h3
             className="text-xl sm:text-2xl md:text-3xl font-bold"
@@ -88,13 +97,16 @@ export default function LocationSection() {
           >
             주차 안내
           </h3>
-          <div className="space-y-2">
+          <br />
+          <br />
+          <div>
             <p
               className="text-base sm:text-lg md:text-xl"
               style={{ color: '#3b2415' }}
             >
-              아늑호텔 지하 주차장 이용 가능
+              아늑 호텔 지하 주차장 이용 가능
             </p>
+            <br />
             <p
               className="text-base sm:text-lg md:text-xl"
               style={{ color: '#3b2415' }}

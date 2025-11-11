@@ -17,7 +17,7 @@ export default function PremiumSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="relative w-full mb-8 md:mb-16"
+          className="relative w-full mb-12 md:mb-24"
         >
           <div className="relative w-full aspect-video overflow-hidden rounded-lg">
             <Image

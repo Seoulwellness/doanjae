@@ -29,20 +29,21 @@ export default function ProcessSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
             style={{ color: "#3b2415" }}
           >
             Process
           </h2>
-          <div className="space-y-1 md:space-y-2">
+          <div>
             <p
-              className="text-lg sm:text-xl md:text-2xl"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
               style={{ color: "#3b2415" }}
             >
               도안재만의
             </p>
+            <br />
             <p
-              className="text-lg sm:text-xl md:text-2xl"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
               style={{ color: "#3b2415" }}
             >
               특별한 관리 프로세스
@@ -100,10 +101,12 @@ export default function ProcessSection() {
               >
                 체질분석 및 상담
               </h3>
-              <div className="space-y-2 text-base sm:text-lg leading-relaxed">
+              <div className="text-base sm:text-lg leading-relaxed">
                 <p style={{ color: "#3b2415" }}>
                   편안한 분위기에서 10년 경력의 전문가와 함께
                 </p>
+                <br />
+                <br />
                 <p style={{ color: "#3b2415" }}>
                   나의 체질과 라이프스타일을 분석합니다.
                 </p>
@@ -141,11 +144,14 @@ export default function ProcessSection() {
               >
                 웰니스 바디 테라피
               </h3>
-              <div className="space-y-2 text-base sm:text-lg leading-relaxed">
+              <div className="text-base sm:text-lg leading-relaxed">
                 <p style={{ color: "#3b2415" }}>나에게 꼭 맞는 프로그램으로</p>
+                <br />
                 <p style={{ color: "#3b2415" }}>
                   30분간 가장 편안한 휴식을 경험합니다.
                 </p>
+                <br />
+                <br />
               </div>
             </motion.div>
 
@@ -218,10 +224,12 @@ export default function ProcessSection() {
               >
                 맞춤형 솔루션
               </h3>
-              <div className="space-y-2 text-base sm:text-lg leading-relaxed">
+              <div className="text-base sm:text-lg leading-relaxed">
                 <p style={{ color: "#3b2415" }}>
                   관리 후 가벼워진 몸의 변화를 수치로 확인하고,
                 </p>
+                <br />
+                <br />
                 <p style={{ color: "#3b2415" }}>
                   도안재의 스페셜 티와 함께 마무리 합니다.
                 </p>

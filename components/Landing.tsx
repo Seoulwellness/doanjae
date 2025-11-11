@@ -45,7 +45,7 @@ export default function Landing() {
               className="text-base sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight"
               style={{ color: '#3b2415' }}
             >
-              30분, 정말 그냥 누워만 있어도 돼요.
+              30분, 정말 그냥 <br /> 누워만 있어도 돼요.
             </motion.h1>
 
             <motion.p
@@ -53,7 +53,7 @@ export default function Landing() {
               className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-medium leading-relaxed"
               style={{ color: '#3b2415' }}
             >
-              딸만 별별 흘리던 기존의 관리와는 달라요.
+              땀만 뻘뻘 흘리던 기존의 관리와는 달라요.
             </motion.p>
 
             <motion.div
@@ -64,13 +64,14 @@ export default function Landing() {
                 className="text-xs sm:text-sm md:text-base lg:text-lg"
                 style={{ color: '#3b2415' }}
               >
-                DOANJAE의 365일 완벽한 계획!
+                도안재의 30분은 <strong> 천년의 지혜</strong>와
+
               </p>
               <p
                 className="text-[10px] sm:text-xs md:text-sm lg:text-base"
                 style={{ color: '#3b2415' }}
               >
-                기존의 기술이 더해진 시스템입니다.
+                <strong>7종의 특허 기술</strong>이 집약된 시간입니다.
               </p>
             </motion.div>
           </motion.div>

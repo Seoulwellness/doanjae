@@ -44,8 +44,7 @@ function ReviewCard({
         >
           <span className="text-white text-sm sm:text-base font-medium leading-tight text-center">
             <span className="block">체지방</span>
-            <span className="block">10%</span>
-            <span className="block">감량</span>
+            <span className="block">10% 감량</span>
           </span>
         </div>
 
@@ -82,7 +81,7 @@ function ReviewCard({
           {/* Review Text with ChevronRight on Right */}
           <div className="flex items-start gap-3">
             {/* Review Text - 70% width, left-aligned */}
-            <p className="text-white text-xs sm:text-sm leading-relaxed line-clamp-2 w-[70%] text-left">
+            <p className="text-white text-xs sm:text-sm leading-relaxed line-clamp-2 w-[70%] text-left whitespace-pre-line">
               {reviewText}
             </p>
 
@@ -108,7 +107,7 @@ export default function ReviewSection() {
       stars: 5,
       date: '10.24',
       reviewText:
-        '좋은식단과 운동 그리고 편안한 분위기에서 매일 다른 저를 마주하면 좋았어요. 트리가 정말 잘어울린다고 제가 생각했어...',
+        '결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....',
     },
     {
       imageSrc: '/images/landing/image22.png',
@@ -116,7 +115,7 @@ export default function ReviewSection() {
       stars: 5,
       date: '11.04',
       reviewText:
-        '생각보다 쉽고 편안한 분위기에서 매일 다른 저를 마주하면 좋았어요. 트리가 정말 잘어울린다고 제가 생각했어...',
+        '결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....',
     },
     {
       imageSrc: '/images/landing/image23.png',
@@ -124,7 +123,7 @@ export default function ReviewSection() {
       stars: 3,
       date: '09.26',
       reviewText:
-        '생각보다 쉽고 편안한 분위기에서 매일 다른 저를 마주하면 좋았어요. 트리가 정말 잘어울린다고 제가 생각했어...',
+        '결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....',
     },
   ];
 
@@ -143,18 +142,29 @@ export default function ReviewSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
             style={{ color: '#3b2415' }}
           >
             Review
           </h2>
 
-          <p
-            className="text-base sm:text-lg md:text-xl lg:text-2xl"
-            style={{ color: '#3b2415' }}
-          >
-            도안재 경험 고객분들의 특별한 후기
-          </p>
+          <div>
+            <p
+              className="text-base sm:text-lg md:text-xl lg:text-2xl"
+              style={{ color: '#3b2415' }}
+            >
+              도안재 경험 고객분들의
+            </p>
+            <br />
+            <p
+              className="text-base sm:text-lg md:text-xl lg:text-2xl"
+              style={{ color: '#3b2415' }}
+            >
+              특별한 후기
+            </p>
+            <br />
+            <br />
+          </div>
         </motion.div>
 
         {/* Review Cards Grid */}

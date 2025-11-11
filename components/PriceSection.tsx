@@ -19,14 +19,14 @@ export default function PriceSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
             style={{ color: '#3b2415' }}
           >
             Price
           </h2>
-          <div className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+          <div>
             <p
-              className="text-lg sm:text-xl md:text-2xl"
+              className="text-xl sm:text-2xl md:text-3xl font-bold"
               style={{ color: '#3b2415' }}
             >
               11월 17일,
@@ -37,8 +37,8 @@ export default function PriceSection() {
             >
               도안재 GRAND OPEN!
             </p>
-          </div>
-          <div className="mb-6 md:mb-8">
+            <br />
+        
             <div
               className="inline-block px-6 md:px-12 py-3 md:py-4 rounded-lg"
               style={{ backgroundColor: '#3b2415' }}
@@ -50,20 +50,24 @@ export default function PriceSection() {
                 첫방문 49,500원!
               </p>
             </div>
-          </div>
-          <div className="space-y-1 md:space-y-2">
+            <br />
+            <br />
+            <br />
             <p
               className="text-base sm:text-lg md:text-xl"
               style={{ color: '#3b2415' }}
             >
               런칭을 기념하여 오직 지금만 드리는
             </p>
+            <br />
             <p
               className="text-base sm:text-lg md:text-xl"
               style={{ color: '#3b2415' }}
             >
               특별한 혜택을 놓치지 마세요!
             </p>
+            <br />
+            <br />
           </div>
         </motion.div>
 
@@ -92,7 +96,7 @@ export default function PriceSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center space-y-2 md:space-y-3"
+          className="text-center"
         >
           <p
             className="text-base sm:text-lg md:text-xl"
@@ -100,6 +104,7 @@ export default function PriceSection() {
           >
             오픈 혜택 마감 전,
           </p>
+          <br />
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
             style={{ color: '#3b2415' }}

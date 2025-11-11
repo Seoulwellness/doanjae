@@ -32,7 +32,7 @@ export default function ProgramSection() {
                             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold inline-block"
                             style={{ color: '#3b2415' }}
                         >
-                            도안재는 당신의 몸을 이해하는 것부터 시작합니다.
+                            도안재는 당신의 몸을 <br />이해하는 것부터 시작합니다.
                         </p>
 
                     </div>
@@ -49,7 +49,7 @@ export default function ProgramSection() {
                             className="text-lg sm:text-xl md:text-2xl lg:text-3xl inline-block"
                             style={{ color: '#3b2415' }}
                         >
-                            개인의 체질과 특성, 라이프스타일까지 모두 고려한 맞춤형 데일리 솔루션
+                            개인의 체질과 체성분은 물론 <br /> 라이프스타일까지 모두 고려한 <br /> <strong> 맞춤형 테라피 솔루션 </strong>
                         </p>
                     </div>
 
@@ -165,8 +165,8 @@ export default function ProgramSection() {
                                 className="text-base sm:text-lg leading-relaxed"
                                 style={{ color: '#3b2415' }}
                             >
-                               개인별 라이프스타일 정보와 디지털 체질 테스트의 결과를 <br />
-                               과학적으로 분석하여 맞춤형 솔루션을 제공합니다.
+                                개인별 라이프스타일 정보와 디지털 체질 테스트의 결과를 <br />
+                                과학적으로 분석하여 맞춤형 솔루션을 제공합니다.
                             </p>
                         </div>
                     </div>
@@ -183,7 +183,7 @@ export default function ProgramSection() {
                     >
                         <Image
                             src="/images/landing/image7.png"
-                            alt="개인 라이프 스타일 정보"
+                            alt="개인별 라이프 스타일 정보"
                             width={1200}
                             height={800}
                             className="w-full h-auto"
@@ -198,7 +198,7 @@ export default function ProgramSection() {
                                 className="text-base sm:text-lg md:text-xl font-medium"
                                 style={{ color: '#ffffff' }}
                             >
-                                개인 라이프 스타일 정보
+                                개인별 라이프 스타일 정보
                             </p>
                         </div>
                     </motion.div>
