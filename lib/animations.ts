@@ -9,10 +9,10 @@ export const prefersReducedMotion = () => {
 // Common transition presets
 export const transitions = {
   fast: { duration: 0.4, ease: 'easeOut' },
-  base: { duration: 0.8, ease: 'easeOut' },
+  base: { duration: 0.7, ease: 'easeOut' },
   slow: { duration: 1.0, ease: 'easeOut' },
-  spring: { type: 'spring', stiffness: 150, damping: 20 },
-  springGentle: { type: 'spring', stiffness: 100, damping: 15 },
+  spring: { type: 'spring', stiffness: 120, damping: 22 },
+  springGentle: { type: 'spring', stiffness: 80, damping: 18 },
 };
 
 // Fade animations
