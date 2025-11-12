@@ -104,7 +104,7 @@ export default function Navigation({
             {/* Navigation Links */}
             <div className="flex items-center gap-6 md:gap-8 lg:gap-10">
               <Link
-                href="/landing#brand"
+                href="/#brand"
                 className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
                   align === "left" ? "text-[#3b2415]" : "text-black"
                 }`}
@@ -112,7 +112,7 @@ export default function Navigation({
                 BRAND
               </Link>
               <Link
-                href="/landing#program"
+                href="/#program"
                 className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
                   align === "left" ? "text-[#3b2415]" : "text-black"
                 }`}
@@ -120,7 +120,7 @@ export default function Navigation({
                 PROGRAM
               </Link>
               <Link
-                href="/landing#price"
+                href="/#price"
                 className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
                   align === "left" ? "text-[#3b2415]" : "text-black"
                 }`}
@@ -128,7 +128,7 @@ export default function Navigation({
                 PRICE
               </Link>
               <Link
-                href="/landing#contact"
+                href="/#contact"
                 className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
                   align === "left" ? "text-[#3b2415]" : "text-black"
                 }`}
@@ -200,28 +200,28 @@ export default function Navigation({
                 <div className="flex-1 px-6 py-4">
                   <nav className="space-y-0">
                     <Link
-                      href="/landing#brand"
+                      href="/#brand"
                       className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Brand
                     </Link>
                     <Link
-                      href="/landing#program"
+                      href="/#program"
                       className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Program
                     </Link>
                     <Link
-                      href="/landing#price"
+                      href="/#price"
                       className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Price
                     </Link>
                     <Link
-                      href="/landing#contact"
+                      href="/#contact"
                       className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
                       onClick={() => setIsMenuOpen(false)}
                     >
