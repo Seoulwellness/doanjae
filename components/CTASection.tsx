@@ -1,14 +1,12 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { fadeInUp } from '@/lib/animations';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp } from "@/lib/animations";
 
 export default function CTASection() {
   return (
-    <section
-      className="px-4 sm:px-6 lg:px-8 bg-white"
-    >
+    <section className="px-4 sm:px-6 lg:px-8 bg-white">
       {/* Image 19 with Overlaid Text - Full Width */}
       <motion.div
         initial="hidden"
@@ -31,13 +29,13 @@ export default function CTASection() {
           <div className="text-center">
             <p
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              지금 바로 '가장 편안한 변화'를
+              지금 바로 &apos;가장 편안한 변화&apos;를
             </p>
             <p
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               예약하세요.
             </p>
@@ -45,7 +43,10 @@ export default function CTASection() {
         </div>
       </motion.div>
 
-      <div className="container max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 pb-8 md:pb-20">
+      <div
+        id="contact"
+        className="container max-w-7xl px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 pb-8 md:pb-20"
+      >
         {/* Bottom Section: Logo and Image 20 */}
         <motion.div
           initial="hidden"
@@ -83,4 +84,3 @@ export default function CTASection() {
     </section>
   );
 }
-

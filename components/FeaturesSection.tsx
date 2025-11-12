@@ -19,7 +19,7 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="relative w-full px-12 sm:px-24 lg:px-0"
+            className="relative w-full"
           >
             <Image
               src="/images/landing/image2.png"
@@ -38,7 +38,7 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInRight}
-            className="space-y-6 mx-4 sm:mx-8 lg:mx-16 text-center lg:text-left"
+            className="space-y-6 mx-16 text-center lg:text-left"
           >
             <h2
               className="text-3xl sm:text-4xl md:text-5xl  leading-tight"
@@ -69,7 +69,7 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInLeft}
-            className="space-y-6 order-2 lg:order-1 mx-4 sm:mx-8 lg:mx-16 text-center lg:text-left"
+            className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
             <h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
@@ -97,7 +97,7 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="relative w-full px-12 sm:px-24 lg:px-0"
+            className="relative w-full order-1 lg:order-2"
           >
             <Image
               src="/images/landing/image3.png"

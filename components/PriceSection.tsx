@@ -6,7 +6,7 @@ import { fadeInUp } from "@/lib/animations";
 
 export default function PriceSection() {
   return (
-    <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="price" className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
         {/* Top Section */}
         <motion.div

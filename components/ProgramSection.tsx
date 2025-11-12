@@ -8,6 +8,7 @@ import { CheckCircle2 } from 'lucide-react';
 export default function ProgramSection() {
     return (
         <section
+            id="program"
             className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
             style={{ backgroundColor: '#dbcfbf' }}
         >

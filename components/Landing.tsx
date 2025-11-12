@@ -7,7 +7,7 @@ import { fadeInUp, fadeInLeft, staggerContainer } from "@/lib/animations";
 export default function Landing() {
   return (
     <motion.section
-      id="landing"
+      id="brand"
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
