@@ -105,33 +105,57 @@ export default function Navigation({
             <div className="flex items-center gap-6 md:gap-8 lg:gap-10">
               <Link
                 href="/#brand"
-                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
-                  align === "left" ? "text-[#3b2415]" : "text-black"
-                }`}
+                className="font-bold text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  color: '#000000',
+                }}
               >
                 BRAND
               </Link>
               <Link
                 href="/#program"
-                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
-                  align === "left" ? "text-[#3b2415]" : "text-black"
-                }`}
+                className="font-bold text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  color: '#000000',
+                }}
               >
                 PROGRAM
               </Link>
               <Link
                 href="/#price"
-                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
-                  align === "left" ? "text-[#3b2415]" : "text-black"
-                }`}
+                className="font-bold text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  color: '#000000',
+                }}
               >
                 PRICE
               </Link>
               <Link
                 href="/#contact"
-                className={`font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer ${
-                  align === "left" ? "text-[#3b2415]" : "text-black"
-                }`}
+                className="font-bold text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '16px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  color: '#000000',
+                }}
               >
                 CONTACT
               </Link>
@@ -201,31 +225,63 @@ export default function Navigation({
                   <nav className="space-y-0">
                     <Link
                       href="/#brand"
-                      className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
+                      className="block py-4 font-bold uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: 'Pretendard, sans-serif',
+                        fontWeight: 700,
+                        fontSize: '16px',
+                        lineHeight: '100%',
+                        letterSpacing: '0%',
+                        color: '#000000',
+                      }}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Brand
+                      BRAND
                     </Link>
                     <Link
                       href="/#program"
-                      className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
+                      className="block py-4 font-bold uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: 'Pretendard, sans-serif',
+                        fontWeight: 700,
+                        fontSize: '16px',
+                        lineHeight: '100%',
+                        letterSpacing: '0%',
+                        color: '#000000',
+                      }}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Program
+                      PROGRAM
                     </Link>
                     <Link
                       href="/#price"
-                      className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
+                      className="block py-4 font-bold uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: 'Pretendard, sans-serif',
+                        fontWeight: 700,
+                        fontSize: '16px',
+                        lineHeight: '100%',
+                        letterSpacing: '0%',
+                        color: '#000000',
+                      }}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Price
+                      PRICE
                     </Link>
                     <Link
                       href="/#contact"
-                      className="block py-4 text-black font-bold text-lg border-b border-black/10 cursor-pointer"
+                      className="block py-4 font-bold uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: 'Pretendard, sans-serif',
+                        fontWeight: 700,
+                        fontSize: '16px',
+                        lineHeight: '100%',
+                        letterSpacing: '0%',
+                        color: '#000000',
+                      }}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Contact
+                      CONTACT
                     </Link>
                   </nav>
                 </div>

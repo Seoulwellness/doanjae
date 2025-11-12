@@ -29,8 +29,16 @@ export default function SlimmingProgramSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-32"
-            style={{ color: "#3b2415" }}
+            className="mb-6 md:mb-32"
+            style={{
+              fontFamily: 'Belleza-Regular, sans-serif',
+              fontWeight: 400,
+              fontSize: '32px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              color: '#3B2415',
+            }}
           >
             Slimming Program
           </h2>
@@ -38,20 +46,41 @@ export default function SlimmingProgramSection() {
           {/* Text below title */}
           <div className="space-y-2 md:space-y-3">
             <p
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               당신의 몸에 가장 &apos;편안한 변화&apos;
             </p>
             <p
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               누워서 30분
             </p>
             <p
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               수면 다이어트 테라피
             </p>
@@ -87,29 +116,80 @@ export default function SlimmingProgramSection() {
         >
           {/* Main Title */}
           <h3
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 500,
+              fontSize: '21px',
+              lineHeight: '26px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             인생에서 가장 빛나야 할 순간을 위해
           </h3>
 
           {/* Focus Statement */}
           <p
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 500,
+              fontSize: '21px',
+              lineHeight: '26px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
-            도안재의 기술이{" "}
-            <strong> &apos;체지방&apos;과 &apos;독소&apos; </strong>에
-            집중합니다.
+            도안재의 기술이{' '}
+            <span
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
+            >
+              &apos;체지방&apos;과 &apos;독소&apos;
+            </span>
+            에 집중합니다.
           </p>
 
           {/* Descriptive Paragraphs */}
-          <div className="space-y-4 text-base sm:text-lg md:text-xl leading-relaxed">
-            <p style={{ color: "#3b2415" }}>
+          <div className="space-y-4">
+            <p
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '12px',
+                lineHeight: '16px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
+            >
               특수 파동이 정체된 림프 순환을 촉진하여 평소 고민이던 부위의
               부종을 빠르게 완화하고,
             </p>
-            <p style={{ color: "#3b2415" }}>
+            <p
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '12px',
+                lineHeight: '16px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
+            >
               근적외선으로 체지방을 집중 분해하여 숨어있던 바디 라인을 선명하게
               되찾아 드립니다.
             </p>
@@ -118,8 +198,16 @@ export default function SlimmingProgramSection() {
           {/* Quoted Text Block */}
           <div className="mt-8 md:mt-32 space-y-2">
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Daehan, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               &quot;
               <br />

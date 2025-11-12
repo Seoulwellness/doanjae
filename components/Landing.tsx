@@ -42,38 +42,74 @@ export default function Landing() {
           >
             <motion.h1
               variants={fadeInLeft}
-              className="text-base sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight"
-              style={{ color: "#3b2415" }}
+              className="font-bold"
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                color: '#3B2415',
+              }}
             >
               30분, 정말 그냥 <br /> 누워만 있어도 돼요.
             </motion.h1>
 
             <motion.p
               variants={fadeInLeft}
-              className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold leading-relaxed"
-              style={{ color: "#3b2415" }}
+              className="font-bold"
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                color: '#3B2415',
+              }}
             >
               땀만 뻘뻘 흘리던 기존의 관리와는 달라요.
             </motion.p>
 
             <motion.div
               variants={fadeInLeft}
-              className="space-y-1 md:space-y-2"
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 400,
+                fontSize: '12px',
+                lineHeight: '16px',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
-              <p
-                className="text-xs sm:text-sm md:text-base lg:text-lg"
-                style={{ color: "#3b2415" }}
+              도안재의 30분은{' '}
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '12px',
+                  lineHeight: '16px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                }}
               >
-                도안재의 30분은 <span className="font-bold"> 천년의 지혜</span>
-                와
-              </p>
-              <p
-                className="text-[10px] sm:text-xs md:text-sm lg:text-base"
-                style={{ color: "#3b2415" }}
+                천년의 지혜
+              </span>
+              와
+              <br />
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '12px',
+                  lineHeight: '16px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                }}
               >
-                <span className="font-bold">7종의 특허 기술</span>이 집약된
-                시간입니다.
-              </p>
+                7종의 특허 기술
+              </span>
+              이 집약된 시간입니다.
             </motion.div>
           </motion.div>
         </div>

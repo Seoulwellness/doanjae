@@ -41,20 +41,69 @@ export default function FeaturesSection() {
             className="space-y-6 mx-16 text-center lg:text-left"
           >
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl  leading-tight"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                color: '#3B2415',
+              }}
             >
-              인체에 가장 유효한 <br />{" "}
-              <span className="font-bold">&apos;근적외선&apos; 파장</span>
+              인체에 가장 유효한 <br />
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '32px',
+                  lineHeight: '40px',
+                  letterSpacing: '0%',
+                  color: '#3B2415',
+                }}
+              >
+                &apos;근적외선&apos; 파장
+              </span>
             </h2>
 
             <p
-              className="text-xl sm:text-2xl leading-relaxed"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
-              피부 표면이 아닌, <span className="font-bold"> 깊은 곳의 </span>{" "}
+              피부 표면이 아닌,{' '}
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
+                깊은 곳의
+              </span>
               <br />
-              <span className="font-bold"> &apos;체지방&apos;에 직접 도달</span>
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
+                &apos;체지방&apos;에 직접 도달
+              </span>
               하여 <br />
               스스로 타오르는 힘을 만듭니다.
             </p>
@@ -72,22 +121,68 @@ export default function FeaturesSection() {
             className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                color: '#3B2415',
+              }}
             >
-              동의보감의 <br /> <strong>&apos;온열 요법&apos;</strong>
+              동의보감의 <br />
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '32px',
+                  lineHeight: '40px',
+                  letterSpacing: '0%',
+                }}
+              >
+                &apos;온열 요법&apos;
+              </span>
             </h2>
 
             <p
-              className="text-xl sm:text-2xl leading-relaxed"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               몸 속 깊은 곳부터 따뜻하게 데워 <br />
-              <span className="font-bold">
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
                 불필요한 노폐물과 독소가 땀과 함께
               </span>
               <br />
-              <span className="font-bold">자연스럽게 배출되도록 돕습니다.</span>
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
+                자연스럽게 배출되도록 돕습니다.
+              </span>
             </p>
           </motion.div>
 

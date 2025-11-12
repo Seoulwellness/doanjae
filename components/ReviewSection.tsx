@@ -42,7 +42,18 @@ function ReviewCard({
           className="absolute top-13 right-13 w-36 h-36 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center z-10"
           style={{ backgroundColor: "#3b2415" }}
         >
-          <span className="text-white text-sm sm:text-base font-medium leading-tight text-center">
+          <span
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '21px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#FFFFFF',
+            }}
+          >
             <span className="block">체지방</span>
             <span className="block">10% 감량</span>
           </span>
@@ -56,7 +67,17 @@ function ReviewCard({
           {/* Customer Name and Stars */}
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
-              <p className="text-white text-sm sm:text-base font-medium">
+              <p
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '100%',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#FFFFFF',
+                }}
+              >
                 {customerName}
               </p>
               <div className="flex items-center gap-0.5">
@@ -76,12 +97,34 @@ function ReviewCard({
           </div>
 
           {/* Date */}
-          <p className="text-white/80 text-xs sm:text-sm mb-3">{date}</p>
+          <p
+            className="mb-3"
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 400,
+              fontSize: '16px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              color: '#FFFFFF',
+            }}
+          >
+            {date}
+          </p>
 
           {/* Review Text with ChevronRight on Right */}
           <div className="flex items-start gap-3">
             {/* Review Text - 70% width, left-aligned */}
-            <p className="text-white text-xs sm:text-sm leading-relaxed line-clamp-2 w-[70%] text-left whitespace-pre-line">
+            <p
+              className="line-clamp-2 w-[70%] text-left whitespace-pre-line"
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '12px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                color: '#FFFFFF',
+              }}
+            >
               {reviewText}
             </p>
 
@@ -142,23 +185,48 @@ export default function ReviewSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
-            style={{ color: "#3b2415" }}
+            className="mb-6 md:mb-24"
+            style={{
+              fontFamily: 'Belleza-Regular, sans-serif',
+              fontWeight: 400,
+              fontSize: '48px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             Review
           </h2>
 
           <div>
             <p
-              className="text-base sm:text-lg md:text-xl lg:text-2xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               도안재 경험 고객분들의
             </p>
             <br />
             <p
-              className="text-base sm:text-lg md:text-xl lg:text-2xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               특별한 후기
             </p>

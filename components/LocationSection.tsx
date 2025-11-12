@@ -21,21 +21,46 @@ export default function LocationSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
-            style={{ color: "#3b2415" }}
+            className="mb-6 md:mb-24"
+            style={{
+              fontFamily: 'Belleza-Regular, sans-serif',
+              fontWeight: 400,
+              fontSize: '48px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             Location
           </h2>
           <div>
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               도안재는 가장 편안한 공간에서
             </p>
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               당신을 기다립니다.
             </p>
@@ -76,11 +101,30 @@ export default function LocationSection() {
             style={{ color: "#3b2415" }}
           />
           <p
-            className="text-base sm:text-lg md:text-xl leading-relaxed text-center"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 400,
+              fontSize: '21px',
+              lineHeight: '26px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             서울특별시 광진구 동이로 212, <br />{" "}
-            <span className="font-bold">
+            <span
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
+            >
               아늑호텔 앤 스파 서울 성수 건대점 B1
             </span>
           </p>
@@ -95,8 +139,16 @@ export default function LocationSection() {
           className="text-center"
         >
           <h3
-            className="text-xl sm:text-2xl md:text-3xl font-bold"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '32px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             주차 안내
           </h3>
@@ -104,17 +156,33 @@ export default function LocationSection() {
 
           <div>
             <p
-              className="text-base sm:text-lg md:text-xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 400,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               아늑 호텔 지하 주차장 이용 가능
             </p>
             <br />
             <p
-              className="text-base sm:text-lg md:text-xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
-              <span className="font-bold">*관리 타임 무료 지원</span>
+              *관리 타임 무료 지원
             </p>
           </div>
         </motion.div>

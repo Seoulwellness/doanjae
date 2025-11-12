@@ -17,33 +17,66 @@ export default function PriceSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
-            style={{ color: "#3b2415" }}
+            className="mb-6 md:mb-24"
+            style={{
+              fontFamily: 'Belleza-Regular, sans-serif',
+              fontWeight: 400,
+              fontSize: '48px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             Price
           </h2>
           <div>
             <p
-              className="text-xl sm:text-2xl md:text-3xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               11월 17일,
             </p>
             <p
-              className="text-xl sm:text-2xl md:text-3xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               도안재 GRAND OPEN!
             </p>
             <br />
 
             <div
-              className="inline-block px-6 md:px-12 py-3 md:py-4 rounded-4xl"
+              className="inline-block px-6 md:px-12 py-3 md:py-4 rounded-full"
               style={{ backgroundColor: "#3b2415" }}
             >
               <p
-                className="text-lg sm:text-xl md:text-2xl font-bold"
-                style={{ color: "#ffffff" }}
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 600,
+                  fontSize: '32px',
+                  lineHeight: '40px',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  verticalAlign: 'middle',
+                  color: '#FFFFFF',
+                }}
               >
                 첫방문 49,500원!
               </p>
@@ -52,15 +85,31 @@ export default function PriceSection() {
             <br />
             <br />
             <p
-              className="text-base sm:text-lg md:text-xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#000000',
+              }}
             >
               런칭을 기념하여 오직 지금만 드리는
             </p>
             <br />
             <p
-              className="text-base sm:text-lg md:text-xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#000000',
+              }}
             >
               특별한 혜택을 놓치지 마세요!
             </p>
@@ -97,15 +146,31 @@ export default function PriceSection() {
           className="text-center"
         >
           <p
-            className="text-large sm:text-xl md:text-3xl"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 500,
+              fontSize: '32px',
+              lineHeight: '40px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             오픈 혜택 마감 전,
           </p>
           <br />
           <p
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '32px',
+              lineHeight: '40px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             지금 바로 예약하세요!
           </p>

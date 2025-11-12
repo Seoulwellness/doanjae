@@ -16,14 +16,30 @@ export default function PatentSection() {
           className="text-center mb-8 md:mb-24"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-            style={{ color: "#3b2415" }}
+            className="font-bold mb-4"
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '32px',
+              lineHeight: '40px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              color: '#3B2415',
+            }}
           >
             아름다운 체형 관리를 위한
           </h2>
           <h3
-            className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold"
-            style={{ color: "#3b2415" }}
+            className="font-bold"
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '32px',
+              lineHeight: '40px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              color: '#3B2415',
+            }}
           >
             도안재만의 7종 특허기술
           </h3>

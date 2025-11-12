@@ -21,8 +21,16 @@ export default function ProgramSection() {
                     className="text-center mb-8"
                 >
                     <h2
-                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
-                        style={{ color: '#3b2415' }}
+                        className="mb-6 md:mb-24"
+                        style={{
+                            fontFamily: 'Belleza-Regular, sans-serif',
+                            fontWeight: 400,
+                            fontSize: '48px',
+                            lineHeight: '100%',
+                            letterSpacing: '0%',
+                            textAlign: 'center',
+                            color: '#3B2415',
+                        }}
                     >
                         Program
                     </h2>
@@ -30,8 +38,15 @@ export default function ProgramSection() {
                     {/* First Text Block */}
                     <div className="mb-4 md:mb-16">
                         <p
-                            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold inline-block"
-                            style={{ color: '#3b2415' }}
+                            style={{
+                                fontFamily: 'Pretendard, sans-serif',
+                                fontWeight: 800,
+                                fontSize: '32px',
+                                lineHeight: '40px',
+                                letterSpacing: '0%',
+                                textAlign: 'center',
+                                color: '#3B2415',
+                            }}
                         >
                             도안재는 당신의 몸을 <br />이해하는 것부터 시작합니다.
                         </p>
@@ -40,17 +55,40 @@ export default function ProgramSection() {
 
                     {/* Vertical Separator */}
                     <div
-                        className="w-px h-8 md:h-12 mx-auto mb-4 md:mb-16"
-                        style={{ backgroundColor: '#3b2415' }}
+                        className="h-8 md:h-12 mx-auto mb-4 md:mb-16"
+                        style={{ 
+                            backgroundColor: '#3b2415',
+                            width: '2px',
+                        }}
                     />
 
                     {/* Second Text Block */}
                     <div className="mb-6 md:mb-24">
                         <p
-                            className="text-lg sm:text-xl md:text-2xl lg:text-3xl inline-block"
-                            style={{ color: '#3b2415' }}
+                            style={{
+                                fontFamily: 'Pretendard, sans-serif',
+                                fontWeight: 500,
+                                fontSize: '21px',
+                                lineHeight: '26px',
+                                letterSpacing: '0%',
+                                textAlign: 'center',
+                                color: '#3B2415',
+                            }}
                         >
-                            개인의 체질과 체성분은 물론 <br /> 라이프스타일까지 모두 고려한 <br /> <strong> 맞춤형 테라피 솔루션 </strong>
+                            개인의 체질과 체성분은 물론 <br /> 라이프스타일까지 모두 고려한 <br />{' '}
+                            <span
+                                style={{
+                                    fontFamily: 'Pretendard, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '21px',
+                                    lineHeight: '26px',
+                                    letterSpacing: '0%',
+                                    textAlign: 'center',
+                                    color: '#3B2415',
+                                }}
+                            >
+                                맞춤형 테라피 솔루션
+                            </span>
                         </p>
                     </div>
 
@@ -64,14 +102,29 @@ export default function ProgramSection() {
                             />
                             <div>
                                 <h3
-                                    className="text-lg sm:text-xl md:text-2xl font-bold mb-2"
-                                    style={{ color: '#3b2415' }}
+                                    className="mb-2"
+                                    style={{
+                                        fontFamily: 'Pretendard, sans-serif',
+                                        fontWeight: 700,
+                                        fontSize: '32px',
+                                        lineHeight: '100%',
+                                        letterSpacing: '0%',
+                                        textAlign: 'center',
+                                        color: '#3B2415',
+                                    }}
                                 >
                                     한의학을 접목한 1:1 컨설팅
                                 </h3>
                                 <p
-                                    className="text-base sm:text-lg leading-relaxed"
-                                    style={{ color: '#3b2415' }}
+                                    style={{
+                                        fontFamily: 'Pretendard, sans-serif',
+                                        fontWeight: 500,
+                                        fontSize: '21px',
+                                        lineHeight: '26px',
+                                        letterSpacing: '0%',
+                                        textAlign: 'center',
+                                        color: '#3B2415',
+                                    }}
                                 >
                                     인바디 체성분 분석은 물론, 한의사와 공동 개발한 <br />
                                     자가 체질 테스트를 통해 내 몸의 균형을 찾고<br />
@@ -105,8 +158,16 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
-                                className="text-base sm:text-lg md:text-xl font-medium"
-                                style={{ color: '#ffffff' }}
+                                style={{
+                                    fontFamily: 'Pretendard, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '21px',
+                                    lineHeight: '26px',
+                                    letterSpacing: '0%',
+                                    textAlign: 'center',
+                                    verticalAlign: 'middle',
+                                    color: '#FFFFFF',
+                                }}
                             >
                                 상담사와 함께 하는 맞춤형 1:1컨설팅
                             </p>
@@ -133,8 +194,16 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
-                                className="text-base sm:text-lg md:text-xl font-medium"
-                                style={{ color: '#ffffff' }}
+                                style={{
+                                    fontFamily: 'Pretendard, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '21px',
+                                    lineHeight: '26px',
+                                    letterSpacing: '0%',
+                                    textAlign: 'center',
+                                    verticalAlign: 'middle',
+                                    color: '#FFFFFF',
+                                }}
                             >
                                 꼼꼼한 인바디 체성분 분석
                             </p>
@@ -157,14 +226,29 @@ export default function ProgramSection() {
                         />
                         <div>
                             <h3
-                                className="text-lg sm:text-xl md:text-2xl font-bold mb-2"
-                                style={{ color: '#3b2415' }}
+                                className="mb-2"
+                                style={{
+                                    fontFamily: 'Pretendard, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '32px',
+                                    lineHeight: '100%',
+                                    letterSpacing: '0%',
+                                    textAlign: 'center',
+                                    color: '#3B2415',
+                                }}
                             >
                                 데이터 기반의 체계적인 분석
                             </h3>
                             <p
-                                className="text-base sm:text-lg leading-relaxed"
-                                style={{ color: '#3b2415' }}
+                                style={{
+                                    fontFamily: 'Pretendard, sans-serif',
+                                    fontWeight: 400,
+                                    fontSize: '21px',
+                                    lineHeight: '26px',
+                                    letterSpacing: '0%',
+                                    textAlign: 'center',
+                                    color: '#3B2415',
+                                }}
                             >
                                 개인별 라이프스타일 정보와 디지털 체질 테스트의 결과를 <br />
                                 과학적으로 분석하여 맞춤형 솔루션을 제공합니다.
@@ -196,8 +280,16 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
-                                className="text-base sm:text-lg md:text-xl font-medium"
-                                style={{ color: '#ffffff' }}
+                                style={{
+                                    fontFamily: 'Pretendard, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '21px',
+                                    lineHeight: '26px',
+                                    letterSpacing: '0%',
+                                    textAlign: 'center',
+                                    verticalAlign: 'middle',
+                                    color: '#FFFFFF',
+                                }}
                             >
                                 개인별 라이프 스타일 정보
                             </p>
@@ -224,8 +316,16 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
-                                className="text-base sm:text-lg md:text-xl font-medium"
-                                style={{ color: '#ffffff' }}
+                                style={{
+                                    fontFamily: 'Pretendard, sans-serif',
+                                    fontWeight: 700,
+                                    fontSize: '21px',
+                                    lineHeight: '26px',
+                                    letterSpacing: '0%',
+                                    textAlign: 'center',
+                                    verticalAlign: 'middle',
+                                    color: '#FFFFFF',
+                                }}
                             >
                                 디지털 체질 테스트 분석 결과
                             </p>
@@ -242,13 +342,62 @@ export default function ProgramSection() {
                     className="text-center mt-8 md:mt-24 space-y-2"
                 >
                     <p
-                        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center leading-relaxed"
-                        style={{ color: '#3b2415' }}
+                        style={{
+                            textAlign: 'center',
+                            color: '#3B2415',
+                        }}
                     >
-                        "<br />
-                        천년의 지혜와 현대의 기술을 접목한<br />
-                        가장 이상적인 다이어트 솔루션<br />
-                        "
+                        <span
+                            style={{
+                                fontFamily: 'Daehan, sans-serif',
+                                fontWeight: 700,
+                                fontSize: '32px',
+                                lineHeight: '100%',
+                                letterSpacing: '0%',
+                                textAlign: 'center',
+                            }}
+                        >
+                            "
+                        </span>
+                        <br />
+                        <span
+                            style={{
+                                fontFamily: 'Pretendard, sans-serif',
+                                fontWeight: 700,
+                                fontSize: '32px',
+                                lineHeight: '100%',
+                                letterSpacing: '0%',
+                                textAlign: 'center',
+                            }}
+                        >
+                            천년의 지혜와 현대의 기술을 접목한
+                        </span>
+                        <br />
+                        <span
+                            style={{
+                                fontFamily: 'Pretendard, sans-serif',
+                                fontWeight: 700,
+                                fontSize: '32px',
+                                lineHeight: '100%',
+                                letterSpacing: '0%',
+                                textAlign: 'center',
+                            }}
+                        >
+                            가장 이상적인 다이어트 솔루션
+                        </span>
+                        <br />
+                        <span
+                            style={{
+                                fontFamily: 'Daehan, sans-serif',
+                                fontWeight: 700,
+                                fontSize: '32px',
+                                lineHeight: '100%',
+                                letterSpacing: '0%',
+                                textAlign: 'center',
+                            }}
+                        >
+                            "
+                        </span>
                     </p>
                 </motion.div>
             </div>

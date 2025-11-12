@@ -42,7 +42,15 @@ export default function Hero() {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white md:text-[#3B2415]"
+            className="font-extrabold"
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 800,
+              fontSize: '52px',
+              lineHeight: '60px',
+              letterSpacing: '0%',
+              color: '#3B2415',
+            }}
           >
             누워서 30분<br />
             수면 다이어트 테라피, 도안재
@@ -50,22 +58,48 @@ export default function Hero() {
 
           <motion.p
             variants={fadeInUp}
-            className="text-lg sm:text-xl md:text-2xl font-medium text-white md:text-[#3B2415]"
+            className="font-bold"
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '32px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              color: '#3B2415',
+            }}
           >
             가볍게, 편안하게, 아름답게
           </motion.p>
 
           <motion.p
             variants={fadeInUp}
-            className="text-base sm:text-lg leading-relaxed text-white md:text-[#3B2415]"
+            className="font-medium"
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 500,
+              fontSize: '21px',
+              lineHeight: '26px',
+              letterSpacing: '0%',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             천년의 지혜와 7종의 특허 기술로 <br />
-            당신의 몸에 가장 ‘편안한 변화’를 약속합니다
+            당신의 몸에 가장 '편안한 변화'를 약속합니다
           </motion.p>
 
           <motion.p
             variants={fadeInUp}
-            className="text-sm sm:text-base text-white md:text-[#3B2415]"
+            className="font-bold"
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '21px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             지금, 가장 먼저 '편안한 변화'를 경험하세요.
           </motion.p>
@@ -83,8 +117,17 @@ export default function Hero() {
               href="#contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 px-4 md:px-8 py-8 md:py-4 font-semibold text-base md:text-lg transition-shadow text-center text-white"
-              style={{ backgroundColor: '#3b2415' }}
+              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-shadow text-center"
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '16px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+                backgroundColor: '#3B2415',
+                color: '#FFFFFF',
+              }}
             >
               도안재 예약하기
             </motion.a>
@@ -93,8 +136,17 @@ export default function Hero() {
               href="#about"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 px-4 md:px-8 py-8 md:py-4 font-semibold text-base md:text-lg transition-colors text-center text-black"
-              style={{ backgroundColor: '#ffd800' }}
+              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-colors text-center"
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '16px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+                backgroundColor: '#FFD800',
+                color: '#3B2415',
+              }}
             >
               카카오 채널
             </motion.a>

@@ -41,20 +41,41 @@ export default function PremiumSection() {
         >
           <div className="space-y-2 md:space-y-3">
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               몸은 가볍게,
             </p>
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               과정은 편안하게,
             </p>
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               결과는 한층 아름답게,
             </p>
@@ -62,14 +83,28 @@ export default function PremiumSection() {
 
           <div className="pt-4 md:pt-6 space-y-2">
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               프리미엄 다이어트 테라피
             </h2>
             <p
-              className="text-2xl sm:text-3xl md:text4xl lg:text-5xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#3B2415',
+              }}
             >
               도안재
             </p>

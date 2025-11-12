@@ -28,14 +28,31 @@ export default function CTASection() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <p
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#000000',
+                marginBottom: '8px',
+              }}
             >
               지금 바로 &apos;가장 편안한 변화&apos;를
             </p>
             <p
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#000000',
+              }}
             >
               예약하세요.
             </p>

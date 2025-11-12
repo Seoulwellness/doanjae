@@ -20,31 +20,74 @@ export default function MuscleFitSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
-            style={{ color: "#3b2415" }}
+            className="mb-6 md:mb-24"
+            style={{
+              fontFamily: 'Belleza-Regular, sans-serif',
+              fontWeight: 400,
+              fontSize: '32px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              color: '#3B2415',
+            }}
           >
             Muscle fit Program
           </h2>
 
           <div className="space-y-2 md:space-y-3">
             <p
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
-              운동만으로는 채울 수 없는{" "}
-              <span className="font-bold">
+              운동만으로는 채울 수 없는{' '}
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  textAlign: 'center',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
                 &apos;핏(FIT)&apos;을 원하신다면,
               </span>
             </p>
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               운동없이 완성하는,
             </p>
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '40px',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
               고강도 머슬핏 케어
             </p>
@@ -87,10 +130,27 @@ export default function MuscleFitSection() {
               고강도 머슬핏 케어
             </h3> */}
             <p
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
-              <span className="font-bold">
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
                 근육 강화, 림프 순환, 지방 감소 3종 프로그램
               </span>
               으로 탄탄한 바디라인을 완성합니다.
@@ -115,17 +175,59 @@ export default function MuscleFitSection() {
               전문 케어 솔루션
             </h3> */}
             <p
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
-              style={{ color: "#3b2415" }}
+              style={{
+                fontFamily: 'Pretendard, sans-serif',
+                fontWeight: 500,
+                fontSize: '21px',
+                lineHeight: '26px',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+                color: '#3B2415',
+              }}
             >
-              <span className="font-bold">
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
                 &apos;고강도 전자기장 기술&apos;을 기반
               </span>
               으로 <br />
               일반적인 운동으로는 <br />
-              <span className="font-bold">자극하기 어려운 깊은 근육까지</span>
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
+                자극하기 어려운 깊은 근육까지
+              </span>
               <br />
-              <strong>직접 자극하고 강화하여,</strong> <br />
+              <span
+                style={{
+                  fontFamily: 'Pretendard, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  lineHeight: '26px',
+                  letterSpacing: '0%',
+                  verticalAlign: 'middle',
+                  color: '#3B2415',
+                }}
+              >
+                직접 자극하고 강화하여,
+              </span>
+              <br />
               원하는 부위를 집중 관리합니다.
             </p>
           </motion.div>
@@ -159,14 +261,30 @@ export default function MuscleFitSection() {
           className="text-center mt-8 md:mt-32 space-y-2"
         >
           <p
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '32px',
+              lineHeight: '40px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             운동 후 지친 근육을 위한
           </p>
           <p
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-            style={{ color: "#3b2415" }}
+            style={{
+              fontFamily: 'Pretendard, sans-serif',
+              fontWeight: 700,
+              fontSize: '32px',
+              lineHeight: '40px',
+              letterSpacing: '0%',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+              color: '#3B2415',
+            }}
           >
             도안재만의 힐링 케어
           </p>
