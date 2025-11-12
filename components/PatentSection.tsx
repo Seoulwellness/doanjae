@@ -22,7 +22,7 @@ export default function PatentSection() {
             아름다운 체형 관리를 위한
           </h2>
           <h3
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
+            className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-bold"
             style={{ color: "#3b2415" }}
           >
             도안재만의 7종 특허기술

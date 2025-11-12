@@ -42,7 +42,6 @@ export default function WellnessBodyTherapySection() {
             >
               당신의 &apos;오늘&apos;을 확인하고
             </p>
-            <br />
             <p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
@@ -50,15 +49,14 @@ export default function WellnessBodyTherapySection() {
               &apos;내일&apos;의 균형을 준비합니다.
             </p>
             <br />
-            <br />
+
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
               style={{ color: "#3b2415" }}
             >
               단순한 체형관리에서
             </p>
-            <br />
-            <br />
+
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
               style={{ color: "#3b2415" }}
@@ -88,15 +86,14 @@ export default function WellnessBodyTherapySection() {
               quality={90}
             />
             <div
-              className="absolute bottom-0 left-0 right-0 p-16 text-center flex items-center justify-center h-[200px]"
+              className="absolute bottom-0 left-0 right-0 h-[140px] md:h-[160px] text-center flex items-center justify-center px-16"
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
-                className="text-base sm:text-lg md:text-xl font-medium"
+                className="text-base sm:text-lg md:text-xl font-medium leading-tight"
                 style={{ color: "#ffffff" }}
               >
                 모든 관리가 끝나면 인바디 재측정을 통해
-        
                 <br />
                 변화된 수치를 눈으로 직접 확인 합니다.
               </p>
@@ -121,15 +118,14 @@ export default function WellnessBodyTherapySection() {
               quality={90}
             />
             <div
-              className="absolute bottom-0 left-0 right-0 p-16 text-center flex items-center justify-center h-[200px]"
+              className="absolute bottom-0 left-0 right-0 h-[140px] md:h-[160px] text-center flex items-center justify-center px-16"
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
-                className="text-base sm:text-lg md:text-xl font-medium"
+                className="text-base sm:text-lg md:text-xl font-medium leading-tight"
                 style={{ color: "#ffffff" }}
               >
                 디지털 체질 테스트 결과에 따라 특별히
-        
                 <br />
                 블렌딩된 맞춤 한방 애프터티를 제공하여,
                 <br />

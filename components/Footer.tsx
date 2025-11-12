@@ -21,7 +21,7 @@ export default function Footer() {
           }}
           className="flex items-center gap-8 md:gap-12 whitespace-nowrap"
         >
-          {Array.from({ length: 20 }).map((_, i) => (
+          {Array.from({ length: 50 }).map((_, i) => (
             <div key={i} className="flex-shrink-0">
               <Image
                 src="/logo3.png"

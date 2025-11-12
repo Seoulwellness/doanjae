@@ -31,7 +31,10 @@ export default function MuscleFitSection() {
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
             >
-              운동만으로는 채울 수 없는 &apos;핏(FIT)&apos;을 원하신다면,
+              운동만으로는 채울 수 없는{" "}
+              <span className="font-bold">
+                &apos;핏(FIT)&apos;을 원하신다면,
+              </span>
             </p>
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
@@ -87,7 +90,10 @@ export default function MuscleFitSection() {
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
             >
-            <strong >근육 강화, 림프 순환, 지방 감소 3종 프로그램</strong>으로 <br /> 탄탄한 바디라인을 완성합니다.
+              <span className="font-bold">
+                근육 강화, 림프 순환, 지방 감소 3종 프로그램
+              </span>
+              으로 탄탄한 바디라인을 완성합니다.
             </p>
           </motion.div>
         </div>
@@ -112,11 +118,15 @@ export default function MuscleFitSection() {
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
               style={{ color: "#3b2415" }}
             >
-              '고강도 전자기장 기술'을 기반으로 <br />
-일반적인 운동으로는 <br />
-자극하기 어려운 깊은 근육까지 <br />
-<strong>직접 자극하고 강화하여,</strong> <br />
-원하는 부위를 집중 관리합니다.
+              <span className="font-bold">
+                &apos;고강도 전자기장 기술&apos;을 기반
+              </span>
+              으로 <br />
+              일반적인 운동으로는 <br />
+              <span className="font-bold">자극하기 어려운 깊은 근육까지</span>
+              <br />
+              <strong>직접 자극하고 강화하여,</strong> <br />
+              원하는 부위를 집중 관리합니다.
             </p>
           </motion.div>
 
@@ -149,7 +159,7 @@ export default function MuscleFitSection() {
           className="text-center mt-8 md:mt-32 space-y-2"
         >
           <p
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
             style={{ color: "#3b2415" }}
           >
             운동 후 지친 근육을 위한

@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { fadeInUp } from '@/lib/animations';
-import { MapPin } from 'lucide-react';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp } from "@/lib/animations";
+import { MapPin } from "lucide-react";
 
 export default function LocationSection() {
   return (
     <section
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: '#D8CEBA' }}
+      style={{ backgroundColor: "#D8CEBA" }}
     >
       <div className="container mx-auto max-w-7xl">
         {/* Title Section */}
@@ -22,20 +22,20 @@ export default function LocationSection() {
         >
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
             Location
           </h2>
           <div>
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               도안재는 가장 편안한 공간에서
             </p>
             <p
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               당신을 기다립니다.
             </p>
@@ -73,13 +73,16 @@ export default function LocationSection() {
         >
           <MapPin
             className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           />
           <p
             className="text-base sm:text-lg md:text-xl leading-relaxed text-center"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
-            서울특별시 광진구 동이로 212, <br /> 아늑호텔 앤 스파 서울 성수 건대점 B1
+            서울특별시 광진구 동이로 212, <br />{" "}
+            <span className="font-bold">
+              아늑호텔 앤 스파 서울 성수 건대점 B1
+            </span>
           </p>
         </motion.div>
 
@@ -93,25 +96,25 @@ export default function LocationSection() {
         >
           <h3
             className="text-xl sm:text-2xl md:text-3xl font-bold"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
             주차 안내
           </h3>
           <br />
-          <br />
+
           <div>
             <p
               className="text-base sm:text-lg md:text-xl"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               아늑 호텔 지하 주차장 이용 가능
             </p>
             <br />
             <p
               className="text-base sm:text-lg md:text-xl"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
-              *관리 타임 무료 지원
+              <span className="font-bold">*관리 타임 무료 지원</span>
             </p>
           </div>
         </motion.div>
@@ -119,4 +122,3 @@ export default function LocationSection() {
     </section>
   );
 }
-

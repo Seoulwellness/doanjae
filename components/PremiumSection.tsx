@@ -68,7 +68,7 @@ export default function PremiumSection() {
               프리미엄 다이어트 테라피
             </h2>
             <p
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
+              className="text-2xl sm:text-3xl md:text4xl lg:text-5xl font-bold"
               style={{ color: "#3b2415" }}
             >
               도안재

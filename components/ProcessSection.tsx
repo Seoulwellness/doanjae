@@ -82,7 +82,7 @@ export default function ProcessSection() {
               className="space-y-6 mx-16 text-center lg:text-left"
             >
               <div
-                className="inline-block px-4 py-2 rounded-lg mb-4"
+                className="inline-block px-4 py-2 rounded-4xl mb-4"
                 style={{ backgroundColor: "#3b2415" }}
               >
                 <span className="text-white font-bold text-sm sm:text-base md:text-lg">
@@ -90,7 +90,7 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-16"
                 style={{ color: "#3b2415" }}
               >
                 나를 알다.
@@ -105,8 +105,7 @@ export default function ProcessSection() {
                 <p style={{ color: "#3b2415" }}>
                   편안한 분위기에서 10년 경력의 전문가와 함께
                 </p>
-                <br />
-                <br />
+
                 <p style={{ color: "#3b2415" }}>
                   나의 체질과 라이프스타일을 분석합니다.
                 </p>
@@ -125,7 +124,7 @@ export default function ProcessSection() {
               className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
             >
               <div
-                className="inline-block px-4 py-2 rounded-lg mb-4"
+                className="inline-block px-4 py-2 rounded-4xl mb-4"
                 style={{ backgroundColor: "#3b2415" }}
               >
                 <span className="text-white font-bold text-sm sm:text-base md:text-lg">
@@ -133,7 +132,7 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-16"
                 style={{ color: "#3b2415" }}
               >
                 몸을 비우다.
@@ -146,12 +145,9 @@ export default function ProcessSection() {
               </h3>
               <div className="text-base sm:text-lg leading-relaxed">
                 <p style={{ color: "#3b2415" }}>나에게 꼭 맞는 프로그램으로</p>
-                <br />
                 <p style={{ color: "#3b2415" }}>
                   30분간 가장 편안한 휴식을 경험합니다.
                 </p>
-                <br />
-                <br />
               </div>
             </motion.div>
 
@@ -205,7 +201,7 @@ export default function ProcessSection() {
               className="space-y-6 mx-16 text-center lg:text-left"
             >
               <div
-                className="inline-block px-4 py-2 rounded-lg mb-4"
+                className="inline-block px-4 py-2 rounded-4xl mb-4"
                 style={{ backgroundColor: "#3b2415" }}
               >
                 <span className="text-white font-bold text-sm sm:text-base md:text-lg">
@@ -213,7 +209,7 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-16"
                 style={{ color: "#3b2415" }}
               >
                 변화를 만나다.
@@ -228,8 +224,6 @@ export default function ProcessSection() {
                 <p style={{ color: "#3b2415" }}>
                   관리 후 가벼워진 몸의 변화를 수치로 확인하고,
                 </p>
-                <br />
-                <br />
                 <p style={{ color: "#3b2415" }}>
                   도안재의 스페셜 티와 함께 마무리 합니다.
                 </p>

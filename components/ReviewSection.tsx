@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
-import { fadeInUp } from '@/lib/animations';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import { fadeInUp } from "@/lib/animations";
 
 interface ReviewCardProps {
   imageSrc: string;
@@ -25,7 +25,7 @@ function ReviewCard({
   return (
     <div
       className="relative w-full overflow-hidden rounded-4xl"
-      style={{ backgroundColor: '#ffffff' }}
+      style={{ backgroundColor: "#ffffff" }}
     >
       {/* Image Section with Overlay */}
       <div className="relative w-full aspect-[3/4]">
@@ -40,7 +40,7 @@ function ReviewCard({
         {/* Circular Badge - Top Right */}
         <div
           className="absolute top-13 right-13 w-36 h-36 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center z-10"
-          style={{ backgroundColor: '#3b2415' }}
+          style={{ backgroundColor: "#3b2415" }}
         >
           <span className="text-white text-sm sm:text-base font-medium leading-tight text-center">
             <span className="block">체지방</span>
@@ -50,8 +50,8 @@ function ReviewCard({
 
         {/* Bottom Section with Dark Brown Background - Overlay on Image */}
         <div
-          className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 rounded-b-2xl"
-          style={{ backgroundColor: '#3b2415' }}
+          className="absolute bottom-0 left-0 right-0 p-8 sm:p-12 rounded-b-2xl"
+          style={{ backgroundColor: "#3b2415" }}
         >
           {/* Customer Name and Stars */}
           <div className="flex items-center justify-between mb-2">
@@ -65,7 +65,7 @@ function ReviewCard({
                     key={i}
                     className="text-yellow-400 text-base sm:text-lg"
                     style={{
-                      color: i < stars ? '#fbbf24' : '#6b7280',
+                      color: i < stars ? "#fbbf24" : "#6b7280",
                     }}
                   >
                     ★
@@ -102,35 +102,35 @@ function ReviewCard({
 export default function ReviewSection() {
   const reviews = [
     {
-      imageSrc: '/images/landing/image21.png',
-      customerName: '장** 고객님',
+      imageSrc: "/images/landing/image21.png",
+      customerName: "장** 고객님",
       stars: 5,
-      date: '10.24',
+      date: "10.24",
       reviewText:
-        '결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....',
+        "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
     },
     {
-      imageSrc: '/images/landing/image22.png',
-      customerName: '박** 고객님',
+      imageSrc: "/images/landing/image22.png",
+      customerName: "박** 고객님",
       stars: 5,
-      date: '11.04',
+      date: "11.04",
       reviewText:
-        '결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....',
+        "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
     },
     {
-      imageSrc: '/images/landing/image23.png',
-      customerName: '김** 고객님',
+      imageSrc: "/images/landing/image23.png",
+      customerName: "김** 고객님",
       stars: 3,
-      date: '09.26',
+      date: "09.26",
       reviewText:
-        '결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....',
+        "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
     },
   ];
 
   return (
     <section
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative"
-      style={{ backgroundColor: '#D8CEBA' }}
+      style={{ backgroundColor: "#D8CEBA" }}
     >
       <div className="container mx-auto max-w-[95%] lg:max-w-[90%] relative z-10">
         {/* Title and Text Section */}
@@ -143,7 +143,7 @@ export default function ReviewSection() {
         >
           <h2
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-24"
-            style={{ color: '#3b2415' }}
+            style={{ color: "#3b2415" }}
           >
             Review
           </h2>
@@ -151,14 +151,14 @@ export default function ReviewSection() {
           <div>
             <p
               className="text-base sm:text-lg md:text-xl lg:text-2xl"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               도안재 경험 고객분들의
             </p>
             <br />
             <p
               className="text-base sm:text-lg md:text-xl lg:text-2xl"
-              style={{ color: '#3b2415' }}
+              style={{ color: "#3b2415" }}
             >
               특별한 후기
             </p>
@@ -197,4 +197,3 @@ export default function ReviewSection() {
     </section>
   );
 }
-
