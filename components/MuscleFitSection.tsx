@@ -78,7 +78,7 @@ export default function MuscleFitSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInRight}
-            className="space-y-6 mx-16 text-center lg:text-left"
+            className="space-y-6 mx-4 sm:mx-8 lg:mx-16 text-center lg:text-left"
           >
             {/* <h3
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
@@ -106,7 +106,7 @@ export default function MuscleFitSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInLeft}
-            className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
+            className="space-y-6 order-2 lg:order-1 mx-4 sm:mx-8 lg:mx-16 text-center lg:text-left"
           >
             {/* <h3
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"

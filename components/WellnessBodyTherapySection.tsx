@@ -86,7 +86,7 @@ export default function WellnessBodyTherapySection() {
               quality={90}
             />
             <div
-              className="absolute bottom-0 left-0 right-0 h-[140px] md:h-[160px] text-center flex items-center justify-center px-16"
+              className="absolute bottom-0 left-0 right-0 h-[100px] sm:h-[120px] md:h-[140px] lg:h-[160px] text-center flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16"
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
@@ -118,7 +118,7 @@ export default function WellnessBodyTherapySection() {
               quality={90}
             />
             <div
-              className="absolute bottom-0 left-0 right-0 h-[140px] md:h-[160px] text-center flex items-center justify-center px-16"
+              className="absolute bottom-0 left-0 right-0 h-[100px] sm:h-[120px] md:h-[140px] lg:h-[160px] text-center flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16"
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p

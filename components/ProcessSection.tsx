@@ -79,7 +79,7 @@ export default function ProcessSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInLeft}
-              className="space-y-6 mx-16 text-center lg:text-left"
+              className="space-y-6 mx-4 sm:mx-8 lg:mx-16 text-center lg:text-left"
             >
               <div
                 className="inline-block px-4 py-2 rounded-4xl mb-4"
@@ -90,7 +90,7 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-16"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 md:mb-16"
                 style={{ color: "#3b2415" }}
               >
                 나를 알다.
@@ -121,7 +121,7 @@ export default function ProcessSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInRight}
-              className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
+              className="space-y-6 order-2 lg:order-1 mx-4 sm:mx-8 lg:mx-16 text-center lg:text-left"
             >
               <div
                 className="inline-block px-4 py-2 rounded-4xl mb-4"
@@ -132,7 +132,7 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-16"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 md:mb-16"
                 style={{ color: "#3b2415" }}
               >
                 몸을 비우다.
@@ -198,7 +198,7 @@ export default function ProcessSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInLeft}
-              className="space-y-6 mx-16 text-center lg:text-left"
+              className="space-y-6 mx-4 sm:mx-8 lg:mx-16 text-center lg:text-left"
             >
               <div
                 className="inline-block px-4 py-2 rounded-4xl mb-4"
@@ -209,7 +209,7 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-16"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 md:mb-16"
                 style={{ color: "#3b2415" }}
               >
                 변화를 만나다.
