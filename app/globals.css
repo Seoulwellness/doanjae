@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* Belleza-Regular for English/Latin characters */
+@font-face {
+  font-family: 'Belleza-Regular';
+  src: url('/Belleza-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0100-017F, U+0180-024F, U+0250-02AF, U+1E00-1EFF, U+20A0-20CF, U+2100-214F, U+2190-21FF, U+2C60-2C7F, U+2C80-2CFF, U+FB00-FB4F;
+}
+
 :root {
   /* Base Colors */
   --background: #ffffff;
@@ -89,7 +99,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans), var(--font-noto-sans-kr), sans-serif;
+  --font-sans: 'Belleza-Regular', 'Pretendard', var(--font-geist-sans), sans-serif;
   --font-mono: var(--font-geist-mono);
   
   /* Typography */

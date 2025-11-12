@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_KR } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,12 +10,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-const notoSansKR = Noto_Sans_KR({
-  variable: "--font-noto-sans-kr",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +28,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
@@ -45,18 +39,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: '도안재',
-    description: '현대적이고 반응형인 랜딩 페이지',
-    inLanguage: 'ko',
-    url: 'https://example.com',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "도안재",
+    description: "현대적이고 반응형인 랜딩 페이지",
+    inLanguage: "ko",
+    url: "https://example.com",
   };
 
   return (
     <html lang="ko">
       <head>
         <meta name="theme-color" content="#3b82f6" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+          as="style"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -65,7 +64,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
