@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
@@ -20,7 +21,6 @@ function ReviewCard({
   stars,
   date,
   reviewText,
-  index,
 }: ReviewCardProps) {
   return (
     <div
@@ -39,19 +39,19 @@ function ReviewCard({
         />
         {/* Circular Badge - Top Right */}
         <div
-          className="absolute top-13 right-13 w-36 h-36 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center z-10"
+          className="absolute top-8 right-8 sm:top-13 sm:right-13 w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full flex flex-col items-center justify-center z-10"
           style={{ backgroundColor: "#3b2415" }}
         >
           <span
-            className="text-base md:text-lg lg:text-xl"
+            className="text-xs sm:text-base md:text-lg lg:text-xl"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#FFFFFF',
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              textAlign: "center",
+              verticalAlign: "middle",
+              color: "#FFFFFF",
             }}
           >
             <span className="block">체지방</span>
@@ -61,21 +61,21 @@ function ReviewCard({
 
         {/* Bottom Section with Dark Brown Background - Overlay on Image */}
         <div
-          className="absolute bottom-0 left-0 right-0 p-8 sm:p-12 rounded-b-2xl"
+          className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 md:p-12 rounded-b-2xl"
           style={{ backgroundColor: "#3b2415" }}
         >
           {/* Customer Name and Stars */}
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between mb-1 sm:mb-2">
+            <div className="flex items-center gap-1 sm:gap-2">
               <p
-                className="text-base md:text-lg lg:text-xl"
+                className="text-xs sm:text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#FFFFFF',
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#FFFFFF",
                 }}
               >
                 {customerName}
@@ -84,7 +84,7 @@ function ReviewCard({
                 {Array.from({ length: 5 }).map((_, i) => (
                   <span
                     key={i}
-                    className="text-yellow-400 text-base sm:text-lg"
+                    className="text-yellow-400 text-xs sm:text-base md:text-lg"
                     style={{
                       color: i < stars ? "#fbbf24" : "#6b7280",
                     }}
@@ -98,29 +98,29 @@ function ReviewCard({
 
           {/* Date */}
           <p
-            className="mb-3 text-sm md:text-base"
+            className="mb-2 sm:mb-3 text-xs sm:text-sm md:text-base"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 400,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              color: '#FFFFFF',
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              color: "#FFFFFF",
             }}
           >
             {date}
           </p>
 
           {/* Review Text with ChevronRight on Right */}
-          <div className="flex items-start gap-3">
+          <div className="flex items-start gap-2 sm:gap-3">
             {/* Review Text - 70% width, left-aligned */}
             <p
-              className="line-clamp-2 w-[70%] text-left whitespace-pre-line text-xs md:text-sm"
+              className="line-clamp-2 w-[70%] text-left whitespace-pre-line text-[10px] sm:text-xs md:text-sm"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                color: '#FFFFFF',
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                color: "#FFFFFF",
               }}
             >
               {reviewText}
@@ -128,10 +128,10 @@ function ReviewCard({
 
             {/* Navigation Arrow - Right Side */}
             <button
-              className="rounded-full p-2 hover:bg-white/10 transition-colors flex-shrink-0 ml-auto mt-4"
+              className="rounded-full p-1 sm:p-2 hover:bg-white/10 transition-colors flex-shrink-0 ml-auto mt-2 sm:mt-4"
               aria-label="더보기"
             >
-              <ChevronRight className="w-8 h-8 text-white" />
+              <ChevronRight className="w-5 h-5 sm:w-8 sm:h-8 text-white" />
             </button>
           </div>
         </div>
@@ -141,6 +141,9 @@ function ReviewCard({
 }
 
 export default function ReviewSection() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   const reviews = [
     {
       imageSrc: "/images/landing/image21.png",
@@ -168,12 +171,59 @@ export default function ReviewSection() {
     },
   ];
 
+  // Reuse reviews to create more cards
+  const allReviews = [...reviews, ...reviews, ...reviews];
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const updateScrollProgress = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      const maxScroll = scrollWidth - clientWidth;
+      const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
+      setScrollProgress(progress);
+    };
+
+    container.addEventListener("scroll", updateScrollProgress);
+    updateScrollProgress(); // Initial calculation
+
+    return () => {
+      container.removeEventListener("scroll", updateScrollProgress);
+    };
+  }, []);
+
+  // Calculate thumb position accounting for its width
+  const getThumbPosition = () => {
+    if (typeof window === "undefined") return 0;
+
+    const isLarge = window.innerWidth >= 1024;
+    const isMedium = window.innerWidth >= 640;
+
+    // Calculate thumb width as percentage of track
+    let thumbWidthPercent = 0;
+    if (isLarge) {
+      thumbWidthPercent = 18;
+    } else if (isMedium) {
+      thumbWidthPercent = 60;
+    } else {
+      // Mobile: w-16 (64px) on w-64 (256px) track = 25%
+      thumbWidthPercent = 25;
+    }
+
+    // Position: scrollProgress * (100 - thumbWidthPercent) / 100
+    return Math.min(
+      (scrollProgress * (100 - thumbWidthPercent)) / 100,
+      100 - thumbWidthPercent
+    );
+  };
+
   return (
     <section
-      className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative"
+      className="py-8 md:py-32 relative"
       style={{ backgroundColor: "#D8CEBA" }}
     >
-      <div className="container mx-auto max-w-[95%] lg:max-w-[90%] relative z-10">
+      <div className="container mx-auto max-w-[95%] lg:max-w-[90%] px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Title and Text Section */}
         <motion.div
           initial="hidden"
@@ -185,13 +235,13 @@ export default function ReviewSection() {
           <h2
             className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             style={{
-              fontFamily: 'Belleza-Regular, sans-serif',
+              fontFamily: "Belleza-Regular, sans-serif",
               fontWeight: 400,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              textAlign: "center",
+              verticalAlign: "middle",
+              color: "#3B2415",
             }}
           >
             Review
@@ -201,13 +251,13 @@ export default function ReviewSection() {
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: '40px',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                lineHeight: "40px",
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
               도안재 경험 고객분들의
@@ -216,13 +266,13 @@ export default function ReviewSection() {
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: '40px',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                lineHeight: "40px",
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
               특별한 후기
@@ -231,33 +281,38 @@ export default function ReviewSection() {
             <br />
           </div>
         </motion.div>
+      </div>
 
-        {/* Review Cards Grid */}
-        <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto overflow-y-hidden sm:overflow-x-visible sm:overflow-y-visible pb-4 sm:pb-0">
-          {reviews.map((review, index) => (
+      {/* Review Cards - Horizontal Scroll */}
+      <div className="relative">
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 md:gap-8 overflow-x-auto overflow-y-hidden pb-8 pl-4 sm:pl-12 lg:pl-16 pr-4 sm:pr-12 lg:pr-16 scrollbar-hide"
+        >
+          {allReviews.map((review, index) => (
             <motion.div
               key={index}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className="flex-shrink-0 w-[90vw] sm:w-full"
+              className="flex-shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw]"
             >
               <ReviewCard {...review} index={index} />
             </motion.div>
           ))}
         </div>
 
-        {/* Sliding Indicator */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="text-center mt-8 md:mt-12"
-        >
-          <div className="w-full max-w-4xl mx-auto h-px bg-gray-300 mb-4"></div>
-        </motion.div>
+        {/* Scroll Progress Bar */}
+        <div className="flex justify-center mt-4">
+          <div className="relative w-64 md:w-80 lg:w-[75%] h-1 bg-gray-200 rounded-full">
+            <motion.div
+              className="absolute top-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full"
+              style={{ left: `${getThumbPosition()}%` }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

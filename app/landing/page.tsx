@@ -37,7 +37,7 @@ export default function LandingPage() {
   return (
     <ErrorBoundary>
       <div className="relative">
-        <Navigation align="left" fixed={false} />
+        <Navigation fixed={false} />
         <Landing />
       </div>
       <Footer />

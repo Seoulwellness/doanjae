@@ -51,8 +51,8 @@ export default function PatentSection() {
       // w-48 (192px) on w-80 (320px) = 60%
       thumbWidthPercent = 60;
     } else {
-      // w-32 (128px) on w-64 (256px) = 50%
-      thumbWidthPercent = 50;
+      // Mobile: w-16 (64px) on w-64 (256px) track = 25%
+      thumbWidthPercent = 25;
     }
 
     // Position: scrollProgress * (100 - thumbWidthPercent) / 100
@@ -104,7 +104,7 @@ export default function PatentSection() {
       <div className="relative">
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto overflow-y-hidden pb-8 pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8 scrollbar-hide"
+          className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto overflow-y-hidden pb-8 pl-4 sm:pl-12 lg:pl-16 pr-4 sm:pr-12 lg:pr-16 scrollbar-hide"
         >
           {[1, 2, 3, 4, 1, 2, 3, 4, 1, 2].map((num, index) => (
             <motion.div
@@ -113,7 +113,7 @@ export default function PatentSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInRight}
-              className="relative flex-shrink-0 w-[90vw] sm:w-[45vw] lg:w-[25vw]"
+              className="relative flex-shrink-0 w-[75vw] sm:w-[45vw] lg:w-[25vw]"
             >
               <Image
                 src={`/images/landing/patent${num}.png`}
@@ -121,7 +121,7 @@ export default function PatentSection() {
                 width={1200}
                 height={1500}
                 className="w-full h-auto"
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 25vw"
+                sizes="(max-width: 640px) 75vw, (max-width: 1024px) 45vw, 25vw"
                 quality={90}
               />
             </motion.div>
@@ -132,7 +132,7 @@ export default function PatentSection() {
         <div className="flex justify-center mt-4">
           <div className="relative w-64 md:w-80 lg:w-[75%] h-1 bg-gray-200 rounded-full">
             <motion.div
-              className="absolute top-0 h-full w-32 md:w-48 lg:w-64 bg-[#3B2415] rounded-full"
+              className="absolute top-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full"
               style={{ left: `${getThumbPosition()}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />
