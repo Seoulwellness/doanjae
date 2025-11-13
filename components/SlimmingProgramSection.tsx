@@ -58,11 +58,10 @@ export default function SlimmingProgramSection() {
               당신의 몸에 가장 &apos;편안한 변화&apos;
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
                 color: '#3B2415',
@@ -71,11 +70,10 @@ export default function SlimmingProgramSection() {
               누워서 30분
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
                 color: '#3B2415',

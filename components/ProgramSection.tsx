@@ -36,11 +36,10 @@ export default function ProgramSection() {
           {/* First Text Block */}
           <div className="mb-4 md:mb-16">
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 800,
-                lineHeight: "40px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 color: "#3B2415",
@@ -63,11 +62,10 @@ export default function ProgramSection() {
           {/* Second Text Block */}
           <div className="mb-6 md:mb-24">
             <p
-              className="text-base md:text-lg lg:text-xl"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                lineHeight: "26px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 color: "#3B2415",
@@ -80,7 +78,6 @@ export default function ProgramSection() {
                 style={{
                   fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: "26px",
                   letterSpacing: "0%",
                   textAlign: "center",
                   color: "#3B2415",
@@ -119,11 +116,10 @@ export default function ProgramSection() {
                   한의학을 접목한 1:1 컨설팅
                 </h3>
                 <p
-                  className="text-base md:text-lg lg:text-xl"
+                  className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
                   style={{
                     fontFamily: "Pretendard, sans-serif",
                     fontWeight: 500,
-                    lineHeight: "26px",
                     letterSpacing: "0%",
                     textAlign: "center",
                     color: "#3B2415",
@@ -162,11 +158,10 @@ export default function ProgramSection() {
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
-                className="text-base md:text-lg lg:text-xl"
+                className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
                 style={{
                   fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: "26px",
                   letterSpacing: "0%",
                   textAlign: "center",
                   verticalAlign: "middle",
@@ -198,11 +193,10 @@ export default function ProgramSection() {
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
-                className="text-base md:text-lg lg:text-xl"
+                className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
                 style={{
                   fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: "26px",
                   letterSpacing: "0%",
                   textAlign: "center",
                   verticalAlign: "middle",
@@ -249,11 +243,10 @@ export default function ProgramSection() {
                 데이터 기반의 체계적인 분석
               </h3>
               <p
-                className="text-base md:text-lg lg:text-xl"
+                className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
                 style={{
                   fontFamily: "Pretendard, sans-serif",
                   fontWeight: 400,
-                  lineHeight: "26px",
                   letterSpacing: "0%",
                   textAlign: "center",
                   color: "#3B2415",
@@ -289,11 +282,10 @@ export default function ProgramSection() {
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
-                className="text-base md:text-lg lg:text-xl"
+                className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
                 style={{
                   fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: "26px",
                   letterSpacing: "0%",
                   textAlign: "center",
                   verticalAlign: "middle",
@@ -325,11 +317,10 @@ export default function ProgramSection() {
               style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
             >
               <p
-                className="text-base md:text-lg lg:text-xl"
+                className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
                 style={{
                   fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: "26px",
                   letterSpacing: "0%",
                   textAlign: "center",
                   verticalAlign: "middle",

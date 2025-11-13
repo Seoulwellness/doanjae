@@ -139,11 +139,10 @@ export default function PatentSection() {
           className="text-center mb-8 md:mb-24"
         >
           <h2
-            className="font-bold mb-4 text-lg md:text-xl lg:text-2xl xl:text-3xl"
+            className="font-bold mb-2 md:mb-4 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
             style={{
               fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              lineHeight: "40px",
               letterSpacing: "0%",
               textAlign: "center",
               color: "#3B2415",
@@ -152,11 +151,10 @@ export default function PatentSection() {
             아름다운 체형 관리를 위한
           </h2>
           <h3
-            className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl"
+            className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
             style={{
               fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              lineHeight: "40px",
               letterSpacing: "0%",
               textAlign: "center",
               color: "#3B2415",

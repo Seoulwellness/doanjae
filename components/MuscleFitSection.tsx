@@ -35,11 +35,10 @@ export default function MuscleFitSection() {
 
           <div className="space-y-2 md:space-y-3">
             <p
-              className="text-base md:text-lg lg:text-xl"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
                 verticalAlign: 'middle',
@@ -52,7 +51,6 @@ export default function MuscleFitSection() {
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  lineHeight: '26px',
                   letterSpacing: '0%',
                   textAlign: 'center',
                   verticalAlign: 'middle',
@@ -63,11 +61,10 @@ export default function MuscleFitSection() {
               </span>
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
                 verticalAlign: 'middle',
@@ -77,11 +74,10 @@ export default function MuscleFitSection() {
               운동없이 완성하는,
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
                 verticalAlign: 'middle',
@@ -129,11 +125,10 @@ export default function MuscleFitSection() {
               고강도 머슬핏 케어
             </h3> */}
             <p
-              className="text-base md:text-lg lg:text-xl"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                lineHeight: '26px',
                 letterSpacing: '0%',
                 verticalAlign: 'middle',
                 color: '#3B2415',
@@ -144,7 +139,6 @@ export default function MuscleFitSection() {
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
                   color: '#3B2415',
@@ -174,11 +168,10 @@ export default function MuscleFitSection() {
               전문 케어 솔루션
             </h3> */}
             <p
-              className="text-base md:text-lg lg:text-xl"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                lineHeight: '26px',
                 letterSpacing: '0%',
                 verticalAlign: 'middle',
                 color: '#3B2415',
@@ -189,7 +182,6 @@ export default function MuscleFitSection() {
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
                   color: '#3B2415',
@@ -204,7 +196,6 @@ export default function MuscleFitSection() {
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
                   color: '#3B2415',
@@ -218,7 +209,6 @@ export default function MuscleFitSection() {
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
                   color: '#3B2415',
@@ -274,11 +264,10 @@ export default function MuscleFitSection() {
             운동 후 지친 근육을 위한
           </p>
           <p
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+            className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 700,
-              lineHeight: '40px',
               letterSpacing: '0%',
               textAlign: 'center',
               verticalAlign: 'middle',

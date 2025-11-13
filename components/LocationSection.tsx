@@ -35,11 +35,10 @@ export default function LocationSection() {
           </h2>
           <div>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "40px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",
@@ -49,11 +48,10 @@ export default function LocationSection() {
               도안재는 가장 편안한 공간에서
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "40px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",
@@ -114,11 +112,10 @@ export default function LocationSection() {
             />
           </div>
           <p
-            className="text-base md:text-lg lg:text-xl"
+            className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
             style={{
               fontFamily: "Pretendard, sans-serif",
               fontWeight: 400,
-              lineHeight: "26px",
               letterSpacing: "0%",
               textAlign: "center",
               verticalAlign: "middle",
@@ -131,7 +128,6 @@ export default function LocationSection() {
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "26px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",
@@ -169,11 +165,10 @@ export default function LocationSection() {
 
           <div>
             <p
-              className="text-base md:text-lg lg:text-xl"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 400,
-                lineHeight: "26px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",
@@ -184,11 +179,10 @@ export default function LocationSection() {
             </p>
             <br />
             <p
-              className="text-base md:text-lg lg:text-xl"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "26px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",

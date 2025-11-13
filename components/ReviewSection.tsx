@@ -324,11 +324,10 @@ export default function ReviewSection() {
 
           <div>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "40px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",
@@ -339,11 +338,10 @@ export default function ReviewSection() {
             </p>
             <br />
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "40px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",

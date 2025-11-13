@@ -19,7 +19,7 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="relative w-full"
+            className="relative w-full px-12 sm:px-16 md:px-0"
           >
             <Image
               src="/images/landing/image2.png"
@@ -41,24 +41,22 @@ export default function FeaturesSection() {
             className="space-y-6 mx-16 text-center lg:text-left"
           >
             <h2
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                lineHeight: '40px',
-                letterSpacing: '0%',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                color: "#3B2415",
               }}
             >
               인체에 가장 유효한 <br />
               <span
                 className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '40px',
-                  letterSpacing: '0%',
-                  color: '#3B2415',
+                  letterSpacing: "0%",
+                  color: "#3B2415",
                 }}
               >
                 &apos;근적외선&apos; 파장
@@ -68,24 +66,24 @@ export default function FeaturesSection() {
             <p
               className="text-base md:text-lg lg:text-xl"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                lineHeight: '26px',
-                letterSpacing: '0%',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                lineHeight: "26px",
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
-              피부 표면이 아닌,{' '}
+              피부 표면이 아닌,{" "}
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '26px',
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  lineHeight: "26px",
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 깊은 곳의
@@ -94,12 +92,12 @@ export default function FeaturesSection() {
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '26px',
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  lineHeight: "26px",
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 &apos;체지방&apos;에 직접 도달
@@ -121,23 +119,21 @@ export default function FeaturesSection() {
             className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
             <h2
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                lineHeight: '40px',
-                letterSpacing: '0%',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                color: "#3B2415",
               }}
             >
               동의보감의 <br />
               <span
                 className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '40px',
-                  letterSpacing: '0%',
+                  letterSpacing: "0%",
                 }}
               >
                 &apos;온열 요법&apos;
@@ -147,24 +143,24 @@ export default function FeaturesSection() {
             <p
               className="text-base md:text-lg lg:text-xl"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                lineHeight: '26px',
-                letterSpacing: '0%',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                lineHeight: "26px",
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
               몸 속 깊은 곳부터 따뜻하게 데워 <br />
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '26px',
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  lineHeight: "26px",
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 불필요한 노폐물과 독소가 땀과 함께
@@ -173,12 +169,12 @@ export default function FeaturesSection() {
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '26px',
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  lineHeight: "26px",
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 자연스럽게 배출되도록 돕습니다.
@@ -192,7 +188,7 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInUp}
-            className="relative w-full order-1 lg:order-2"
+            className="relative w-full order-1 lg:order-2 px-12 sm:px-16 md:px-0"
           >
             <Image
               src="/images/landing/image3.png"

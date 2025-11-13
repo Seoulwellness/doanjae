@@ -28,11 +28,10 @@ export default function CTASection() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "40px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",
@@ -43,11 +42,10 @@ export default function CTASection() {
               지금 바로 &apos;가장 편안한 변화&apos;를
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "40px",
                 letterSpacing: "0%",
                 textAlign: "center",
                 verticalAlign: "middle",
