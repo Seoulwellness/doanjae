@@ -9,25 +9,59 @@ export default function PatentSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const progressTrackRef = useRef<HTMLDivElement>(null);
   const progressThumbRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const rafIdRef = useRef<number | null>(null);
   const [isDraggingProgress, setIsDraggingProgress] = useState(false);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
-    if (!container) return;
+    const thumb = progressThumbRef.current;
+    const track = progressTrackRef.current;
+    if (!container || !thumb || !track) return;
 
-    const updateScrollProgress = () => {
+    const updateThumbPosition = () => {
       const { scrollLeft, scrollWidth, clientWidth } = container;
       const maxScroll = scrollWidth - clientWidth;
       const progress = maxScroll > 0 ? (scrollLeft / maxScroll) * 100 : 0;
-      setScrollProgress(progress);
+
+      // Get track and thumb dimensions
+      const trackRect = track.getBoundingClientRect();
+      const trackWidth = trackRect.width;
+      const thumbWidth = thumb.offsetWidth;
+
+      // Calculate position using transform (GPU accelerated)
+      let translateX = 0;
+      if (progress >= 100) {
+        // At end: position thumb so right edge aligns with track end
+        translateX = trackWidth - thumbWidth;
+      } else {
+        // Calculate position accounting for thumb width
+        const maxTranslate = trackWidth - thumbWidth;
+        translateX = (progress / 100) * maxTranslate;
+      }
+
+      // Use transform instead of left for better performance
+      thumb.style.transform = `translateX(${translateX}px)`;
+      thumb.style.willChange = "transform";
     };
 
-    container.addEventListener("scroll", updateScrollProgress);
-    updateScrollProgress(); // Initial calculation
+    const handleScroll = () => {
+      // Cancel previous animation frame if exists
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current);
+      }
+
+      // Use requestAnimationFrame for smooth 60fps updates
+      rafIdRef.current = requestAnimationFrame(updateThumbPosition);
+    };
+
+    container.addEventListener("scroll", handleScroll, { passive: true });
+    updateThumbPosition(); // Initial calculation
 
     return () => {
-      container.removeEventListener("scroll", updateScrollProgress);
+      container.removeEventListener("scroll", handleScroll);
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current);
+      }
     };
   }, []);
 
@@ -63,7 +97,13 @@ export default function PatentSection() {
     const handleProgressMouseMove = (e: MouseEvent) => {
       if (!isDraggingProgress) return;
       e.preventDefault();
-      updateScrollFromPosition(e.clientX);
+      // Use requestAnimationFrame for smooth dragging
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current);
+      }
+      rafIdRef.current = requestAnimationFrame(() => {
+        updateScrollFromPosition(e.clientX);
+      });
     };
 
     const handleProgressMouseUp = () => {
@@ -87,43 +127,6 @@ export default function PatentSection() {
       document.removeEventListener("mouseup", handleProgressMouseUp);
     };
   }, [isDraggingProgress]);
-
-  // Calculate thumb position accounting for its width
-  // Use CSS calc to position thumb correctly: left = progress% but limit to (100% - thumbWidth)
-  const getThumbPosition = () => {
-    // The thumb should move from 0% to (100% - thumbWidth%)
-    // Thumb widths: w-32=128px, w-48=192px, w-64=256px
-    // Track widths: w-64=256px, w-80=320px, lg:w-[75%]=variable
-    if (typeof window === "undefined") return 0;
-
-    const isLarge = window.innerWidth >= 1024;
-    const isMedium = window.innerWidth >= 640;
-
-    // Calculate thumb width as percentage of track
-    let thumbWidthPercent = 0;
-    if (isLarge) {
-      // w-64 (256px) thumb on 75% screen width track
-      // Approximate: 256px / (screenWidth * 0.75) * 100
-      // For a 1920px screen: 256 / 1440 * 100 ≈ 17.8%
-      // Use a conservative estimate
-      thumbWidthPercent = 18;
-    } else if (isMedium) {
-      // w-48 (192px) on w-80 (320px) = 60%
-      thumbWidthPercent = 60;
-    } else {
-      // Mobile: w-16 (64px) on w-64 (256px) track = 25%
-      thumbWidthPercent = 25;
-    }
-
-    // When at 100% scroll, thumb should reach the end (right edge at 100%)
-    // So left position should be 100% - thumbWidthPercent
-    if (scrollProgress >= 100) {
-      return 100 - thumbWidthPercent;
-    }
-
-    // Position: scrollProgress * (100 - thumbWidthPercent) / 100
-    return (scrollProgress * (100 - thumbWidthPercent)) / 100;
-  };
 
   return (
     <section className="py-8 md:py-32 bg-white">
@@ -197,25 +200,15 @@ export default function PatentSection() {
             ref={progressTrackRef}
             className="relative w-64 md:w-80 lg:w-[75%] h-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300 transition-colors select-none"
           >
-            <motion.div
+            <div
               ref={progressThumbRef}
-              className="absolute top-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
+              className="absolute top-0 left-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
               style={{
-                ...(scrollProgress >= 100
-                  ? { right: 0, left: "auto" }
-                  : { left: `${getThumbPosition()}%`, right: "auto" }),
-                transition: isDraggingProgress ? "none" : undefined,
+                willChange: "transform",
+                transition: isDraggingProgress
+                  ? "none"
+                  : "transform 0.1s ease-out",
               }}
-              animate={
-                scrollProgress >= 100
-                  ? { right: 0, left: "auto" }
-                  : { left: `${getThumbPosition()}%`, right: "auto" }
-              }
-              transition={
-                isDraggingProgress
-                  ? { duration: 0 }
-                  : { type: "spring", stiffness: 300, damping: 30 }
-              }
             />
           </div>
         </div>
