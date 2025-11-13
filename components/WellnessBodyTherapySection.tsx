@@ -239,27 +239,78 @@ export default function WellnessBodyTherapySection() {
           className="text-center mt-8 md:mt-32 space-y-2"
         >
           <p
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
-              fontFamily: 'Daehan, sans-serif',
-              fontWeight: 700,
-              lineHeight: '40px',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              textAlign: "center",
+              color: "#3B2415",
             }}
           >
-            &quot;
+            <span
+              style={{
+                fontFamily: "Georgia, serif",
+                fontWeight: 700,
+                fontSize: "32px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+                display: "block",
+                marginBottom: "16px",
+              }}
+            >
+              &ldquo;
+            </span>
+            <span
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              style={{
+                fontFamily: "Pretendard, sans-serif",
+                fontWeight: 700,
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
+              도안재는 무너진 균형의 원인을 발견하고
+            </span>
             <br />
-            도안재는 무너진 균형의 원인을 발견하고
+            <span
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              style={{
+                fontFamily: "Pretendard, sans-serif",
+                fontWeight: 700,
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
+              우리 몸에 맞는 이상적인 아름다움을
+            </span>
             <br />
-            우리 몸에 맞는 이상적인 아름다움을
+            <span
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              style={{
+                fontFamily: "Pretendard, sans-serif",
+                fontWeight: 700,
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+              }}
+            >
+              함께 찾아 갑니다.
+            </span>
             <br />
-            함께 찾아 갑니다.
-            <br />
-            <br />
-            &quot;
+            <span
+              style={{
+                fontFamily: "Georgia, serif",
+                fontWeight: 700,
+                fontSize: "32px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                textAlign: "center",
+                display: "block",
+                marginTop: "16px",
+              }}
+            >
+              &rdquo;
+            </span>
           </p>
         </motion.div>
       </div>

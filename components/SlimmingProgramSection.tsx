@@ -197,26 +197,78 @@ export default function SlimmingProgramSection() {
           {/* Quoted Text Block */}
           <div className="mt-8 md:mt-32 space-y-2">
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
-                fontFamily: 'Daehan, sans-serif',
-                fontWeight: 700,
-                lineHeight: '40px',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                textAlign: "center",
+                color: "#3B2415",
               }}
             >
-              &quot;
+              <span
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontWeight: 700,
+                  fontSize: "32px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                  display: "block",
+                  marginBottom: "16px",
+                }}
+              >
+                &ldquo;
+              </span>
+              <span
+                className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                style={{
+                  fontFamily: "Pretendard, sans-serif",
+                  fontWeight: 700,
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                }}
+              >
+                식단과 운동으로 미처 정리되지 못한
+              </span>
               <br />
-              식단과 운동으로 미처 정리되지 못한
+              <span
+                className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                style={{
+                  fontFamily: "Pretendard, sans-serif",
+                  fontWeight: 700,
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                }}
+              >
+                마지막 1인치까지,
+              </span>
               <br />
-              마지막 1인치까지,
+              <span
+                className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                style={{
+                  fontFamily: "Pretendard, sans-serif",
+                  fontWeight: 700,
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                }}
+              >
+                도안재가 &apos;가볍게&apos; 완성합니다.
+              </span>
               <br />
-              도안재가 &apos;가볍게&apos; 완성합니다.
-              <br />
-              &quot;
+              <span
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontWeight: 700,
+                  fontSize: "32px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                  display: "block",
+                  marginTop: "16px",
+                }}
+              >
+                &rdquo;
+              </span>
             </p>
           </div>
         </motion.div>
