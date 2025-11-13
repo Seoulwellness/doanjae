@@ -9,7 +9,8 @@ export default function Landing() {
     <motion.section
       id="brand"
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer}
       className="relative lg:h-screen pb-8 lg:py-0 lg:flex lg:items-center"
       style={{ backgroundColor: "#e4dbd2" }}
@@ -44,11 +45,11 @@ export default function Landing() {
               variants={fadeInLeft}
               className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: '40px',
-                letterSpacing: '0%',
-                color: '#3B2415',
+                lineHeight: "40px",
+                letterSpacing: "0%",
+                color: "#3B2415",
               }}
             >
               30분, 정말 그냥 <br /> 누워만 있어도 돼요.
@@ -58,11 +59,11 @@ export default function Landing() {
               variants={fadeInLeft}
               className="font-bold text-base md:text-lg lg:text-xl"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: '26px',
-                letterSpacing: '0%',
-                color: '#3B2415',
+                lineHeight: "26px",
+                letterSpacing: "0%",
+                color: "#3B2415",
               }}
             >
               땀만 뻘뻘 흘리던 기존의 관리와는 달라요.
@@ -72,23 +73,23 @@ export default function Landing() {
               variants={fadeInLeft}
               className="text-xs md:text-sm"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 400,
-                lineHeight: '16px',
-                letterSpacing: '0%',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                lineHeight: "16px",
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
-              도안재의 30분은{' '}
+              도안재의 30분은{" "}
               <span
                 className="text-xs md:text-sm"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '16px',
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
+                  lineHeight: "16px",
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
                 }}
               >
                 천년의 지혜
@@ -98,11 +99,11 @@ export default function Landing() {
               <span
                 className="text-xs md:text-sm"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  lineHeight: '16px',
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
+                  lineHeight: "16px",
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
                 }}
               >
                 7종의 특허 기술
