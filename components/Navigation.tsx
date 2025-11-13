@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,6 +17,26 @@ export default function Navigation({
   fixed = true,
 }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Check if banner is visible (scrolling down past 50px hides it)
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setBannerVisible(false);
+      } else if (currentScrollY < lastScrollY || currentScrollY <= 50) {
+        setBannerVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <>
@@ -25,8 +45,10 @@ export default function Navigation({
         initial="hidden"
         animate="visible"
         variants={fadeInDown}
-        className={`${fixed ? "fixed" : "absolute"} left-0 right-0 z-50 ${
-          fixed ? "top-10" : "top-0"
+        className={`${
+          fixed ? "fixed" : "absolute"
+        } left-0 right-0 z-50 transition-all duration-300 ${
+          fixed ? (bannerVisible ? "top-10" : "top-0") : "top-0"
         } md:hidden`}
       >
         <div className="container mx-auto px-4">
@@ -68,8 +90,10 @@ export default function Navigation({
         initial="hidden"
         animate="visible"
         variants={fadeInDown}
-        className={`hidden md:block ${fixed ? "fixed" : "absolute"} z-50 ${
-          fixed ? "top-12" : "top-10"
+        className={`hidden md:block ${
+          fixed ? "fixed" : "absolute"
+        } z-50 transition-all duration-300 ${
+          fixed ? (bannerVisible ? "top-12" : "top-0") : "top-10"
         } ${
           align === "left"
             ? "left-32"

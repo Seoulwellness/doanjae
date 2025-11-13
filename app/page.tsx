@@ -43,11 +43,9 @@ export default function Home() {
   return (
     <ErrorBoundary>
       {/* Hero Section with Banner and Navigation */}
-      <div className="h-screen flex flex-col">
-        <Banner />
-        <Navigation />
-        <Hero />
-      </div>
+      <Banner />
+      <Navigation />
+      <Hero />
 
       {/* Landing Sections - Scrollable */}
       <Landing />

@@ -208,6 +208,18 @@ section[id] {
   }
 }
 
+/* Hero Image Position - Slightly left of center on small screens */
+section#home img {
+  object-position: 45% center;
+  transition: object-position 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  section#home img {
+    object-position: center;
+  }
+}
+
 /* Animation Utilities */
 @media (prefers-reduced-motion: reduce) {
   *,

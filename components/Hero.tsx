@@ -11,7 +11,7 @@ export default function Hero() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="relative flex items-center px-8 sm:px-8 lg:px-8 overflow-hidden h-[calc(100vh-2.5rem)] md:h-[calc(100vh-3rem)]"
+      className="relative flex items-center px-8 sm:px-8 lg:px-8 overflow-hidden h-screen"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -25,8 +25,6 @@ export default function Hero() {
           quality={90}
           style={{
             objectFit: "cover",
-            objectPosition: "center",
-            transform: "scale(1)",
             willChange: "auto",
           }}
         />
@@ -100,7 +98,7 @@ export default function Hero() {
       </div>
 
       {/* Buttons - Fixed at bottom */}
-      <div className="absolute bottom-0  md:bottom-16 left-0 right-0 z-[70] w-full">
+      <div className="absolute bottom-0  md:bottom-16 left-0 right-0 z-40 w-full">
         <div className="flex justify-center w-full">
           <motion.div
             variants={fadeInUp}
