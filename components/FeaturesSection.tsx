@@ -41,10 +41,10 @@ export default function FeaturesSection() {
             className="space-y-6 mx-16 text-center lg:text-left"
           >
             <h2
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 color: '#3B2415',
@@ -52,10 +52,10 @@ export default function FeaturesSection() {
             >
               인체에 가장 유효한 <br />
               <span
+                className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '32px',
                   lineHeight: '40px',
                   letterSpacing: '0%',
                   color: '#3B2415',
@@ -66,10 +66,10 @@ export default function FeaturesSection() {
             </h2>
 
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 verticalAlign: 'middle',
@@ -78,10 +78,10 @@ export default function FeaturesSection() {
             >
               피부 표면이 아닌,{' '}
               <span
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
@@ -92,10 +92,10 @@ export default function FeaturesSection() {
               </span>
               <br />
               <span
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
@@ -121,10 +121,10 @@ export default function FeaturesSection() {
             className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
             <h2
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 color: '#3B2415',
@@ -132,10 +132,10 @@ export default function FeaturesSection() {
             >
               동의보감의 <br />
               <span
+                className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '32px',
                   lineHeight: '40px',
                   letterSpacing: '0%',
                 }}
@@ -145,10 +145,10 @@ export default function FeaturesSection() {
             </h2>
 
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 verticalAlign: 'middle',
@@ -157,10 +157,10 @@ export default function FeaturesSection() {
             >
               몸 속 깊은 곳부터 따뜻하게 데워 <br />
               <span
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
@@ -171,10 +171,10 @@ export default function FeaturesSection() {
               </span>
               <br />
               <span
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '26px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',

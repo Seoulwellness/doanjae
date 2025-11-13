@@ -29,11 +29,10 @@ export default function WellnessBodyTherapySection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="mb-6 md:mb-24"
+            className="mb-6 md:mb-24 text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
               fontFamily: 'Belleza-Regular, sans-serif',
               fontWeight: 400,
-              fontSize: '32px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -45,10 +44,10 @@ export default function WellnessBodyTherapySection() {
 
           <div>
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -59,10 +58,10 @@ export default function WellnessBodyTherapySection() {
               당신의 &apos;오늘&apos;을 확인하고
             </p>
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -75,10 +74,10 @@ export default function WellnessBodyTherapySection() {
             <br />
 
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -90,10 +89,10 @@ export default function WellnessBodyTherapySection() {
             </p>
 
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -130,10 +129,10 @@ export default function WellnessBodyTherapySection() {
               style={{ backgroundColor: "#3B2415CC" }}
             >
               <p
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 500,
-                  fontSize: '21px',
                   lineHeight: '26px',
                   letterSpacing: '0%',
                   textAlign: 'center',
@@ -143,10 +142,10 @@ export default function WellnessBodyTherapySection() {
               >
                 모든 관리가 끝나면{' '}
                 <span
+                  className="text-base md:text-lg lg:text-xl"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 700,
-                    fontSize: '21px',
                     lineHeight: '26px',
                     letterSpacing: '0%',
                     textAlign: 'center',
@@ -158,10 +157,10 @@ export default function WellnessBodyTherapySection() {
                 </span>
                 <br />
                 <span
+                  className="text-base md:text-lg lg:text-xl"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 700,
-                    fontSize: '21px',
                     lineHeight: '26px',
                     letterSpacing: '0%',
                     textAlign: 'center',
@@ -197,10 +196,10 @@ export default function WellnessBodyTherapySection() {
               style={{ backgroundColor: "#3B2415CC" }}
             >
               <p
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 500,
-                  fontSize: '21px',
                   lineHeight: '26px',
                   letterSpacing: '0%',
                   textAlign: 'center',
@@ -211,10 +210,10 @@ export default function WellnessBodyTherapySection() {
                 디지털 체질 테스트 결과에 따라 특별히
                 <br />
                 <span
+                  className="text-base md:text-lg lg:text-xl"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 700,
-                    fontSize: '21px',
                     lineHeight: '26px',
                     letterSpacing: '0%',
                     textAlign: 'center',
@@ -240,10 +239,10 @@ export default function WellnessBodyTherapySection() {
           className="text-center mt-8 md:mt-32 space-y-2"
         >
           <p
+            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
               fontFamily: 'Daehan, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
               lineHeight: '40px',
               letterSpacing: '0%',
               textAlign: 'center',

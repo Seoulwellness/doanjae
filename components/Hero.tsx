@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { fadeInUp, fadeInLeft, staggerContainer } from '@/lib/animations';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp, fadeInLeft, staggerContainer } from "@/lib/animations";
 
 export default function Hero() {
   return (
@@ -11,7 +11,7 @@ export default function Hero() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="relative flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden h-[calc(100vh-2.5rem)] md:h-[calc(100vh-3rem)]"
+      className="relative flex items-center px-8 sm:px-8 lg:px-8 overflow-hidden h-[calc(100vh-2.5rem)] md:h-[calc(100vh-3rem)]"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -24,10 +24,10 @@ export default function Hero() {
           sizes="100vw"
           quality={90}
           style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-            transform: 'scale(1)',
-            willChange: 'auto'
+            objectFit: "cover",
+            objectPosition: "center",
+            transform: "scale(1)",
+            willChange: "auto",
           }}
         />
         {/* Overlay for better text readability */}
@@ -35,37 +35,34 @@ export default function Hero() {
       </div>
 
       {/* Text Content */}
-      <div className="container mx-auto max-w-[80%] relative z-10">
+      <div className="container mx-auto max-w-full md:max-w-[80%] relative z-10">
         <motion.div
           variants={fadeInLeft}
           className="text-left space-y-4 md:space-y-6 lg:space-y-8 mt-[10vh] md:mt-[25vh]"
         >
           <motion.h1
             variants={fadeInUp}
-            className="font-extrabold"
+            className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white md:text-[#3B2415]"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 800,
-              fontSize: '52px',
-              lineHeight: '60px',
-              letterSpacing: '0%',
-              color: '#3B2415',
+              lineHeight: "60px",
+              letterSpacing: "0%",
             }}
           >
-            누워서 30분<br />
+            누워서 30분
+            <br />
             수면 다이어트 테라피, 도안재
           </motion.h1>
 
           <motion.p
             variants={fadeInUp}
-            className="font-bold"
+            className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-white md:text-[#3B2415]"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              fontSize: '32px',
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              color: '#3B2415',
+              lineHeight: "100%",
+              letterSpacing: "0%",
             }}
           >
             가볍게, 편안하게, 아름답게
@@ -73,35 +70,31 @@ export default function Hero() {
 
           <motion.p
             variants={fadeInUp}
-            className="font-medium"
+            className="font-medium text-base md:text-lg lg:text-xl text-white md:text-[#3B2415]"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 500,
-              fontSize: '21px',
-              lineHeight: '26px',
-              letterSpacing: '0%',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              lineHeight: "26px",
+              letterSpacing: "0%",
+              verticalAlign: "middle",
             }}
           >
             천년의 지혜와 7종의 특허 기술로 <br />
-            당신의 몸에 가장 '편안한 변화'를 약속합니다
+            당신의 몸에 가장 &apos;편안한 변화&apos;를 약속합니다
           </motion.p>
 
           <motion.p
             variants={fadeInUp}
-            className="font-bold"
+            className="font-bold text-base md:text-lg lg:text-xl text-white md:text-[#3B2415]"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              fontSize: '21px',
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              verticalAlign: "middle",
             }}
           >
-            지금, 가장 먼저 '편안한 변화'를 경험하세요.
+            지금, 가장 먼저 &apos;편안한 변화&apos;를 경험하세요.
           </motion.p>
         </motion.div>
       </div>
@@ -117,16 +110,15 @@ export default function Hero() {
               href="#contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-shadow text-center"
+              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-shadow text-center text-sm md:text-base"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                fontSize: '16px',
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                verticalAlign: 'middle',
-                backgroundColor: '#3B2415',
-                color: '#FFFFFF',
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                backgroundColor: "#3B2415",
+                color: "#FFFFFF",
               }}
             >
               도안재 예약하기
@@ -136,16 +128,15 @@ export default function Hero() {
               href="#about"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-colors text-center"
+              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-colors text-center text-sm md:text-base"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                fontSize: '16px',
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                verticalAlign: 'middle',
-                backgroundColor: '#FFD800',
-                color: '#3B2415',
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                backgroundColor: "#FFD800",
+                color: "#3B2415",
               }}
             >
               카카오 채널

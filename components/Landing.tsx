@@ -42,11 +42,10 @@ export default function Landing() {
           >
             <motion.h1
               variants={fadeInLeft}
-              className="font-bold"
+              className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 color: '#3B2415',
@@ -57,11 +56,10 @@ export default function Landing() {
 
             <motion.p
               variants={fadeInLeft}
-              className="font-bold"
+              className="font-bold text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 color: '#3B2415',
@@ -72,10 +70,10 @@ export default function Landing() {
 
             <motion.div
               variants={fadeInLeft}
+              className="text-xs md:text-sm"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 400,
-                fontSize: '12px',
                 lineHeight: '16px',
                 letterSpacing: '0%',
                 verticalAlign: 'middle',
@@ -84,10 +82,10 @@ export default function Landing() {
             >
               도안재의 30분은{' '}
               <span
+                className="text-xs md:text-sm"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '12px',
                   lineHeight: '16px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
@@ -98,10 +96,10 @@ export default function Landing() {
               와
               <br />
               <span
+                className="text-xs md:text-sm"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '12px',
                   lineHeight: '16px',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',

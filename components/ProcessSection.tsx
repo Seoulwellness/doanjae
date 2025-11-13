@@ -29,11 +29,10 @@ export default function ProcessSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="mb-6 md:mb-24"
+            className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             style={{
               fontFamily: 'Belleza-Regular, sans-serif',
               fontWeight: 400,
-              fontSize: '48px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -45,10 +44,10 @@ export default function ProcessSection() {
           </h2>
           <div>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '100%',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -59,10 +58,10 @@ export default function ProcessSection() {
             </p>
             <br />
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '100%',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -109,10 +108,10 @@ export default function ProcessSection() {
                 style={{ backgroundColor: "#3b2415" }}
               >
                 <span
+                  className="text-sm md:text-base"
                   style={{
                     fontFamily: 'Daehan, sans-serif',
                     fontWeight: 700,
-                    fontSize: '16px',
                     lineHeight: '100%',
                     letterSpacing: '0%',
                     textAlign: 'center',
@@ -123,11 +122,10 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="mb-8 md:mb-16"
+                className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '32px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   color: '#3B2415',
@@ -136,10 +134,10 @@ export default function ProcessSection() {
                 나를 알다.
               </h2>
               <h3
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   color: '#3B2415',
@@ -149,10 +147,10 @@ export default function ProcessSection() {
               </h3>
               <div>
                 <p
+                  className="text-xs md:text-sm"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 400,
-                    fontSize: '12px',
                     lineHeight: '16px',
                     letterSpacing: '0%',
                     color: '#3B2415',
@@ -162,10 +160,10 @@ export default function ProcessSection() {
                 </p>
 
                 <p
+                  className="text-xs md:text-sm"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 400,
-                    fontSize: '12px',
                     lineHeight: '16px',
                     letterSpacing: '0%',
                     color: '#3B2415',
@@ -192,10 +190,10 @@ export default function ProcessSection() {
                 style={{ backgroundColor: "#3b2415" }}
               >
                 <span
+                  className="text-sm md:text-base"
                   style={{
                     fontFamily: 'Daehan, sans-serif',
                     fontWeight: 700,
-                    fontSize: '16px',
                     lineHeight: '100%',
                     letterSpacing: '0%',
                     textAlign: 'center',
@@ -206,11 +204,10 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="mb-8 md:mb-16"
+                className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '32px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   color: '#3B2415',
@@ -219,10 +216,10 @@ export default function ProcessSection() {
                 몸을 비우다.
               </h2>
               <h3
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   color: '#3B2415',
@@ -232,10 +229,10 @@ export default function ProcessSection() {
               </h3>
               <div>
                 <p
+                  className="text-xs md:text-sm"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 400,
-                    fontSize: '12px',
                     lineHeight: '16px',
                     letterSpacing: '0%',
                     color: '#3B2415',
@@ -244,10 +241,10 @@ export default function ProcessSection() {
                   나에게 꼭 맞는 프로그램으로
                 </p>
                 <p
+                  className="text-xs md:text-sm"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 400,
-                    fontSize: '12px',
                     lineHeight: '16px',
                     letterSpacing: '0%',
                     color: '#3B2415',
@@ -312,10 +309,10 @@ export default function ProcessSection() {
                 style={{ backgroundColor: "#3b2415" }}
               >
                 <span
+                  className="text-sm md:text-base"
                   style={{
                     fontFamily: 'Daehan, sans-serif',
                     fontWeight: 700,
-                    fontSize: '16px',
                     lineHeight: '100%',
                     letterSpacing: '0%',
                     textAlign: 'center',
@@ -326,11 +323,10 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="mb-8 md:mb-16"
+                className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '32px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   color: '#3B2415',
@@ -339,10 +335,10 @@ export default function ProcessSection() {
                 변화를 만나다.
               </h2>
               <h3
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   color: '#3B2415',
@@ -352,10 +348,10 @@ export default function ProcessSection() {
               </h3>
               <div>
                 <p
+                  className="text-xs md:text-sm"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 400,
-                    fontSize: '12px',
                     lineHeight: '16px',
                     letterSpacing: '0%',
                     color: '#3B2415',
@@ -364,10 +360,10 @@ export default function ProcessSection() {
                   관리 후 가벼워진 몸의 변화를 수치로 확인하고,
                 </p>
                 <p
+                  className="text-xs md:text-sm"
                   style={{
                     fontFamily: 'Pretendard, sans-serif',
                     fontWeight: 400,
-                    fontSize: '12px',
                     lineHeight: '16px',
                     letterSpacing: '0%',
                     color: '#3B2415',

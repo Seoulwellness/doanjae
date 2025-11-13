@@ -21,11 +21,10 @@ export default function ProgramSection() {
                     className="text-center mb-8"
                 >
                     <h2
-                        className="mb-6 md:mb-24"
+                        className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
                         style={{
                             fontFamily: 'Belleza-Regular, sans-serif',
                             fontWeight: 400,
-                            fontSize: '48px',
                             lineHeight: '100%',
                             letterSpacing: '0%',
                             textAlign: 'center',
@@ -38,10 +37,10 @@ export default function ProgramSection() {
                     {/* First Text Block */}
                     <div className="mb-4 md:mb-16">
                         <p
+                            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                             style={{
                                 fontFamily: 'Pretendard, sans-serif',
                                 fontWeight: 800,
-                                fontSize: '32px',
                                 lineHeight: '40px',
                                 letterSpacing: '0%',
                                 textAlign: 'center',
@@ -65,10 +64,10 @@ export default function ProgramSection() {
                     {/* Second Text Block */}
                     <div className="mb-6 md:mb-24">
                         <p
+                            className="text-base md:text-lg lg:text-xl"
                             style={{
                                 fontFamily: 'Pretendard, sans-serif',
                                 fontWeight: 500,
-                                fontSize: '21px',
                                 lineHeight: '26px',
                                 letterSpacing: '0%',
                                 textAlign: 'center',
@@ -77,10 +76,10 @@ export default function ProgramSection() {
                         >
                             개인의 체질과 체성분은 물론 <br /> 라이프스타일까지 모두 고려한 <br />{' '}
                             <span
+                                className="text-base md:text-lg lg:text-xl"
                                 style={{
                                     fontFamily: 'Pretendard, sans-serif',
                                     fontWeight: 700,
-                                    fontSize: '21px',
                                     lineHeight: '26px',
                                     letterSpacing: '0%',
                                     textAlign: 'center',
@@ -102,11 +101,10 @@ export default function ProgramSection() {
                             />
                             <div>
                                 <h3
-                                    className="mb-2"
+                                    className="mb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                                     style={{
                                         fontFamily: 'Pretendard, sans-serif',
                                         fontWeight: 700,
-                                        fontSize: '32px',
                                         lineHeight: '100%',
                                         letterSpacing: '0%',
                                         textAlign: 'center',
@@ -116,10 +114,10 @@ export default function ProgramSection() {
                                     한의학을 접목한 1:1 컨설팅
                                 </h3>
                                 <p
+                                    className="text-base md:text-lg lg:text-xl"
                                     style={{
                                         fontFamily: 'Pretendard, sans-serif',
                                         fontWeight: 500,
-                                        fontSize: '21px',
                                         lineHeight: '26px',
                                         letterSpacing: '0%',
                                         textAlign: 'center',
@@ -158,10 +156,10 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
+                                className="text-base md:text-lg lg:text-xl"
                                 style={{
                                     fontFamily: 'Pretendard, sans-serif',
                                     fontWeight: 700,
-                                    fontSize: '21px',
                                     lineHeight: '26px',
                                     letterSpacing: '0%',
                                     textAlign: 'center',
@@ -194,10 +192,10 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
+                                className="text-base md:text-lg lg:text-xl"
                                 style={{
                                     fontFamily: 'Pretendard, sans-serif',
                                     fontWeight: 700,
-                                    fontSize: '21px',
                                     lineHeight: '26px',
                                     letterSpacing: '0%',
                                     textAlign: 'center',
@@ -226,11 +224,10 @@ export default function ProgramSection() {
                         />
                         <div>
                             <h3
-                                className="mb-2"
+                                className="mb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                                 style={{
                                     fontFamily: 'Pretendard, sans-serif',
                                     fontWeight: 700,
-                                    fontSize: '32px',
                                     lineHeight: '100%',
                                     letterSpacing: '0%',
                                     textAlign: 'center',
@@ -240,10 +237,10 @@ export default function ProgramSection() {
                                 데이터 기반의 체계적인 분석
                             </h3>
                             <p
+                                className="text-base md:text-lg lg:text-xl"
                                 style={{
                                     fontFamily: 'Pretendard, sans-serif',
                                     fontWeight: 400,
-                                    fontSize: '21px',
                                     lineHeight: '26px',
                                     letterSpacing: '0%',
                                     textAlign: 'center',
@@ -280,10 +277,10 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
+                                className="text-base md:text-lg lg:text-xl"
                                 style={{
                                     fontFamily: 'Pretendard, sans-serif',
                                     fontWeight: 700,
-                                    fontSize: '21px',
                                     lineHeight: '26px',
                                     letterSpacing: '0%',
                                     textAlign: 'center',
@@ -316,10 +313,10 @@ export default function ProgramSection() {
                             style={{ backgroundColor: 'rgba(57, 38, 24, 0.8)' }}
                         >
                             <p
+                                className="text-base md:text-lg lg:text-xl"
                                 style={{
                                     fontFamily: 'Pretendard, sans-serif',
                                     fontWeight: 700,
-                                    fontSize: '21px',
                                     lineHeight: '26px',
                                     letterSpacing: '0%',
                                     textAlign: 'center',
@@ -348,10 +345,10 @@ export default function ProgramSection() {
                         }}
                     >
                         <span
+                            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                             style={{
                                 fontFamily: 'Daehan, sans-serif',
                                 fontWeight: 700,
-                                fontSize: '32px',
                                 lineHeight: '100%',
                                 letterSpacing: '0%',
                                 textAlign: 'center',
@@ -361,10 +358,10 @@ export default function ProgramSection() {
                         </span>
                         <br />
                         <span
+                            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                             style={{
                                 fontFamily: 'Pretendard, sans-serif',
                                 fontWeight: 700,
-                                fontSize: '32px',
                                 lineHeight: '100%',
                                 letterSpacing: '0%',
                                 textAlign: 'center',
@@ -374,10 +371,10 @@ export default function ProgramSection() {
                         </span>
                         <br />
                         <span
+                            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                             style={{
                                 fontFamily: 'Pretendard, sans-serif',
                                 fontWeight: 700,
-                                fontSize: '32px',
                                 lineHeight: '100%',
                                 letterSpacing: '0%',
                                 textAlign: 'center',
@@ -387,10 +384,10 @@ export default function ProgramSection() {
                         </span>
                         <br />
                         <span
+                            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                             style={{
                                 fontFamily: 'Daehan, sans-serif',
                                 fontWeight: 700,
-                                fontSize: '32px',
                                 lineHeight: '100%',
                                 letterSpacing: '0%',
                                 textAlign: 'center',

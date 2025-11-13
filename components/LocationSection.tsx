@@ -21,11 +21,10 @@ export default function LocationSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="mb-6 md:mb-24"
+            className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             style={{
               fontFamily: 'Belleza-Regular, sans-serif',
               fontWeight: 400,
-              fontSize: '48px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -37,10 +36,10 @@ export default function LocationSection() {
           </h2>
           <div>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -51,10 +50,10 @@ export default function LocationSection() {
               도안재는 가장 편안한 공간에서
             </p>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -101,10 +100,10 @@ export default function LocationSection() {
             style={{ color: "#3b2415" }}
           />
           <p
+            className="text-base md:text-lg lg:text-xl"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 400,
-              fontSize: '21px',
               lineHeight: '26px',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -114,10 +113,10 @@ export default function LocationSection() {
           >
             서울특별시 광진구 동이로 212, <br />{" "}
             <span
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -139,10 +138,10 @@ export default function LocationSection() {
           className="text-center"
         >
           <h3
+            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -156,10 +155,10 @@ export default function LocationSection() {
 
           <div>
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 400,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -171,10 +170,10 @@ export default function LocationSection() {
             </p>
             <br />
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',

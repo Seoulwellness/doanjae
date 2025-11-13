@@ -29,11 +29,10 @@ export default function SlimmingProgramSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="mb-6 md:mb-32"
+            className="mb-6 md:mb-32 text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
               fontFamily: 'Belleza-Regular, sans-serif',
               fontWeight: 400,
-              fontSize: '32px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -46,10 +45,10 @@ export default function SlimmingProgramSection() {
           {/* Text below title */}
           <div className="space-y-2 md:space-y-3">
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '21px',
                 lineHeight: '100%',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -59,10 +58,10 @@ export default function SlimmingProgramSection() {
               당신의 몸에 가장 &apos;편안한 변화&apos;
             </p>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -72,10 +71,10 @@ export default function SlimmingProgramSection() {
               누워서 30분
             </p>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -116,10 +115,10 @@ export default function SlimmingProgramSection() {
         >
           {/* Main Title */}
           <h3
+            className="text-base md:text-lg lg:text-xl"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 500,
-              fontSize: '21px',
               lineHeight: '26px',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -132,10 +131,10 @@ export default function SlimmingProgramSection() {
 
           {/* Focus Statement */}
           <p
+            className="text-base md:text-lg lg:text-xl"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 500,
-              fontSize: '21px',
               lineHeight: '26px',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -145,10 +144,10 @@ export default function SlimmingProgramSection() {
           >
             도안재의 기술이{' '}
             <span
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -164,10 +163,10 @@ export default function SlimmingProgramSection() {
           {/* Descriptive Paragraphs */}
           <div className="space-y-4">
             <p
+              className="text-xs md:text-sm"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '12px',
                 lineHeight: '16px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -179,10 +178,10 @@ export default function SlimmingProgramSection() {
               부종을 빠르게 완화하고,
             </p>
             <p
+              className="text-xs md:text-sm"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '12px',
                 lineHeight: '16px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -198,10 +197,10 @@ export default function SlimmingProgramSection() {
           {/* Quoted Text Block */}
           <div className="mt-8 md:mt-32 space-y-2">
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Daehan, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',

@@ -139,6 +139,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Global Word Break - Optimized for Korean text */
+* {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* Hide scrollbar but allow scrolling */
 html {
   scrollbar-width: none; /* Firefox */
@@ -164,6 +170,8 @@ body {
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Container Queries Support */

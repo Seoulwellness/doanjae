@@ -43,10 +43,10 @@ function ReviewCard({
           style={{ backgroundColor: "#3b2415" }}
         >
           <span
+            className="text-base md:text-lg lg:text-xl"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 700,
-              fontSize: '21px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -68,10 +68,10 @@ function ReviewCard({
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
               <p
+                className="text-base md:text-lg lg:text-xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 700,
-                  fontSize: '21px',
                   lineHeight: '100%',
                   letterSpacing: '0%',
                   verticalAlign: 'middle',
@@ -98,11 +98,10 @@ function ReviewCard({
 
           {/* Date */}
           <p
-            className="mb-3"
+            className="mb-3 text-sm md:text-base"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 400,
-              fontSize: '16px',
               lineHeight: '100%',
               letterSpacing: '0%',
               color: '#FFFFFF',
@@ -115,11 +114,10 @@ function ReviewCard({
           <div className="flex items-start gap-3">
             {/* Review Text - 70% width, left-aligned */}
             <p
-              className="line-clamp-2 w-[70%] text-left whitespace-pre-line"
+              className="line-clamp-2 w-[70%] text-left whitespace-pre-line text-xs md:text-sm"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '12px',
                 lineHeight: '100%',
                 letterSpacing: '0%',
                 color: '#FFFFFF',
@@ -185,11 +183,10 @@ export default function ReviewSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="mb-6 md:mb-24"
+            className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             style={{
               fontFamily: 'Belleza-Regular, sans-serif',
               fontWeight: 400,
-              fontSize: '48px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -202,10 +199,10 @@ export default function ReviewSection() {
 
           <div>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -217,10 +214,10 @@ export default function ReviewSection() {
             </p>
             <br />
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',

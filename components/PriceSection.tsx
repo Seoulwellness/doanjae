@@ -17,11 +17,10 @@ export default function PriceSection() {
           className="text-center mb-8 md:mb-16"
         >
           <h2
-            className="mb-6 md:mb-24"
+            className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             style={{
               fontFamily: 'Belleza-Regular, sans-serif',
               fontWeight: 400,
-              fontSize: '48px',
               lineHeight: '100%',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -33,10 +32,10 @@ export default function PriceSection() {
           </h2>
           <div>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -47,10 +46,10 @@ export default function PriceSection() {
               11월 17일,
             </p>
             <p
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '32px',
                 lineHeight: '40px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -67,10 +66,10 @@ export default function PriceSection() {
               style={{ backgroundColor: "#3b2415" }}
             >
               <p
+                className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={{
                   fontFamily: 'Pretendard, sans-serif',
                   fontWeight: 600,
-                  fontSize: '32px',
                   lineHeight: '40px',
                   letterSpacing: '0%',
                   textAlign: 'center',
@@ -85,10 +84,10 @@ export default function PriceSection() {
             <br />
             <br />
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 500,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -100,10 +99,10 @@ export default function PriceSection() {
             </p>
             <br />
             <p
+              className="text-base md:text-lg lg:text-xl"
               style={{
                 fontFamily: 'Pretendard, sans-serif',
                 fontWeight: 700,
-                fontSize: '21px',
                 lineHeight: '26px',
                 letterSpacing: '0%',
                 textAlign: 'center',
@@ -146,10 +145,10 @@ export default function PriceSection() {
           className="text-center"
         >
           <p
+            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 500,
-              fontSize: '32px',
               lineHeight: '40px',
               letterSpacing: '0%',
               textAlign: 'center',
@@ -161,10 +160,10 @@ export default function PriceSection() {
           </p>
           <br />
           <p
+            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
               fontFamily: 'Pretendard, sans-serif',
               fontWeight: 700,
-              fontSize: '32px',
               lineHeight: '40px',
               letterSpacing: '0%',
               textAlign: 'center',
