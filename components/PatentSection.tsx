@@ -7,7 +7,10 @@ import { fadeInRight, fadeInUp } from "@/lib/animations";
 
 export default function PatentSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const progressTrackRef = useRef<HTMLDivElement>(null);
+  const progressThumbRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isDraggingProgress, setIsDraggingProgress] = useState(false);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -27,6 +30,63 @@ export default function PatentSection() {
       container.removeEventListener("scroll", updateScrollProgress);
     };
   }, []);
+
+  // Progress bar interaction handlers
+  useEffect(() => {
+    const track = progressTrackRef.current;
+    const thumb = progressThumbRef.current;
+    const container = scrollContainerRef.current;
+    if (!track || !container) return;
+
+    const updateScrollFromPosition = (clientX: number) => {
+      const rect = track.getBoundingClientRect();
+      const clickX = clientX - rect.left;
+      const trackWidth = rect.width;
+      const percentage = Math.max(
+        0,
+        Math.min(100, (clickX / trackWidth) * 100)
+      );
+
+      // Calculate scroll position
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      const targetScroll = (percentage / 100) * maxScroll;
+      container.scrollLeft = targetScroll;
+    };
+
+    const handleProgressMouseDown = (e: MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsDraggingProgress(true);
+      updateScrollFromPosition(e.clientX);
+    };
+
+    const handleProgressMouseMove = (e: MouseEvent) => {
+      if (!isDraggingProgress) return;
+      e.preventDefault();
+      updateScrollFromPosition(e.clientX);
+    };
+
+    const handleProgressMouseUp = () => {
+      setIsDraggingProgress(false);
+    };
+
+    // Add listeners to both track and thumb
+    track.addEventListener("mousedown", handleProgressMouseDown);
+    if (thumb) {
+      thumb.addEventListener("mousedown", handleProgressMouseDown);
+    }
+    document.addEventListener("mousemove", handleProgressMouseMove);
+    document.addEventListener("mouseup", handleProgressMouseUp);
+
+    return () => {
+      track.removeEventListener("mousedown", handleProgressMouseDown);
+      if (thumb) {
+        thumb.removeEventListener("mousedown", handleProgressMouseDown);
+      }
+      document.removeEventListener("mousemove", handleProgressMouseMove);
+      document.removeEventListener("mouseup", handleProgressMouseUp);
+    };
+  }, [isDraggingProgress]);
 
   // Calculate thumb position accounting for its width
   // Use CSS calc to position thumb correctly: left = progress% but limit to (100% - thumbWidth)
@@ -55,11 +115,14 @@ export default function PatentSection() {
       thumbWidthPercent = 25;
     }
 
+    // When at 100% scroll, thumb should reach the end (right edge at 100%)
+    // So left position should be 100% - thumbWidthPercent
+    if (scrollProgress >= 100) {
+      return 100 - thumbWidthPercent;
+    }
+
     // Position: scrollProgress * (100 - thumbWidthPercent) / 100
-    return Math.min(
-      (scrollProgress * (100 - thumbWidthPercent)) / 100,
-      100 - thumbWidthPercent
-    );
+    return (scrollProgress * (100 - thumbWidthPercent)) / 100;
   };
 
   return (
@@ -130,11 +193,29 @@ export default function PatentSection() {
 
         {/* Scroll Progress Bar */}
         <div className="flex justify-center mt-4">
-          <div className="relative w-64 md:w-80 lg:w-[75%] h-1 bg-gray-200 rounded-full">
+          <div
+            ref={progressTrackRef}
+            className="relative w-64 md:w-80 lg:w-[75%] h-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300 transition-colors select-none"
+          >
             <motion.div
-              className="absolute top-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full"
-              style={{ left: `${getThumbPosition()}%` }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              ref={progressThumbRef}
+              className="absolute top-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
+              style={{
+                ...(scrollProgress >= 100
+                  ? { right: 0, left: "auto" }
+                  : { left: `${getThumbPosition()}%`, right: "auto" }),
+                transition: isDraggingProgress ? "none" : undefined,
+              }}
+              animate={
+                scrollProgress >= 100
+                  ? { right: 0, left: "auto" }
+                  : { left: `${getThumbPosition()}%`, right: "auto" }
+              }
+              transition={
+                isDraggingProgress
+                  ? { duration: 0 }
+                  : { type: "spring", stiffness: 300, damping: 30 }
+              }
             />
           </div>
         </div>
