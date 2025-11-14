@@ -19,7 +19,7 @@ export default function PremiumSection() {
           variants={fadeInUp}
           className="relative w-full mb-12 md:mb-24"
         >
-          <div className="relative w-full aspect-video overflow-hidden rounded-lg">
+          <div className="relative w-full aspect-video overflow-hidden rounded-none">
             <Image
               src="/images/landing/video.png"
               alt="프리미엄 다이어트 테라피"

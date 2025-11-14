@@ -19,13 +19,13 @@ export default function PriceSection() {
           <h2
             className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             style={{
-              fontFamily: 'Belleza-Regular, sans-serif',
+              fontFamily: "Belleza-Regular, sans-serif",
               fontWeight: 400,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              textAlign: "center",
+              verticalAlign: "middle",
+              color: "#3B2415",
             }}
           >
             Price
@@ -34,25 +34,25 @@ export default function PriceSection() {
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
-              11월 17일,
+              2025년 11월
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
               도안재 GRAND OPEN!
@@ -66,15 +66,15 @@ export default function PriceSection() {
               <p
                 className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 600,
-                  letterSpacing: '0%',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  color: '#FFFFFF',
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                  verticalAlign: "middle",
+                  color: "#FFFFFF",
                 }}
               >
-                첫방문 49,500원!
+                첫방문 49,500원
               </p>
             </div>
             <br />
@@ -83,12 +83,12 @@ export default function PriceSection() {
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#000000',
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#000000",
               }}
             >
               런칭을 기념하여 오직 지금만 드리는
@@ -97,12 +97,12 @@ export default function PriceSection() {
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#000000',
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#000000",
               }}
             >
               특별한 혜택을 놓치지 마세요!
@@ -142,12 +142,12 @@ export default function PriceSection() {
           <p
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 500,
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              letterSpacing: "0%",
+              textAlign: "center",
+              verticalAlign: "middle",
+              color: "#3B2415",
             }}
           >
             오픈 혜택 마감 전,
@@ -156,12 +156,12 @@ export default function PriceSection() {
           <p
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              letterSpacing: "0%",
+              textAlign: "center",
+              verticalAlign: "middle",
+              color: "#3B2415",
             }}
           >
             지금 바로 예약하세요!

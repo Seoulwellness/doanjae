@@ -12,7 +12,7 @@ export default function Landing() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer}
-      className="relative lg:h-screen pb-8 lg:py-0 lg:flex lg:items-center"
+      className="relative py-8 md:py-12 lg:py-40"
       style={{ backgroundColor: "#e4dbd2" }}
     >
       <div className="container mx-auto max-w-7xl w-full">

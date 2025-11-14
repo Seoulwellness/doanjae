@@ -110,6 +110,7 @@ export default function Hero() {
   return (
     <motion.section
       id="home"
+      data-hero-section
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
@@ -242,7 +243,7 @@ export default function Hero() {
 
       {/* Buttons - Fixed at bottom */}
       <div className="fixed bottom-0 md:bottom-16 left-0 right-0 z-40 w-full">
-        <div className="flex justify-center w-full px-4 md:px-0">
+        <div className="flex justify-center w-full md:px-0">
           <motion.div
             variants={fadeInUp}
             className="flex w-full md:w-1/2 md:rounded-4xl overflow-hidden shadow-lg"
@@ -251,7 +252,7 @@ export default function Hero() {
               href="#contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-shadow text-center text-sm md:text-base"
+              className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-shadow text-center text-sm md:text-base"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
@@ -269,7 +270,7 @@ export default function Hero() {
               href="#about"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex-1 px-4 md:px-8 py-8 md:py-4 transition-colors text-center text-sm md:text-base"
+              className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-colors text-center text-sm md:text-base"
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,

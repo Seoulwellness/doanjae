@@ -6,7 +6,7 @@ import { fadeInUp } from "@/lib/animations";
 
 export default function CTASection() {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="px-4 sm:px-6 lg:px-8 pb-8 md:pb-12 lg:pb-16 bg-white">
       {/* Image 19 with Overlaid Text - Full Width */}
       <motion.div
         initial="hidden"

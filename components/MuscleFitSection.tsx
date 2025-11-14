@@ -22,12 +22,12 @@ export default function MuscleFitSection() {
           <h2
             className="mb-6 md:mb-24 text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
-              fontFamily: 'Belleza-Regular, sans-serif',
+              fontFamily: "Belleza-Regular, sans-serif",
               fontWeight: 400,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              color: '#3B2415',
+              lineHeight: "100%",
+              letterSpacing: "0%",
+              textAlign: "center",
+              color: "#3B2415",
             }}
           >
             Muscle fit Program
@@ -37,24 +37,24 @@ export default function MuscleFitSection() {
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
-              운동만으로는 채울 수 없는{' '}
+              운동만으로는 채울 수 없는{" "}
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  letterSpacing: '0%',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  letterSpacing: "0%",
+                  textAlign: "center",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 &apos;핏(FIT)&apos;을 원하신다면,
@@ -63,25 +63,25 @@ export default function MuscleFitSection() {
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
-              운동없이 완성하는,
+              운동없이 완성하는
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                textAlign: "center",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
               고강도 머슬핏 케어
@@ -127,21 +127,21 @@ export default function MuscleFitSection() {
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                letterSpacing: '0%',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 근육 강화, 림프 순환, 지방 감소 3종 프로그램
@@ -170,21 +170,21 @@ export default function MuscleFitSection() {
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={{
-                fontFamily: 'Pretendard, sans-serif',
+                fontFamily: "Pretendard, sans-serif",
                 fontWeight: 500,
-                letterSpacing: '0%',
-                verticalAlign: 'middle',
-                color: '#3B2415',
+                letterSpacing: "0%",
+                verticalAlign: "middle",
+                color: "#3B2415",
               }}
             >
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 &apos;고강도 전자기장 기술&apos;을 기반
@@ -194,11 +194,11 @@ export default function MuscleFitSection() {
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 자극하기 어려운 깊은 근육까지
@@ -207,11 +207,11 @@ export default function MuscleFitSection() {
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={{
-                  fontFamily: 'Pretendard, sans-serif',
+                  fontFamily: "Pretendard, sans-serif",
                   fontWeight: 700,
-                  letterSpacing: '0%',
-                  verticalAlign: 'middle',
-                  color: '#3B2415',
+                  letterSpacing: "0%",
+                  verticalAlign: "middle",
+                  color: "#3B2415",
                 }}
               >
                 직접 자극하고 강화하여,
@@ -252,13 +252,13 @@ export default function MuscleFitSection() {
           <p
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              lineHeight: '40px',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              lineHeight: "40px",
+              letterSpacing: "0%",
+              textAlign: "center",
+              verticalAlign: "middle",
+              color: "#3B2415",
             }}
           >
             운동 후 지친 근육을 위한
@@ -266,12 +266,12 @@ export default function MuscleFitSection() {
           <p
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
             style={{
-              fontFamily: 'Pretendard, sans-serif',
+              fontFamily: "Pretendard, sans-serif",
               fontWeight: 700,
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
+              letterSpacing: "0%",
+              textAlign: "center",
+              verticalAlign: "middle",
+              color: "#3B2415",
             }}
           >
             도안재만의 힐링 케어

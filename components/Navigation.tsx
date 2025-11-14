@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { prefersReducedMotion } from "@/lib/animations";
 
 interface NavigationProps {
   fixed?: boolean;
@@ -80,7 +82,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
             <Link href="/">
               <div className="flex-shrink-0 transition-opacity duration-200 ease-out">
                 <Image
-                  src={bannerVisible ? "/logo2.png" : "/logo4.png"}
+                  src={bannerVisible ? "/logo2.png" : "/logo3.png"}
                   alt="DOANJAE"
                   width={120}
                   height={120}
@@ -192,117 +194,154 @@ export default function Navigation({ fixed = true }: NavigationProps) {
       </nav>
 
       {/* Mobile Side Panel */}
-      {isMenuOpen && (
-        <>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 bg-black/50 z-[110] md:hidden"
-            onClick={() => setIsMenuOpen(false)}
-          />
+      <AnimatePresence>
+        {isMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={
+                prefersReducedMotion()
+                  ? { duration: 0.01 }
+                  : { duration: 0.3, ease: "easeOut" }
+              }
+              className="fixed inset-0 bg-black/50 z-[110] md:hidden"
+              onClick={() => setIsMenuOpen(false)}
+            />
 
-          {/* Side Panel */}
-          <div
-            className="fixed left-0 top-0 bottom-0 w-[70%] max-w-sm bg-[#d8ceba] z-[110] md:hidden overflow-y-auto"
-            onClick={(e: React.MouseEvent) => e.stopPropagation()}
-          >
-            <div className="flex flex-col h-full">
-              {/* Header */}
-              <div className="p-6 bg-[#d8ceba]">
-                <Link href="/">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Image
-                      src="/logo.png"
-                      alt="DOANJAE"
-                      width={50}
-                      height={50}
-                      style={{ width: "50px", height: "auto" }}
-                    />
-                    <div className="flex flex-col">
-                      <p className="text-black font-medium mb-1">
-                        가볍게, 편안하게, 아름답게
-                      </p>
-                      <p className="text-black text-sm">
-                        Korea Wellness & Body Therapy
-                      </p>
+            {/* Side Panel */}
+            <motion.div
+              initial={
+                prefersReducedMotion()
+                  ? { opacity: 0 }
+                  : { opacity: 0, x: "-100%" }
+              }
+              animate={
+                prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, x: 0 }
+              }
+              exit={
+                prefersReducedMotion()
+                  ? { opacity: 0 }
+                  : { opacity: 0, x: "-100%" }
+              }
+              transition={
+                prefersReducedMotion()
+                  ? { duration: 0.01 }
+                  : { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }
+              }
+              className="fixed left-0 top-0 bottom-0 w-[80%] max-w-md bg-[#d8ceba] z-[110] md:hidden overflow-y-auto"
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
+            >
+              <div className="flex flex-col h-full">
+                {/* Header */}
+                <div className="p-6 bg-[#d8ceba] relative">
+                  {/* Close Button */}
+                  <button
+                    className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/10 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                    aria-label="Close menu"
+                  >
+                    <X className="w-6 h-6 text-black" />
+                  </button>
+
+                  <Link href="/">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Image
+                        src="/logo.png"
+                        alt="DOANJAE"
+                        width={50}
+                        height={50}
+                        style={{ width: "50px", height: "auto" }}
+                      />
+                      <div className="flex flex-col">
+                        <p className="text-black font-medium mb-1">
+                          가볍게, 편안하게, 아름답게
+                        </p>
+                        <p className="text-black text-sm">
+                          Korea Wellness & Body Therapy
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
+                  </Link>
+                </div>
 
-              {/* Promotional Banner */}
-              <div className="px-6 py-6 bg-[#ffd800]">
-                <p className="text-black font-semibold text-sm leading-relaxed">
-                  카카오톡 채널 추가하고
-                  <br />
-                  3,000원 혜택 받아가세요!
-                </p>
-              </div>
+                {/* Promotional Banner */}
+                <div className="px-6 py-6 bg-[#ffd800]">
+                  <p className="text-black font-semibold text-sm leading-relaxed">
+                    카카오톡 채널 추가하고
+                    <br />
+                    3,000원 혜택 받아가세요!
+                  </p>
+                </div>
 
-              {/* Navigation Links */}
-              <div className="flex-1 px-6 py-4">
-                <nav className="space-y-0">
-                  <Link
-                    href="/#brand"
-                    className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                    style={{
-                      fontFamily: "Pretendard, sans-serif",
-                      fontWeight: 700,
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    BRAND
-                  </Link>
-                  <Link
-                    href="/#program"
-                    className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                    style={{
-                      fontFamily: "Pretendard, sans-serif",
-                      fontWeight: 700,
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    PROGRAM
-                  </Link>
-                  <Link
-                    href="/#price"
-                    className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                    style={{
-                      fontFamily: "Pretendard, sans-serif",
-                      fontWeight: 700,
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    PRICE
-                  </Link>
-                  <Link
-                    href="/#contact"
-                    className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                    style={{
-                      fontFamily: "Pretendard, sans-serif",
-                      fontWeight: 700,
-                      lineHeight: "100%",
-                      letterSpacing: "0%",
-                      color: "#000000",
-                    }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    CONTACT
-                  </Link>
-                </nav>
+                {/* Navigation Links */}
+                <div className="flex-1 px-6 py-4">
+                  <nav className="space-y-0">
+                    <Link
+                      href="/#brand"
+                      className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: "Pretendard, sans-serif",
+                        fontWeight: 700,
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#000000",
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      BRAND
+                    </Link>
+                    <Link
+                      href="/#program"
+                      className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: "Pretendard, sans-serif",
+                        fontWeight: 700,
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#000000",
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      PROGRAM
+                    </Link>
+                    <Link
+                      href="/#price"
+                      className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: "Pretendard, sans-serif",
+                        fontWeight: 700,
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#000000",
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      PRICE
+                    </Link>
+                    <Link
+                      href="/#contact"
+                      className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
+                      style={{
+                        fontFamily: "Pretendard, sans-serif",
+                        fontWeight: 700,
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#000000",
+                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      CONTACT
+                    </Link>
+                  </nav>
+                </div>
               </div>
-            </div>
-          </div>
-        </>
-      )}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }

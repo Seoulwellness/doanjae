@@ -6,10 +6,10 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <div
-      className="w-full py-4 md:py-6 overflow-hidden"
+      className="w-full h-10 md:h-[54px] overflow-hidden flex items-center py-2 md:py-3"
       style={{ backgroundColor: "#3b2415" }}
     >
-      <div className="relative">
+      <div className="relative w-full">
         {/* Repeating Logo3 Animation */}
         <motion.div
           initial={{ x: 0 }}
@@ -28,7 +28,7 @@ export default function Footer() {
                 alt="DOANJAE"
                 width={80}
                 height={34}
-                className="h-auto w-16 md:w-20 lg:w-24"
+                className="h-5 md:h-6 w-auto"
               />
             </div>
           ))}
