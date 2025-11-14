@@ -13,7 +13,7 @@ import ProgramSection from "@/components/ProgramSection";
 import SlimmingProgramSection from "@/components/SlimmingProgramSection";
 import MuscleFitSection from "@/components/MuscleFitSection";
 import WellnessBodyTherapySection from "@/components/WellnessBodyTherapySection";
-import ReviewSection from "@/components/ReviewSection";
+// import ReviewSection from "@/components/ReviewSection";
 import PriceSection from "@/components/PriceSection";
 import ProcessSection from "@/components/ProcessSection";
 import LocationSection from "@/components/LocationSection";
@@ -74,9 +74,9 @@ export default function Home() {
       <ErrorBoundary>
         <WellnessBodyTherapySection />
       </ErrorBoundary>
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <ReviewSection />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
       <ErrorBoundary>
         <PriceSection />
       </ErrorBoundary>
