@@ -1,51 +1,113 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { fadeInDown } from "@/lib/animations";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { motion, AnimatePresence, PanInfo } from "framer-motion";
+import { prefersReducedMotion } from "@/lib/animations";
+
+interface BannerItem {
+  id: number;
+  text: string;
+}
+
+const bannerItems: BannerItem[] = [
+  { id: 1, text: "11월 17일 GRAND OPEN" },
+  { id: 2, text: "신규 회원 특별 할인 진행중" },
+  { id: 3, text: "무료 체험 예약 받습니다" },
+];
+
+const AUTO_PLAY_INTERVAL = 4000; // 4 seconds
 
 export default function Banner() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Auto-play functionality (disabled if user prefers reduced motion)
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+    if (!isDragging && !prefersReducedMotion()) {
+      autoPlayTimerRef.current = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % bannerItems.length);
+      }, AUTO_PLAY_INTERVAL);
+    }
 
-      // Hide banner when scrolling down, show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
+    return () => {
+      if (autoPlayTimerRef.current) {
+        clearInterval(autoPlayTimerRef.current);
       }
-
-      setLastScrollY(currentScrollY);
     };
+  }, [isDragging]);
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % bannerItems.length);
+  }, []);
+
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex(
+      (prev) => (prev - 1 + bannerItems.length) % bannerItems.length
+    );
+  }, []);
+
+  const handleDragStart = () => {
+    setIsDragging(true);
+    if (autoPlayTimerRef.current) {
+      clearInterval(autoPlayTimerRef.current);
+    }
+  };
+
+  const handleDragEnd = (
+    _: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
+    setIsDragging(false);
+    const swipeThreshold = 50;
+
+    if (info.offset.x > swipeThreshold) {
+      goToPrevious();
+    } else if (info.offset.x < -swipeThreshold) {
+      goToNext();
+    }
+  };
 
   return (
-    <AnimatePresence>
-      {isVisible && (
+    <div
+      id="top-banner"
+      className="w-full overflow-hidden"
+      style={{ backgroundColor: "#3b2415" }}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          variants={fadeInDown}
-          className="fixed top-0 left-0 right-0 z-[60]"
-          style={{ backgroundColor: "#3b2415" }}
+          className="flex items-center justify-center h-10 md:h-12 text-sm md:text-base cursor-grab active:cursor-grabbing"
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.2}
+          onDragStart={handleDragStart}
+          onDragEnd={handleDragEnd}
+          whileTap={{ cursor: "grabbing" }}
         >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center h-10 md:h-12 text-sm md:text-base">
-              <span className="text-white font-medium">
-                11월 17일 GRAND OPEN
-              </span>
-            </div>
-          </div>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.span
+              key={currentIndex}
+              initial={
+                prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, x: 20 }
+              }
+              animate={
+                prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, x: 0 }
+              }
+              exit={
+                prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, x: -20 }
+              }
+              transition={
+                prefersReducedMotion()
+                  ? { duration: 0.01 }
+                  : { duration: 0.3, ease: "easeInOut" }
+              }
+              className="text-white font-medium whitespace-nowrap"
+            >
+              {bannerItems[currentIndex].text}
+            </motion.span>
+          </AnimatePresence>
         </motion.div>
-      )}
-    </AnimatePresence>
+      </div>
+    </div>
   );
 }

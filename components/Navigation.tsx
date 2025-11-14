@@ -12,25 +12,42 @@ interface NavigationProps {
 export default function Navigation({ fixed = true }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [bannerVisible, setBannerVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+    if (!fixed) return;
 
-      // Check if banner is visible (scrolling down past 50px hides it)
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+    let observer: IntersectionObserver | null = null;
+
+    // Use setTimeout to avoid synchronous setState in effect
+    const timeoutId = setTimeout(() => {
+      const bannerElement = document.getElementById("top-banner");
+      if (!bannerElement) {
         setBannerVisible(false);
-      } else if (currentScrollY < lastScrollY || currentScrollY <= 50) {
-        setBannerVisible(true);
+        return;
       }
 
-      setLastScrollY(currentScrollY);
-    };
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            setBannerVisible(entry.isIntersecting);
+          });
+        },
+        {
+          threshold: 0,
+          rootMargin: "0px",
+        }
+      );
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+      observer.observe(bannerElement);
+    }, 0);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, [fixed]);
 
   return (
     <>
@@ -38,9 +55,12 @@ export default function Navigation({ fixed = true }: NavigationProps) {
       <nav
         className={`${
           fixed ? "fixed" : "absolute"
-        } left-0 right-0 z-50 transition-all duration-300 ${
+        } left-0 right-0 z-[100] transition-all duration-200 ease-out ${
           fixed ? (bannerVisible ? "top-10" : "top-0") : "top-0"
         } md:hidden`}
+        style={{
+          backgroundColor: bannerVisible ? "transparent" : "#3b2415",
+        }}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -50,14 +70,17 @@ export default function Navigation({ fixed = true }: NavigationProps) {
               aria-label="Menu"
               onClick={() => setIsMenuOpen(true)}
             >
-              <Menu className="w-8 h-8 text-black" />
+              <Menu
+                className="w-8 h-8 transition-colors duration-200 ease-out"
+                style={{ color: bannerVisible ? "#000000" : "#ffffff" }}
+              />
             </button>
 
             {/* Logo - Center */}
             <Link href="/">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 transition-opacity duration-200 ease-out">
                 <Image
-                  src="/logo2.png"
+                  src={bannerVisible ? "/logo2.png" : "/logo4.png"}
                   alt="DOANJAE"
                   width={120}
                   height={120}
@@ -77,17 +100,25 @@ export default function Navigation({ fixed = true }: NavigationProps) {
       <nav
         className={`hidden md:block ${
           fixed ? "fixed" : "absolute"
-        } z-50 transition-all duration-300 ${
-          fixed ? (bannerVisible ? "top-12" : "top-0") : "top-10"
+        } z-[100] transition-[top] duration-200 ease-out ${
+          fixed ? (bannerVisible ? "top-12" : "top-3") : "top-10"
         } left-1/2 -translate-x-1/2`}
       >
-        <div className="rounded-lg px-6 md:px-8 lg:px-12 py-3 md:py-4">
+        <div
+          className={`rounded-lg px-6 md:px-8 lg:px-12 py-3 md:py-4 ${
+            bannerVisible ? "" : "shadow-sm"
+          }`}
+          style={{
+            backgroundColor: bannerVisible ? "transparent" : "#3b2415",
+            transition: "background-color 200ms ease-out",
+          }}
+        >
           <div className="flex items-center gap-8 md:gap-12 lg:gap-16 justify-between">
             {/* Logo */}
             <Link href="/">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 transition-opacity duration-200 ease-out">
                 <Image
-                  src="/logo.png"
+                  src={bannerVisible ? "/logo.png" : "/logo4.png"}
                   alt="DOANJAE"
                   width={40}
                   height={40}
@@ -107,7 +138,8 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                   fontWeight: 700,
                   lineHeight: "100%",
                   letterSpacing: "0%",
-                  color: "#000000",
+                  color: bannerVisible ? "#000000" : "#ffffff",
+                  transition: "color 200ms ease-out",
                 }}
               >
                 BRAND
@@ -120,7 +152,8 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                   fontWeight: 700,
                   lineHeight: "100%",
                   letterSpacing: "0%",
-                  color: "#000000",
+                  color: bannerVisible ? "#000000" : "#ffffff",
+                  transition: "color 200ms ease-out",
                 }}
               >
                 PROGRAM
@@ -133,7 +166,8 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                   fontWeight: 700,
                   lineHeight: "100%",
                   letterSpacing: "0%",
-                  color: "#000000",
+                  color: bannerVisible ? "#000000" : "#ffffff",
+                  transition: "color 200ms ease-out",
                 }}
               >
                 PRICE
@@ -146,7 +180,8 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                   fontWeight: 700,
                   lineHeight: "100%",
                   letterSpacing: "0%",
-                  color: "#000000",
+                  color: bannerVisible ? "#000000" : "#ffffff",
+                  transition: "color 200ms ease-out",
                 }}
               >
                 CONTACT
@@ -161,13 +196,13 @@ export default function Navigation({ fixed = true }: NavigationProps) {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/50 z-[60] md:hidden"
+            className="fixed inset-0 bg-black/50 z-[110] md:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
 
           {/* Side Panel */}
           <div
-            className="fixed left-0 top-0 bottom-0 w-[70%] max-w-sm bg-[#d8ceba] z-[60] md:hidden overflow-y-auto"
+            className="fixed left-0 top-0 bottom-0 w-[70%] max-w-sm bg-[#d8ceba] z-[110] md:hidden overflow-y-auto"
             onClick={(e: React.MouseEvent) => e.stopPropagation()}
           >
             <div className="flex flex-col h-full">

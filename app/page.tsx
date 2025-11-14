@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Banner from "@/components/Banner";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import ScrollToTop from "@/components/ScrollToTop";
 import Landing from "@/components/Landing";
 import Footer from "@/components/Footer";
 import ErrorBoundary from "@/components/ErrorBoundary";
@@ -48,6 +49,7 @@ export default function Home() {
       <Hero />
 
       {/* Landing Sections - Scrollable */}
+      <Banner />
       <Landing />
       <Footer />
       <ErrorBoundary>
@@ -87,6 +89,7 @@ export default function Home() {
       <ErrorBoundary>
         <CTASection />
       </ErrorBoundary>
+      <ScrollToTop />
     </ErrorBoundary>
   );
 }
