@@ -4,8 +4,11 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInRight, fadeInUp } from "@/lib/animations";
+import { colors, textStyles } from "@/lib/constants";
 
 export default function PatentSection() {
+  // Use existing textStyles
+  const headingStyle = textStyles.headingCentered;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const progressTrackRef = useRef<HTMLDivElement>(null);
   const progressThumbRef = useRef<HTMLDivElement>(null);
@@ -140,25 +143,13 @@ export default function PatentSection() {
         >
           <h2
             className="font-bold mb-2 md:mb-4 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-            style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 700,
-              letterSpacing: "0%",
-              textAlign: "center",
-              color: "#3B2415",
-            }}
+            style={headingStyle}
           >
             아름다운 체형 관리를 위한
           </h2>
           <h3
             className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-            style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 700,
-              letterSpacing: "0%",
-              textAlign: "center",
-              color: "#3B2415",
-            }}
+            style={headingStyle}
           >
             도안재만의 7종 특허기술
           </h3>
@@ -200,8 +191,9 @@ export default function PatentSection() {
           >
             <div
               ref={progressThumbRef}
-              className="absolute top-0 left-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
+              className="absolute top-0 left-0 h-full w-16 md:w-48 lg:w-64 rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
               style={{
+                backgroundColor: colors.brown.primary,
                 willChange: "transform",
                 transition: isDraggingProgress
                   ? "none"

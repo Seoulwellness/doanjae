@@ -3,12 +3,43 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
 export default function MuscleFitSection() {
+  // Extend base styles with component-specific overrides
+  const sectionTitleStyle = mergeStyles({
+    fontFamily: fonts.belleza,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    color: colors.brown.primary,
+  });
+
+  const bodyTextMedium = mergeStyles(textStyles.heading3, {
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const bodyTextBold = mergeStyles(textStyles.headingCentered, {
+    verticalAlign: "middle" as const,
+  });
+
+  const largeTextBold = mergeStyles(textStyles.headingCentered, {
+    verticalAlign: "middle" as const,
+  });
+
+  const bodyTextMediumLeft = mergeStyles(textStyles.heading3, {
+    verticalAlign: "middle" as const,
+  });
+
+  const bodyTextBoldLeft = mergeStyles(textStyles.heading1, {
+    verticalAlign: "middle" as const,
+  });
   return (
     <section
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: "#D8CEBA" }}
+      style={{ backgroundColor: colors.beige.primary }}
     >
       <div className="container mx-auto max-w-7xl">
         {/* Title and Text Section */}
@@ -21,14 +52,7 @@ export default function MuscleFitSection() {
         >
           <h2
             className="mb-6 md:mb-24 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-            style={{
-              fontFamily: "Belleza-Regular, sans-serif",
-              fontWeight: 400,
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              color: "#3B2415",
-            }}
+            style={sectionTitleStyle}
           >
             Muscle fit Program
           </h2>
@@ -36,53 +60,25 @@ export default function MuscleFitSection() {
           <div className="space-y-2 md:space-y-3">
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 500,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={bodyTextMedium}
             >
               운동만으로는 채울 수 없는{" "}
               <span
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  color: "#3B2415",
-                }}
+                style={bodyTextBold}
               >
                 &apos;핏(FIT)&apos;을 원하신다면,
               </span>
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={largeTextBold}
             >
               운동없이 완성하는
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={largeTextBold}
             >
               고강도 머슬핏 케어
             </p>
@@ -126,23 +122,11 @@ export default function MuscleFitSection() {
             </h3> */}
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 500,
-                letterSpacing: "0%",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={bodyTextMediumLeft}
             >
               <span
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                  color: "#3B2415",
-                }}
+                style={bodyTextBoldLeft}
               >
                 근육 강화, 림프 순환, 지방 감소 3종 프로그램
               </span>
@@ -169,23 +153,11 @@ export default function MuscleFitSection() {
             </h3> */}
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 500,
-                letterSpacing: "0%",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={bodyTextMediumLeft}
             >
               <span
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                  color: "#3B2415",
-                }}
+                style={bodyTextBoldLeft}
               >
                 &apos;고강도 전자기장 기술&apos;을 기반
               </span>
@@ -193,26 +165,14 @@ export default function MuscleFitSection() {
               일반적인 운동으로는 <br />
               <span
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                  color: "#3B2415",
-                }}
+                style={bodyTextBoldLeft}
               >
                 자극하기 어려운 깊은 근육까지
               </span>
               <br />
               <span
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                  color: "#3B2415",
-                }}
+                style={bodyTextBoldLeft}
               >
                 직접 자극하고 강화하여,
               </span>
@@ -252,27 +212,15 @@ export default function MuscleFitSection() {
           <p
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
             style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 700,
+              ...largeTextBold,
               lineHeight: "40px",
-              letterSpacing: "0%",
-              textAlign: "center",
-              verticalAlign: "middle",
-              color: "#3B2415",
             }}
           >
             운동 후 지친 근육을 위한
           </p>
           <p
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-            style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 700,
-              letterSpacing: "0%",
-              textAlign: "center",
-              verticalAlign: "middle",
-              color: "#3B2415",
-            }}
+            style={largeTextBold}
           >
             도안재만의 힐링 케어
           </p>

@@ -3,8 +3,38 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
 export default function CTASection() {
+  // Extend base styles with component-specific overrides
+  const ctaTextBold = mergeStyles(textStyles.headingCentered, {
+    verticalAlign: "middle" as const,
+    color: "#000000",
+  });
+
+  const labelTextStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "-0.15em",
+    color: colors.text.secondary,
+  });
+
+  const valueTextStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "-0.05em",
+    color: "#000000",
+  });
+
+  const copyrightTextStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    color: "#000000",
+  });
   return (
     <section className="px-4 sm:px-6 lg:px-8 pb-8 md:pb-12 lg:pb-16 bg-white">
       {/* Image 19 with Overlaid Text - Full Width */}
@@ -29,28 +59,13 @@ export default function CTASection() {
           <div className="text-center">
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#000000",
-                marginBottom: "8px",
-              }}
+              style={{ ...ctaTextBold, marginBottom: "8px" }}
             >
               지금 바로 &apos;가장 편안한 변화&apos;를
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#000000",
-              }}
+              style={ctaTextBold}
             >
               예약하세요.
             </p>
@@ -100,50 +115,26 @@ export default function CTASection() {
               <div className="flex flex-row items-center justify-center md:justify-start gap-1 md:gap-2">
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.15em",
-                    color: "#747474",
-                  }}
+                  style={labelTextStyle}
                 >
                   상호
                 </span>
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.05em",
-                    color: "#000000",
-                  }}
+                  style={valueTextStyle}
                 >
                   주식회사 서울웰니스클럽
                 </span>
                 <span
                   className="text-sm md:text-base lg:text-lg md:hidden"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.15em",
-                    color: "#747474",
-                  }}
+                  style={labelTextStyle}
                 >
                   {" "}
                   대표자{" "}
                 </span>
                 <span
                   className="text-sm md:text-base lg:text-lg md:hidden"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.05em",
-                    color: "#000000",
-                  }}
+                  style={valueTextStyle}
                 >
                   김연준
                 </span>
@@ -153,25 +144,13 @@ export default function CTASection() {
               <div className="hidden md:flex flex-row items-center gap-1 md:gap-2">
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.15em",
-                    color: "#747474",
-                  }}
+                  style={labelTextStyle}
                 >
                   대표자
                 </span>
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.05em",
-                    color: "#000000",
-                  }}
+                  style={valueTextStyle}
                 >
                   김연준
                 </span>
@@ -181,32 +160,21 @@ export default function CTASection() {
               <div className="flex flex-row items-center justify-center md:justify-start gap-1 md:gap-2">
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.15em",
-                    color: "#747474",
-                  }}
+                  style={labelTextStyle}
                 >
                   사업자등록번호
                 </span>
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.05em",
-                    color: "#000000",
-                  }}
+                  style={valueTextStyle}
                 >
                   8688102266
                   <a
                     href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=8688102266"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#000000] underline hover:opacity-70 transition-opacity ml-1 cursor-pointer"
+                    className="underline hover:opacity-70 transition-opacity ml-1 cursor-pointer"
+                    style={{ color: "#000000" }}
                   >
                     [사업자정보확인]
                   </a>
@@ -220,25 +188,13 @@ export default function CTASection() {
               <div className="flex flex-row items-center justify-center md:justify-start gap-1 md:gap-2">
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.15em",
-                    color: "#747474",
-                  }}
+                  style={labelTextStyle}
                 >
                   주소
                 </span>
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.05em",
-                    color: "#000000",
-                  }}
+                  style={valueTextStyle}
                 >
                   대전광역시 대덕구 대전로 1394, 1층(읍내동)
                 </span>
@@ -248,25 +204,13 @@ export default function CTASection() {
               <div className="flex flex-row items-center justify-center md:justify-start gap-1 md:gap-2">
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.15em",
-                    color: "#747474",
-                  }}
+                  style={labelTextStyle}
                 >
                   개인정보보호책임자
                 </span>
                 <span
                   className="text-sm md:text-base lg:text-lg"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 400,
-                    lineHeight: "100%",
-                    letterSpacing: "-0.05em",
-                    color: "#000000",
-                  }}
+                  style={valueTextStyle}
                 >
                   김연준
                 </span>
@@ -276,13 +220,7 @@ export default function CTASection() {
             {/* Copyright */}
             <p
               className="text-sm md:text-base lg:text-lg mt-2 text-center md:text-left"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 400,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "#000000",
-              }}
+              style={copyrightTextStyle}
             >
               Copyright ⓒ 주식회사 서울웰니스클럽 All rights reserved.
             </p>

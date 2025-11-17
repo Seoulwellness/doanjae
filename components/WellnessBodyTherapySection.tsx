@@ -3,8 +3,45 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInLeft, fadeInRight, fadeInUp } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
+import { colors as themeColors } from "@/lib/theme";
 
 export default function WellnessBodyTherapySection() {
+  // Extend base styles with component-specific overrides
+  const sectionTitleStyle = mergeStyles({
+    fontFamily: fonts.belleza,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    color: colors.brown.primary,
+  });
+
+  const bodyTextMedium = mergeStyles(textStyles.heading3, {
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const largeTextBold = mergeStyles(textStyles.headingCentered, {
+    verticalAlign: "middle" as const,
+  });
+
+  const overlayTextRegular = mergeStyles(textStyles.bodyWhite, {
+    fontWeight: 500,
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const overlayTextBold = mergeStyles(textStyles.headingWhite, {
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const quoteTextStyle = mergeStyles(textStyles.headingCentered, {
+    lineHeight: "100%",
+  });
+
+  const overlayBackground = themeColors.overlay.darkBrown;
   return (
     <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative">
       {/* Background Image */}
@@ -30,14 +67,7 @@ export default function WellnessBodyTherapySection() {
         >
           <h2
             className="mb-6 md:mb-24 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-            style={{
-              fontFamily: 'Belleza-Regular, sans-serif',
-              fontWeight: 400,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              color: '#3B2415',
-            }}
+            style={sectionTitleStyle}
           >
             Wellness Body Therapy
           </h2>
@@ -45,27 +75,13 @@ export default function WellnessBodyTherapySection() {
           <div>
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 500,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
-              }}
+              style={bodyTextMedium}
             >
               당신의 &apos;오늘&apos;을 확인하고
             </p>
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 500,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
-              }}
+              style={bodyTextMedium}
             >
               &apos;내일&apos;의 균형을 준비합니다.
             </p>
@@ -73,28 +89,14 @@ export default function WellnessBodyTherapySection() {
 
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
-              }}
+              style={largeTextBold}
             >
               단순한 체형관리에서
             </p>
 
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
-              }}
+              style={largeTextBold}
             >
               끝나지 않는 도안재의 웰니스 테라피
             </p>
@@ -122,44 +124,23 @@ export default function WellnessBodyTherapySection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 h-[85px] sm:h-[95px] md:h-[105px] lg:h-[115px] text-center flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16"
-              style={{ backgroundColor: "#3B2415CC" }}
+              style={{ backgroundColor: overlayBackground }}
             >
               <p
                 className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 500,
-                  letterSpacing: '0%',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  color: '#FFFFFF',
-                }}
+                style={overlayTextRegular}
               >
-                모든 관리가 끝나면{' '}
+                모든 관리가 끝나면{" "}
                 <span
                   className="text-base md:text-lg lg:text-xl"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 700,
-                    letterSpacing: '0%',
-                    textAlign: 'center',
-                    verticalAlign: 'middle',
-                    color: '#FFFFFF',
-                  }}
+                  style={overlayTextBold}
                 >
                   인바디 재측정을 통해
                 </span>
                 <br />
                 <span
                   className="text-base md:text-lg lg:text-xl"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 700,
-                    letterSpacing: '0%',
-                    textAlign: 'center',
-                    verticalAlign: 'middle',
-                    color: '#FFFFFF',
-                  }}
+                  style={overlayTextBold}
                 >
                   변화된 수치를 눈으로 직접 확인 합니다.
                 </span>
@@ -186,31 +167,17 @@ export default function WellnessBodyTherapySection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 h-[85px] sm:h-[95px] md:h-[105px] lg:h-[115px] text-center flex items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16"
-              style={{ backgroundColor: "#3B2415CC" }}
+              style={{ backgroundColor: overlayBackground }}
             >
               <p
                 className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 500,
-                  letterSpacing: '0%',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  color: '#FFFFFF',
-                }}
+                style={overlayTextRegular}
               >
                 디지털 체질 테스트 결과에 따라 특별히
                 <br />
                 <span
                   className="text-base md:text-lg lg:text-xl"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 700,
-                    letterSpacing: '0%',
-                    textAlign: 'center',
-                    verticalAlign: 'middle',
-                    color: '#FFFFFF',
-                  }}
+                  style={overlayTextBold}
                 >
                   블렌딩된 맞춤 한방 애프터티를 제공
                 </span>
@@ -232,7 +199,7 @@ export default function WellnessBodyTherapySection() {
           <p
             style={{
               textAlign: "center",
-              color: "#3B2415",
+              color: colors.brown.primary,
             }}
           >
             <span
@@ -251,39 +218,21 @@ export default function WellnessBodyTherapySection() {
             </span>
             <span
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                textAlign: "center",
-              }}
+              style={quoteTextStyle}
             >
               도안재는 무너진 균형의 원인을 발견하고
             </span>
             <br />
             <span
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                textAlign: "center",
-              }}
+              style={quoteTextStyle}
             >
               우리 몸에 맞는 이상적인 아름다움을
             </span>
             <br />
             <span
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                textAlign: "center",
-              }}
+              style={quoteTextStyle}
             >
               함께 찾아 갑니다.
             </span>

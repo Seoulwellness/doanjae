@@ -3,12 +3,42 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
 export default function LocationSection() {
+  // Extend base styles - Belleza font for section titles
+  const sectionTitleStyle = mergeStyles({
+    fontFamily: fonts.belleza,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+    color: colors.brown.primary,
+  });
+
+  const largeTextBold = mergeStyles(textStyles.headingCentered, {
+    verticalAlign: "middle" as const,
+  });
+
+  const bodyTextRegular = mergeStyles(textStyles.bodyCentered, {
+    fontWeight: 400,
+    color: colors.brown.primary,
+    verticalAlign: "middle" as const,
+  });
+
+  const bodyTextBold = mergeStyles(textStyles.headingCentered, {
+    verticalAlign: "middle" as const,
+  });
+
+  const headingStyle = mergeStyles(textStyles.headingCentered, {
+    lineHeight: "100%",
+    verticalAlign: "middle" as const,
+  });
   return (
     <section
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: "#D8CEBA" }}
+      style={{ backgroundColor: colors.beige.primary }}
     >
       <div className="container mx-auto max-w-7xl">
         {/* Title Section */}
@@ -21,42 +51,20 @@ export default function LocationSection() {
         >
           <h2
             className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            style={{
-              fontFamily: "Belleza-Regular, sans-serif",
-              fontWeight: 400,
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              verticalAlign: "middle",
-              color: "#3B2415",
-            }}
+            style={sectionTitleStyle}
           >
             Location
           </h2>
           <div>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={largeTextBold}
             >
               도안재는 가장 편안한 공간에서
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={largeTextBold}
             >
               당신을 기다립니다.
             </p>
@@ -107,32 +115,18 @@ export default function LocationSection() {
               style={{
                 width: "32%",
                 height: "32%",
-                backgroundColor: "#D8CEBA",
+                backgroundColor: colors.beige.primary,
               }}
             />
           </div>
           <p
             className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-            style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 400,
-              letterSpacing: "0%",
-              textAlign: "center",
-              verticalAlign: "middle",
-              color: "#3B2415",
-            }}
+            style={bodyTextRegular}
           >
             서울특별시 광진구 동이로 212, <br />{" "}
             <span
               className="text-base md:text-lg lg:text-xl"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={bodyTextBold}
             >
               아늑호텔 앤 스파 서울 성수 건대점 B1
             </span>
@@ -149,15 +143,7 @@ export default function LocationSection() {
         >
           <h3
             className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-            style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 700,
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              verticalAlign: "middle",
-              color: "#3B2415",
-            }}
+            style={headingStyle}
           >
             주차 안내
           </h3>
@@ -166,28 +152,14 @@ export default function LocationSection() {
           <div>
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 400,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={bodyTextRegular}
             >
               아늑 호텔 지하 주차장 이용 가능
             </p>
             <br />
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={bodyTextBold}
             >
               *관리 타임 무료 지원
             </p>

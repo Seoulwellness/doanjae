@@ -3,8 +3,46 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
 export default function ProcessSection() {
+  // Extend base styles with component-specific overrides
+  const sectionTitleStyle = mergeStyles({
+    fontFamily: fonts.belleza,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+    color: colors.brown.primary,
+  });
+
+  const largeTextBold = mergeStyles(textStyles.headingCentered, {
+    lineHeight: "100%",
+  });
+
+  const stepBadgeTextStyle = mergeStyles({
+    fontFamily: "Daehan, sans-serif",
+    fontWeight: 700,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    color: colors.text.white,
+  });
+
+  const headingStyle = mergeStyles(textStyles.heading1, { lineHeight: "100%" });
+
+  const subheadingStyle = mergeStyles(textStyles.heading1, {
+    lineHeight: "100%",
+  });
+
+  const smallTextStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    lineHeight: "16px",
+    letterSpacing: "0%",
+    color: colors.brown.primary,
+  });
   return (
     <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative">
       {/* Background Image */}
@@ -30,43 +68,21 @@ export default function ProcessSection() {
         >
           <h2
             className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            style={{
-              fontFamily: 'Belleza-Regular, sans-serif',
-              fontWeight: 400,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
-            }}
+            style={sectionTitleStyle}
           >
             Process
           </h2>
           <div>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                color: '#3B2415',
-              }}
+              style={largeTextBold}
             >
               도안재만의
             </p>
             <br />
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                color: '#3B2415',
-              }}
+              style={largeTextBold}
             >
               특별한 관리 프로세스
             </p>
@@ -105,70 +121,33 @@ export default function ProcessSection() {
             >
               <div
                 className="inline-block px-4 py-2 rounded-4xl mb-4"
-                style={{ backgroundColor: "#3b2415" }}
+                style={{ backgroundColor: colors.brown.primary }}
               >
                 <span
                   className="text-sm md:text-base"
-                  style={{
-                    fontFamily: 'Daehan, sans-serif',
-                    fontWeight: 700,
-                    lineHeight: '100%',
-                    letterSpacing: '0%',
-                    textAlign: 'center',
-                    color: '#FFFFFF',
-                  }}
+                  style={stepBadgeTextStyle}
                 >
                   STEP 01
                 </span>
               </div>
               <h2
                 className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 700,
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  color: '#3B2415',
-                }}
+                style={headingStyle}
               >
                 나를 알다.
               </h2>
               <h3
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 700,
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  color: '#3B2415',
-                }}
+                style={subheadingStyle}
               >
                 체질분석 및 상담
               </h3>
               <div>
-                <p
-                  className="text-xs md:text-sm"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 400,
-                    lineHeight: '16px',
-                    letterSpacing: '0%',
-                    color: '#3B2415',
-                  }}
-                >
+                <p className="text-xs md:text-sm" style={smallTextStyle}>
                   편안한 분위기에서 10년 경력의 전문가와 함께
                 </p>
 
-                <p
-                  className="text-xs md:text-sm"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 400,
-                    lineHeight: '16px',
-                    letterSpacing: '0%',
-                    color: '#3B2415',
-                  }}
-                >
+                <p className="text-xs md:text-sm" style={smallTextStyle}>
                   나의 체질과 라이프스타일을 분석합니다.
                 </p>
               </div>
@@ -187,69 +166,32 @@ export default function ProcessSection() {
             >
               <div
                 className="inline-block px-4 py-2 rounded-4xl mb-4"
-                style={{ backgroundColor: "#3b2415" }}
+                style={{ backgroundColor: colors.brown.primary }}
               >
                 <span
                   className="text-sm md:text-base"
-                  style={{
-                    fontFamily: 'Daehan, sans-serif',
-                    fontWeight: 700,
-                    lineHeight: '100%',
-                    letterSpacing: '0%',
-                    textAlign: 'center',
-                    color: '#FFFFFF',
-                  }}
+                  style={stepBadgeTextStyle}
                 >
                   STEP 02
                 </span>
               </div>
               <h2
                 className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 700,
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  color: '#3B2415',
-                }}
+                style={headingStyle}
               >
                 몸을 비우다.
               </h2>
               <h3
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 700,
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  color: '#3B2415',
-                }}
+                style={subheadingStyle}
               >
                 웰니스 바디 테라피
               </h3>
               <div>
-                <p
-                  className="text-xs md:text-sm"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 400,
-                    lineHeight: '16px',
-                    letterSpacing: '0%',
-                    color: '#3B2415',
-                  }}
-                >
+                <p className="text-xs md:text-sm" style={smallTextStyle}>
                   나에게 꼭 맞는 프로그램으로
                 </p>
-                <p
-                  className="text-xs md:text-sm"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 400,
-                    lineHeight: '16px',
-                    letterSpacing: '0%',
-                    color: '#3B2415',
-                  }}
-                >
+                <p className="text-xs md:text-sm" style={smallTextStyle}>
                   30분간 가장 편안한 휴식을 경험합니다.
                 </p>
               </div>
@@ -306,69 +248,32 @@ export default function ProcessSection() {
             >
               <div
                 className="inline-block px-4 py-2 rounded-4xl mb-4"
-                style={{ backgroundColor: "#3b2415" }}
+                style={{ backgroundColor: colors.brown.primary }}
               >
                 <span
                   className="text-sm md:text-base"
-                  style={{
-                    fontFamily: 'Daehan, sans-serif',
-                    fontWeight: 700,
-                    lineHeight: '100%',
-                    letterSpacing: '0%',
-                    textAlign: 'center',
-                    color: '#FFFFFF',
-                  }}
+                  style={stepBadgeTextStyle}
                 >
                   STEP 03
                 </span>
               </div>
               <h2
                 className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 700,
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  color: '#3B2415',
-                }}
+                style={headingStyle}
               >
                 변화를 만나다.
               </h2>
               <h3
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: 'Pretendard, sans-serif',
-                  fontWeight: 700,
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  color: '#3B2415',
-                }}
+                style={subheadingStyle}
               >
                 맞춤형 솔루션
               </h3>
               <div>
-                <p
-                  className="text-xs md:text-sm"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 400,
-                    lineHeight: '16px',
-                    letterSpacing: '0%',
-                    color: '#3B2415',
-                  }}
-                >
+                <p className="text-xs md:text-sm" style={smallTextStyle}>
                   관리 후 가벼워진 몸의 변화를 수치로 확인하고,
                 </p>
-                <p
-                  className="text-xs md:text-sm"
-                  style={{
-                    fontFamily: 'Pretendard, sans-serif',
-                    fontWeight: 400,
-                    lineHeight: '16px',
-                    letterSpacing: '0%',
-                    color: '#3B2415',
-                  }}
-                >
+                <p className="text-xs md:text-sm" style={smallTextStyle}>
                   도안재의 스페셜 티와 함께 마무리 합니다.
                 </p>
               </div>

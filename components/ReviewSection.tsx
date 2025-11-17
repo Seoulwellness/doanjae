@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { fadeInUp } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
 interface ReviewCardProps {
   imageSrc: string;
@@ -22,10 +23,31 @@ function ReviewCard({
   date,
   reviewText,
 }: ReviewCardProps) {
+  // Component-specific style constants
+  const badgeTextStyle = mergeStyles(textStyles.headingWhite, {
+    lineHeight: "100%",
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const customerNameStyle = mergeStyles(textStyles.headingWhite, {
+    lineHeight: "100%",
+    verticalAlign: "middle" as const,
+  });
+
+  const dateStyle = mergeStyles(textStyles.bodyWhite, {
+    lineHeight: "100%",
+  });
+
+  const reviewTextStyle = mergeStyles(textStyles.bodyWhite, {
+    fontWeight: 500,
+    lineHeight: "100%",
+  });
+
   return (
     <div
       className="relative w-full overflow-hidden rounded-4xl"
-      style={{ backgroundColor: "#ffffff" }}
+      style={{ backgroundColor: colors.background.secondary }}
     >
       {/* Image Section with Overlay */}
       <div className="relative w-full aspect-[3/4]">
@@ -40,19 +62,11 @@ function ReviewCard({
         {/* Circular Badge - Top Right */}
         <div
           className="absolute top-8 right-8 sm:top-13 sm:right-13 w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full flex flex-col items-center justify-center z-10"
-          style={{ backgroundColor: "#3b2415" }}
+          style={{ backgroundColor: colors.brown.primary }}
         >
           <span
             className="text-xs sm:text-base md:text-lg lg:text-xl"
-            style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 700,
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              verticalAlign: "middle",
-              color: "#FFFFFF",
-            }}
+            style={badgeTextStyle}
           >
             <span className="block">체지방</span>
             <span className="block">10% 감량</span>
@@ -62,21 +76,14 @@ function ReviewCard({
         {/* Bottom Section with Dark Brown Background - Overlay on Image */}
         <div
           className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 md:p-12 rounded-b-2xl"
-          style={{ backgroundColor: "#3b2415" }}
+          style={{ backgroundColor: colors.brown.primary }}
         >
           {/* Customer Name and Stars */}
           <div className="flex items-center justify-between mb-1 sm:mb-2">
             <div className="flex items-center gap-1 sm:gap-2">
               <p
                 className="text-xs sm:text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                  color: "#FFFFFF",
-                }}
+                style={customerNameStyle}
               >
                 {customerName}
               </p>
@@ -99,13 +106,7 @@ function ReviewCard({
           {/* Date */}
           <p
             className="mb-2 sm:mb-3 text-xs sm:text-sm md:text-base"
-            style={{
-              fontFamily: "Pretendard, sans-serif",
-              fontWeight: 400,
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              color: "#FFFFFF",
-            }}
+            style={dateStyle}
           >
             {date}
           </p>
@@ -115,13 +116,7 @@ function ReviewCard({
             {/* Review Text - 70% width, left-aligned */}
             <p
               className="line-clamp-2 w-[70%] text-left whitespace-pre-line text-[10px] sm:text-xs md:text-sm"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 500,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "#FFFFFF",
-              }}
+              style={reviewTextStyle}
             >
               {reviewText}
             </p>
@@ -293,10 +288,25 @@ export default function ReviewSection() {
     };
   }, [isDraggingProgress]);
 
+  // Component-specific style constants
+  const sectionTitleStyle = mergeStyles({
+    fontFamily: fonts.belleza,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+    color: colors.brown.primary,
+  });
+
+  const largeTextBold = mergeStyles(textStyles.headingCentered, {
+    verticalAlign: "middle" as const,
+  });
+
   return (
     <section
       className="py-8 md:py-32 relative"
-      style={{ backgroundColor: "#D8CEBA" }}
+      style={{ backgroundColor: colors.beige.primary }}
     >
       <div className="container mx-auto max-w-[95%] lg:max-w-[90%] px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Title and Text Section */}
@@ -309,15 +319,7 @@ export default function ReviewSection() {
         >
           <h2
             className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            style={{
-              fontFamily: "Belleza-Regular, sans-serif",
-              fontWeight: 400,
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              verticalAlign: "middle",
-              color: "#3B2415",
-            }}
+            style={sectionTitleStyle}
           >
             Review
           </h2>
@@ -325,28 +327,14 @@ export default function ReviewSection() {
           <div>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={largeTextBold}
             >
               도안재 경험 고객분들의
             </p>
             <br />
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={largeTextBold}
             >
               특별한 후기
             </p>
@@ -384,8 +372,9 @@ export default function ReviewSection() {
           >
             <div
               ref={progressThumbRef}
-              className="absolute top-0 left-0 h-full w-16 md:w-48 lg:w-64 bg-[#3B2415] rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
+              className="absolute top-0 left-0 h-full w-16 md:w-48 lg:w-64 rounded-full cursor-grab active:cursor-grabbing pointer-events-auto"
               style={{
+                backgroundColor: colors.brown.primary,
                 willChange: "transform",
                 transition: isDraggingProgress
                   ? "none"

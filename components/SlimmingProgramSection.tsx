@@ -3,8 +3,45 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
 export default function SlimmingProgramSection() {
+  // Extend base styles with component-specific overrides
+  const sectionTitleStyle = mergeStyles({
+    fontFamily: fonts.belleza,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    color: colors.brown.primary,
+  });
+
+  const largeTextBold = mergeStyles(textStyles.headingCentered);
+
+  const mediumTextBold = mergeStyles(textStyles.headingCentered, {
+    lineHeight: "100%",
+  });
+
+  const bodyTextMedium = mergeStyles(textStyles.heading3, {
+    lineHeight: "26px",
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const bodyTextBold = mergeStyles(textStyles.headingCentered, {
+    lineHeight: "26px",
+    verticalAlign: "middle" as const,
+  });
+
+  const smallTextMedium = mergeStyles(textStyles.heading3, {
+    lineHeight: "16px",
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const quoteTextStyle = mergeStyles(textStyles.headingCentered, {
+    lineHeight: "100%",
+  });
   return (
     <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative">
       {/* Background Image */}
@@ -30,14 +67,7 @@ export default function SlimmingProgramSection() {
         >
           <h2
             className="mb-6 md:mb-32 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-            style={{
-              fontFamily: 'Belleza-Regular, sans-serif',
-              fontWeight: 400,
-              lineHeight: '100%',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              color: '#3B2415',
-            }}
+            style={sectionTitleStyle}
           >
             Slimming Program
           </h2>
@@ -46,38 +76,19 @@ export default function SlimmingProgramSection() {
           <div className="space-y-2 md:space-y-3">
             <p
               className="text-base md:text-lg lg:text-xl"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                lineHeight: '100%',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                color: '#3B2415',
-              }}
+              style={mediumTextBold}
             >
               당신의 몸에 가장 &apos;편안한 변화&apos;
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                color: '#3B2415',
-              }}
+              style={largeTextBold}
             >
               누워서 30분
             </p>
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                letterSpacing: '0%',
-                textAlign: 'center',
-                color: '#3B2415',
-              }}
+              style={largeTextBold}
             >
               수면 다이어트 테라피
             </p>
@@ -114,44 +125,17 @@ export default function SlimmingProgramSection() {
           {/* Main Title */}
           <h3
             className="text-base md:text-lg lg:text-xl"
-            style={{
-              fontFamily: 'Pretendard, sans-serif',
-              fontWeight: 500,
-              lineHeight: '26px',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
-            }}
+            style={bodyTextMedium}
           >
             인생에서 가장 빛나야 할 순간을 위해
           </h3>
 
           {/* Focus Statement */}
-          <p
-            className="text-base md:text-lg lg:text-xl"
-            style={{
-              fontFamily: 'Pretendard, sans-serif',
-              fontWeight: 500,
-              lineHeight: '26px',
-              letterSpacing: '0%',
-              textAlign: 'center',
-              verticalAlign: 'middle',
-              color: '#3B2415',
-            }}
-          >
-            도안재의 기술이{' '}
+          <p className="text-base md:text-lg lg:text-xl" style={bodyTextMedium}>
+            도안재의 기술이{" "}
             <span
               className="text-base md:text-lg lg:text-xl"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 700,
-                lineHeight: '26px',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
-              }}
+              style={bodyTextBold}
             >
               &apos;체지방&apos;과 &apos;독소&apos;
             </span>
@@ -160,33 +144,11 @@ export default function SlimmingProgramSection() {
 
           {/* Descriptive Paragraphs */}
           <div className="space-y-4">
-            <p
-              className="text-xs md:text-sm"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 500,
-                lineHeight: '16px',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
-              }}
-            >
+            <p className="text-xs md:text-sm" style={smallTextMedium}>
               특수 파동이 정체된 림프 순환을 촉진하여 평소 고민이던 부위의
               부종을 빠르게 완화하고,
             </p>
-            <p
-              className="text-xs md:text-sm"
-              style={{
-                fontFamily: 'Pretendard, sans-serif',
-                fontWeight: 500,
-                lineHeight: '16px',
-                letterSpacing: '0%',
-                textAlign: 'center',
-                verticalAlign: 'middle',
-                color: '#3B2415',
-              }}
-            >
+            <p className="text-xs md:text-sm" style={smallTextMedium}>
               근적외선으로 체지방을 집중 분해하여 숨어있던 바디 라인을 선명하게
               되찾아 드립니다.
             </p>
@@ -197,7 +159,7 @@ export default function SlimmingProgramSection() {
             <p
               style={{
                 textAlign: "center",
-                color: "#3B2415",
+                color: colors.brown.primary,
               }}
             >
               <span
@@ -216,39 +178,21 @@ export default function SlimmingProgramSection() {
               </span>
               <span
                 className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                }}
+                style={quoteTextStyle}
               >
                 식단과 운동으로 미처 정리되지 못한
               </span>
               <br />
               <span
                 className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                }}
+                style={quoteTextStyle}
               >
                 마지막 1인치까지,
               </span>
               <br />
               <span
                 className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                }}
+                style={quoteTextStyle}
               >
                 도안재가 &apos;가볍게&apos; 완성합니다.
               </span>

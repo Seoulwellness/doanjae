@@ -3,13 +3,49 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
+import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
+import { colors as themeColors } from "@/lib/theme";
 
 export default function ProgramSection() {
+  // Extend base styles with component-specific overrides
+  const sectionTitleStyle = mergeStyles({
+    fontFamily: fonts.belleza,
+    fontWeight: 400,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    textAlign: "center" as const,
+    color: colors.brown.primary,
+  });
+
+  const largeTextExtraBold = mergeStyles(textStyles.headingCentered, {
+    fontWeight: 800,
+  });
+
+  const bodyTextRegular = mergeStyles(textStyles.heading3, {
+    textAlign: "center" as const,
+  });
+
+  const bodyTextBold = mergeStyles(textStyles.headingCentered);
+
+  const headingStyle = mergeStyles(textStyles.headingCentered, {
+    lineHeight: "100%",
+  });
+
+  const bodyTextMedium = mergeStyles(textStyles.heading3, {
+    textAlign: "center" as const,
+  });
+
+  const overlayTextStyle = mergeStyles(textStyles.headingWhite, {
+    textAlign: "center" as const,
+    verticalAlign: "middle" as const,
+  });
+
+  const overlayBackground = themeColors.overlay.darkBrown;
   return (
     <section
       id="program"
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: "#dbcfbf" }}
+      style={{ backgroundColor: colors.beige.secondary }}
     >
       <div className="container mx-auto max-w-7xl">
         <motion.div
@@ -21,14 +57,7 @@ export default function ProgramSection() {
         >
           <h2
             className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
-            style={{
-              fontFamily: "Belleza-Regular, sans-serif",
-              fontWeight: 400,
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              color: "#3B2415",
-            }}
+            style={sectionTitleStyle}
           >
             Program
           </h2>
@@ -37,13 +66,7 @@ export default function ProgramSection() {
           <div className="mb-4 md:mb-16">
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 800,
-                letterSpacing: "0%",
-                textAlign: "center",
-                color: "#3B2415",
-              }}
+              style={largeTextExtraBold}
             >
               도안재는 당신의 몸을 <br />
               이해하는 것부터 시작합니다.
@@ -54,7 +77,7 @@ export default function ProgramSection() {
           <div
             className="h-8 md:h-12 mx-auto mb-4 md:mb-16"
             style={{
-              backgroundColor: "#3b2415",
+              backgroundColor: colors.brown.primary,
               width: "2px",
             }}
           />
@@ -63,25 +86,13 @@ export default function ProgramSection() {
           <div className="mb-6 md:mb-24">
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 500,
-                letterSpacing: "0%",
-                textAlign: "center",
-                color: "#3B2415",
-              }}
+              style={bodyTextRegular}
             >
               개인의 체질과 체성분은 물론 <br /> 라이프스타일까지 모두 고려한{" "}
               <br />{" "}
               <span
                 className="text-base md:text-lg lg:text-xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                  color: "#3B2415",
-                }}
+                style={bodyTextBold}
               >
                 맞춤형 테라피 솔루션
               </span>
@@ -104,26 +115,13 @@ export default function ProgramSection() {
               <div>
                 <h3
                   className="mb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 700,
-                    lineHeight: "100%",
-                    letterSpacing: "0%",
-                    textAlign: "center",
-                    color: "#3B2415",
-                  }}
+                  style={headingStyle}
                 >
                   한의학을 접목한 1:1 컨설팅
                 </h3>
                 <p
                   className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-                  style={{
-                    fontFamily: "Pretendard, sans-serif",
-                    fontWeight: 500,
-                    letterSpacing: "0%",
-                    textAlign: "center",
-                    color: "#3B2415",
-                  }}
+                  style={bodyTextMedium}
                 >
                   인바디 체성분 분석은 물론, 한의사와 공동 개발한 <br />
                   자가 체질 테스트를 통해 내 몸의 균형을 찾고
@@ -155,18 +153,11 @@ export default function ProgramSection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 p-16 text-center"
-              style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
+              style={{ backgroundColor: overlayBackground }}
             >
               <p
                 className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  color: "#FFFFFF",
-                }}
+                style={overlayTextStyle}
               >
                 상담사와 함께 하는 맞춤형 1:1컨설팅
               </p>
@@ -190,18 +181,11 @@ export default function ProgramSection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 p-16 text-center"
-              style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
+              style={{ backgroundColor: overlayBackground }}
             >
               <p
                 className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  color: "#FFFFFF",
-                }}
+                style={overlayTextStyle}
               >
                 꼼꼼한 인바디 체성분 분석
               </p>
@@ -231,25 +215,18 @@ export default function ProgramSection() {
             <div>
               <h3
                 className="mb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                  color: "#3B2415",
-                }}
+                style={headingStyle}
               >
                 데이터 기반의 체계적인 분석
               </h3>
               <p
                 className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
                 style={{
-                  fontFamily: "Pretendard, sans-serif",
+                  fontFamily: fonts.pretendard,
                   fontWeight: 400,
                   letterSpacing: "0%",
                   textAlign: "center",
-                  color: "#3B2415",
+                  color: colors.brown.primary,
                 }}
               >
                 개인별 라이프스타일 정보와 디지털 체질 테스트의 결과를 <br />
@@ -279,18 +256,11 @@ export default function ProgramSection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 p-16 text-center"
-              style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
+              style={{ backgroundColor: overlayBackground }}
             >
               <p
                 className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  color: "#FFFFFF",
-                }}
+                style={overlayTextStyle}
               >
                 개인별 라이프 스타일 정보
               </p>
@@ -314,18 +284,11 @@ export default function ProgramSection() {
             />
             <div
               className="absolute bottom-0 left-0 right-0 p-16 text-center"
-              style={{ backgroundColor: "rgba(57, 38, 24, 0.8)" }}
+              style={{ backgroundColor: overlayBackground }}
             >
               <p
                 className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  letterSpacing: "0%",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  color: "#FFFFFF",
-                }}
+                style={overlayTextStyle}
               >
                 디지털 체질 테스트 분석 결과
               </p>
@@ -344,7 +307,7 @@ export default function ProgramSection() {
           <p
             style={{
               textAlign: "center",
-              color: "#3B2415",
+              color: colors.brown.primary,
             }}
           >
             <span
