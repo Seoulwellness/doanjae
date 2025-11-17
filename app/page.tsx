@@ -1,23 +1,32 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Banner from "@/components/Banner";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import ScrollToTop from "@/components/ScrollToTop";
 import Landing from "@/components/Landing";
-import Footer from "@/components/Footer";
 import ErrorBoundary from "@/components/ErrorBoundary";
-import FeaturesSection from "@/components/FeaturesSection";
-import PatentSection from "@/components/PatentSection";
-import PremiumSection from "@/components/PremiumSection";
-import ProgramSection from "@/components/ProgramSection";
-import SlimmingProgramSection from "@/components/SlimmingProgramSection";
-import MuscleFitSection from "@/components/MuscleFitSection";
-import WellnessBodyTherapySection from "@/components/WellnessBodyTherapySection";
-// import ReviewSection from "@/components/ReviewSection";
-import PriceSection from "@/components/PriceSection";
-import ProcessSection from "@/components/ProcessSection";
-import LocationSection from "@/components/LocationSection";
-import CTASection from "@/components/CTASection";
+
+// Lazy load below-the-fold components for better performance
+const Footer = dynamic(() => import("@/components/Footer"));
+const FeaturesSection = dynamic(() => import("@/components/FeaturesSection"));
+const PatentSection = dynamic(() => import("@/components/PatentSection"));
+const PremiumSection = dynamic(() => import("@/components/PremiumSection"));
+const ProgramSection = dynamic(() => import("@/components/ProgramSection"));
+const SlimmingProgramSection = dynamic(
+  () => import("@/components/SlimmingProgramSection")
+);
+const MuscleFitSection = dynamic(() => import("@/components/MuscleFitSection"));
+const WellnessBodyTherapySection = dynamic(
+  () => import("@/components/WellnessBodyTherapySection")
+);
+const PriceSection = dynamic(() => import("@/components/PriceSection"));
+const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
+const LocationSection = dynamic(() => import("@/components/LocationSection"));
+const CTASection = dynamic(() => import("@/components/CTASection"));
+const ScrollToTop = dynamic(() => import("@/components/ScrollToTop"));
+
+// Keep ReviewSection import for future use
+const ReviewSection = dynamic(() => import("@/components/ReviewSection"));
 
 export const metadata: Metadata = {
   title: "도안재 - 프리미엄 다이어트 테라피",
@@ -74,9 +83,9 @@ export default function Home() {
       <ErrorBoundary>
         <WellnessBodyTherapySection />
       </ErrorBoundary>
-      {/* <ErrorBoundary>
+      <ErrorBoundary>
         <ReviewSection />
-      </ErrorBoundary> */}
+      </ErrorBoundary>
       <ErrorBoundary>
         <PriceSection />
       </ErrorBoundary>

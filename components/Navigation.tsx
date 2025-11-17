@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { prefersReducedMotion } from "@/lib/animations";
+import { colors, fonts } from "@/lib/constants";
 
 interface NavigationProps {
   fixed?: boolean;
@@ -14,6 +15,25 @@ interface NavigationProps {
 export default function Navigation({ fixed = true }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [bannerVisible, setBannerVisible] = useState(true);
+
+  // Reusable style objects
+  const navLinkStyle = {
+    fontFamily: fonts.pretendard,
+    fontWeight: 700,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+  };
+
+  const desktopNavLinkStyle = (visible: boolean) => ({
+    ...navLinkStyle,
+    color: visible ? "#000000" : colors.text.white,
+    transition: "color 200ms ease-out",
+  });
+
+  const mobileNavLinkStyle = {
+    ...navLinkStyle,
+    color: "#000000",
+  };
 
   useEffect(() => {
     if (!fixed) return;
@@ -61,7 +81,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
           fixed ? (bannerVisible ? "top-10" : "top-0") : "top-0"
         } md:hidden`}
         style={{
-          backgroundColor: bannerVisible ? "transparent" : "#3b2415",
+          backgroundColor: bannerVisible ? "transparent" : colors.brown.primary,
         }}
       >
         <div className="container mx-auto px-4">
@@ -111,7 +131,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
             bannerVisible ? "" : "shadow-sm"
           }`}
           style={{
-            backgroundColor: bannerVisible ? "transparent" : "#3b2415",
+            backgroundColor: bannerVisible ? "transparent" : colors.brown.primary,
             transition: "background-color 200ms ease-out",
           }}
         >
@@ -135,56 +155,28 @@ export default function Navigation({ fixed = true }: NavigationProps) {
               <Link
                 href="/#brand"
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: bannerVisible ? "#000000" : "#ffffff",
-                  transition: "color 200ms ease-out",
-                }}
+                style={desktopNavLinkStyle(bannerVisible)}
               >
                 BRAND
               </Link>
               <Link
                 href="/#program"
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: bannerVisible ? "#000000" : "#ffffff",
-                  transition: "color 200ms ease-out",
-                }}
+                style={desktopNavLinkStyle(bannerVisible)}
               >
                 PROGRAM
               </Link>
               <Link
                 href="/#price"
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: bannerVisible ? "#000000" : "#ffffff",
-                  transition: "color 200ms ease-out",
-                }}
+                style={desktopNavLinkStyle(bannerVisible)}
               >
                 PRICE
               </Link>
               <Link
                 href="/#contact"
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: bannerVisible ? "#000000" : "#ffffff",
-                  transition: "color 200ms ease-out",
-                }}
+                style={desktopNavLinkStyle(bannerVisible)}
               >
                 CONTACT
               </Link>
@@ -231,12 +223,13 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                   ? { duration: 0.01 }
                   : { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }
               }
-              className="fixed left-0 top-0 bottom-0 w-[80%] max-w-md bg-[#d8ceba] z-[110] md:hidden overflow-y-auto"
+              className="fixed left-0 top-0 bottom-0 w-[80%] max-w-md z-[110] md:hidden overflow-y-auto"
+              style={{ backgroundColor: colors.beige.primary }}
               onClick={(e: React.MouseEvent) => e.stopPropagation()}
             >
               <div className="flex flex-col h-full">
                 {/* Header */}
-                <div className="p-6 bg-[#d8ceba] relative">
+                <div className="p-6 relative" style={{ backgroundColor: colors.beige.primary }}>
                   {/* Close Button */}
                   <button
                     className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/10 transition-colors"
@@ -282,13 +275,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                     <Link
                       href="/#brand"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                      style={{
-                        fontFamily: "Pretendard, sans-serif",
-                        fontWeight: 700,
-                        lineHeight: "100%",
-                        letterSpacing: "0%",
-                        color: "#000000",
-                      }}
+                      style={mobileNavLinkStyle}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       BRAND
@@ -296,13 +283,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                     <Link
                       href="/#program"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                      style={{
-                        fontFamily: "Pretendard, sans-serif",
-                        fontWeight: 700,
-                        lineHeight: "100%",
-                        letterSpacing: "0%",
-                        color: "#000000",
-                      }}
+                      style={mobileNavLinkStyle}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       PROGRAM
@@ -310,13 +291,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                     <Link
                       href="/#price"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                      style={{
-                        fontFamily: "Pretendard, sans-serif",
-                        fontWeight: 700,
-                        lineHeight: "100%",
-                        letterSpacing: "0%",
-                        color: "#000000",
-                      }}
+                      style={mobileNavLinkStyle}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       PRICE
@@ -324,13 +299,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                     <Link
                       href="/#contact"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
-                      style={{
-                        fontFamily: "Pretendard, sans-serif",
-                        fontWeight: 700,
-                        lineHeight: "100%",
-                        letterSpacing: "0%",
-                        color: "#000000",
-                      }}
+                      style={mobileNavLinkStyle}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       CONTACT

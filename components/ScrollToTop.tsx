@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp } from "lucide-react";
+import { colors } from "@/lib/constants";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -98,7 +99,7 @@ export default function ScrollToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="fixed bottom-22 md:bottom-12 right-4 md:right-12 z-[9999] p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out cursor-pointer"
-          style={{ backgroundColor: "#3b2415" }}
+          style={{ backgroundColor: colors.brown.primary }}
           aria-label="Scroll to top"
         >
           <ChevronUp className="w-6 h-6 text-white pointer-events-none" />

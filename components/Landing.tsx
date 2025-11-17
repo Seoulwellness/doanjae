@@ -2,9 +2,38 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeInLeft, staggerContainer } from "@/lib/animations";
+import { fadeInLeft, staggerContainer } from "@/lib/animations";
+import { colors, textStyles, fonts } from "@/lib/constants";
 
 export default function Landing() {
+  // Reusable style objects
+  const headingStyle = {
+    ...textStyles.heading1,
+    lineHeight: "40px",
+  };
+
+  const subheadingStyle = {
+    ...textStyles.heading2,
+    lineHeight: "26px",
+  };
+
+  const bodyTextStyle = {
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    lineHeight: "16px",
+    letterSpacing: "0%",
+    verticalAlign: "middle" as const,
+    color: colors.brown.primary,
+  };
+
+  const boldTextStyle = {
+    fontFamily: fonts.pretendard,
+    fontWeight: 700,
+    lineHeight: "16px",
+    letterSpacing: "0%",
+    verticalAlign: "middle" as const,
+  };
+
   return (
     <motion.section
       id="brand"
@@ -13,7 +42,7 @@ export default function Landing() {
       viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer}
       className="relative py-8 md:py-12 lg:py-40"
-      style={{ backgroundColor: "#e4dbd2" }}
+      style={{ backgroundColor: colors.beige.lighter }}
     >
       <div className="container mx-auto max-w-7xl w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-32 lg:items-center">
@@ -44,13 +73,7 @@ export default function Landing() {
             <motion.h1
               variants={fadeInLeft}
               className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "40px",
-                letterSpacing: "0%",
-                color: "#3B2415",
-              }}
+              style={headingStyle}
             >
               30분, 정말 그냥 <br /> 누워만 있어도 돼요.
             </motion.h1>
@@ -58,13 +81,7 @@ export default function Landing() {
             <motion.p
               variants={fadeInLeft}
               className="font-bold text-base md:text-lg lg:text-xl"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "26px",
-                letterSpacing: "0%",
-                color: "#3B2415",
-              }}
+              style={subheadingStyle}
             >
               땀만 뻘뻘 흘리던 기존의 관리와는 달라요.
             </motion.p>
@@ -72,40 +89,15 @@ export default function Landing() {
             <motion.div
               variants={fadeInLeft}
               className="text-xs md:text-sm"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 400,
-                lineHeight: "16px",
-                letterSpacing: "0%",
-                verticalAlign: "middle",
-                color: "#3B2415",
-              }}
+              style={bodyTextStyle}
             >
               도안재의 30분은{" "}
-              <span
-                className="text-xs md:text-sm"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "16px",
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                }}
-              >
+              <span className="text-xs md:text-sm" style={boldTextStyle}>
                 천년의 지혜
               </span>
               와
               <br />
-              <span
-                className="text-xs md:text-sm"
-                style={{
-                  fontFamily: "Pretendard, sans-serif",
-                  fontWeight: 700,
-                  lineHeight: "16px",
-                  letterSpacing: "0%",
-                  verticalAlign: "middle",
-                }}
-              >
+              <span className="text-xs md:text-sm" style={boldTextStyle}>
                 7종의 특허 기술
               </span>
               이 집약된 시간입니다.

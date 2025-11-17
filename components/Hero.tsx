@@ -8,6 +8,7 @@ import {
   staggerContainer,
   prefersReducedMotion,
 } from "@/lib/animations";
+import { colors, fonts } from "@/lib/constants";
 
 interface HeroSlide {
   id: number;
@@ -58,6 +59,49 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Reusable style objects
+  const titleStyle = {
+    fontFamily: fonts.pretendard,
+    fontWeight: 800,
+    lineHeight: "60px",
+    letterSpacing: "0%",
+  };
+
+  const subtitleStyle = {
+    fontFamily: fonts.pretendard,
+    fontWeight: 700,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+  };
+
+  const descriptionStyle = {
+    fontFamily: fonts.pretendard,
+    fontWeight: 500,
+    lineHeight: "26px",
+    letterSpacing: "0%",
+    verticalAlign: "middle" as const,
+  };
+
+  const ctaTextStyle = {
+    fontFamily: fonts.pretendard,
+    fontWeight: 700,
+    lineHeight: "100%",
+    letterSpacing: "0%",
+    verticalAlign: "middle" as const,
+  };
+
+  const ctaButtonStyle = {
+    ...ctaTextStyle,
+    backgroundColor: colors.brown.primary,
+    color: colors.text.white,
+  };
+
+  const kakaoButtonStyle = {
+    ...ctaTextStyle,
+    backgroundColor: colors.accent.kakao,
+    color: colors.brown.primary,
+  };
 
   // Auto-play functionality (disabled if user prefers reduced motion)
   useEffect(() => {
@@ -115,7 +159,7 @@ export default function Hero() {
       animate="visible"
       variants={staggerContainer}
       className="relative flex items-center px-8 sm:px-8 lg:px-8 overflow-hidden h-[calc(100vh-2.5rem)] md:h-[calc(100vh-3rem)]"
-      style={{ backgroundColor: "#e5d6c3" }}
+      style={{ backgroundColor: colors.beige.light }}
     >
       {/* Carousel Container */}
       <motion.div
@@ -190,50 +234,28 @@ export default function Hero() {
           >
             <h1
               className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white md:text-[#3B2415] whitespace-pre-line"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 800,
-                lineHeight: "60px",
-                letterSpacing: "0%",
-              }}
+              style={titleStyle}
             >
               {currentSlide.title}
             </h1>
 
             <p
               className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-white md:text-[#3B2415]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-              }}
+              style={subtitleStyle}
             >
               {currentSlide.subtitle}
             </p>
 
             <p
               className="font-medium text-base md:text-lg lg:text-xl text-white md:text-[#3B2415] whitespace-pre-line"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 500,
-                lineHeight: "26px",
-                letterSpacing: "0%",
-                verticalAlign: "middle",
-              }}
+              style={descriptionStyle}
             >
               {currentSlide.description}
             </p>
 
             <p
               className="font-bold text-base md:text-lg lg:text-xl text-white md:text-[#3B2415]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                verticalAlign: "middle",
-              }}
+              style={ctaTextStyle}
             >
               {currentSlide.cta}
             </p>
@@ -253,15 +275,7 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-shadow text-center text-sm md:text-base"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                verticalAlign: "middle",
-                backgroundColor: "#3B2415",
-                color: "#FFFFFF",
-              }}
+              style={ctaButtonStyle}
             >
               도안재 예약하기
             </motion.a>
@@ -271,15 +285,7 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-colors text-center text-sm md:text-base"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                verticalAlign: "middle",
-                backgroundColor: "#FFD800",
-                color: "#3B2415",
-              }}
+              style={kakaoButtonStyle}
             >
               카카오 채널
             </motion.a>

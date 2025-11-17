@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { prefersReducedMotion } from "@/lib/animations";
+import { colors } from "@/lib/constants";
 
 interface BannerItem {
   id: number;
@@ -72,7 +73,7 @@ export default function Banner() {
     <div
       id="top-banner"
       className="w-full overflow-hidden"
-      style={{ backgroundColor: "#3b2415" }}
+      style={{ backgroundColor: colors.brown.primary }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

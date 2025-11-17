@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
+import { colors, textStyles } from "@/lib/constants";
 
 export default function PremiumSection() {
   return (
     <section
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: "#dbcfbf" }}
+      style={{ backgroundColor: colors.beige.secondary }}
     >
       <div className="container mx-auto max-w-7xl">
         {/* Video/Image Section */}
@@ -42,37 +43,19 @@ export default function PremiumSection() {
           <div className="space-y-1 md:space-y-3">
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                color: "#3B2415",
-              }}
+              style={textStyles.headingCentered}
             >
               몸은 가볍게,
             </p>
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                color: "#3B2415",
-              }}
+              style={textStyles.headingCentered}
             >
               과정은 편안하게,
             </p>
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                color: "#3B2415",
-              }}
+              style={textStyles.headingCentered}
             >
               결과는 한층 아름답게,
             </p>
@@ -81,25 +64,13 @@ export default function PremiumSection() {
           <div className="pt-4 md:pt-6 space-y-1 md:space-y-2">
             <h2
               className="text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                color: "#3B2415",
-              }}
+              style={textStyles.headingCentered}
             >
               프리미엄 다이어트 테라피
             </h2>
             <p
               className="text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-[1.15] md:[line-height:40px]"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0%",
-                textAlign: "center",
-                color: "#3B2415",
-              }}
+              style={textStyles.headingCentered}
             >
               도안재
             </p>
