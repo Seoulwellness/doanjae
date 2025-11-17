@@ -123,22 +123,24 @@ export default function Navigation({ fixed = true }: NavigationProps) {
         className={`hidden md:block ${
           fixed ? "fixed" : "absolute"
         } z-[100] transition-[top] duration-200 ease-out ${
-          fixed ? (bannerVisible ? "top-12" : "top-3") : "top-10"
-        } left-1/2 -translate-x-1/2`}
+          fixed ? (bannerVisible ? "top-14 md:top-18" : "top-0") : "top-10"
+        } left-0 right-0 w-full`}
       >
         <div
-          className={`rounded-lg px-6 md:px-8 lg:px-12 py-3 md:py-4 ${
+          className={`w-full px-6 md:px-8 lg:px-12 py-3 md:py-4 ${
             bannerVisible ? "" : "shadow-sm"
           }`}
           style={{
-            backgroundColor: bannerVisible ? "transparent" : colors.brown.primary,
+            backgroundColor: bannerVisible
+              ? "transparent"
+              : colors.brown.primary,
             transition: "background-color 200ms ease-out",
           }}
         >
-          <div className="flex items-center gap-8 md:gap-12 lg:gap-16 justify-between">
-            {/* Logo */}
-            <Link href="/">
-              <div className="flex-shrink-0 transition-opacity duration-200 ease-out">
+          <div className="container mx-auto flex items-center justify-between">
+            {/* Logo - Left */}
+            <Link href="/" className="flex-shrink-0">
+              <div className="transition-opacity duration-200 ease-out">
                 <Image
                   src={bannerVisible ? "/logo.png" : "/logo4.png"}
                   alt="DOANJAE"
@@ -150,8 +152,8 @@ export default function Navigation({ fixed = true }: NavigationProps) {
               </div>
             </Link>
 
-            {/* Navigation Links */}
-            <div className="flex items-center gap-6 md:gap-8 lg:gap-10">
+            {/* Navigation Links - Center */}
+            <div className="flex items-center gap-6 md:gap-8 lg:gap-10 absolute left-1/2 -translate-x-1/2">
               <Link
                 href="/#brand"
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
@@ -181,6 +183,9 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                 CONTACT
               </Link>
             </div>
+
+            {/* Spacer for balance - Right */}
+            <div className="flex-shrink-0 w-10" />
           </div>
         </div>
       </nav>
@@ -229,7 +234,10 @@ export default function Navigation({ fixed = true }: NavigationProps) {
             >
               <div className="flex flex-col h-full">
                 {/* Header */}
-                <div className="p-6 relative" style={{ backgroundColor: colors.beige.primary }}>
+                <div
+                  className="p-6 relative"
+                  style={{ backgroundColor: colors.beige.primary }}
+                >
                   {/* Close Button */}
                   <button
                     className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/10 transition-colors"

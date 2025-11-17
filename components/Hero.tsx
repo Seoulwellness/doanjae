@@ -13,7 +13,7 @@ import { colors, fonts } from "@/lib/constants";
 interface HeroSlide {
   id: number;
   image: string;
-  imageType: "jpg" | "avif";
+  imageType: "jpg" | "avif" | "png";
   title: string;
   subtitle: string;
   description: string;
@@ -33,8 +33,8 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 2,
-    image: "/images/hero/image2",
-    imageType: "jpg",
+    image: "/images/hero/image3",
+    imageType: "png",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -43,8 +43,8 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 3,
-    image: "/images/hero/image6",
-    imageType: "jpg",
+    image: "/images/hero/image4",
+    imageType: "png",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -64,7 +64,7 @@ export default function Hero() {
   const titleStyle = {
     fontFamily: fonts.pretendard,
     fontWeight: 800,
-    lineHeight: "60px",
+    lineHeight: "125%",
     letterSpacing: "0%",
   };
 
@@ -272,8 +272,8 @@ export default function Hero() {
           >
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              // whileHover={{ scale: 1.02 }}
+              // whileTap={{ scale: 0.98 }}
               className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-shadow text-center text-sm md:text-base"
               style={ctaButtonStyle}
             >
@@ -282,8 +282,8 @@ export default function Hero() {
 
             <motion.a
               href="#about"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              // whileHover={{ scale: 1.02 }}
+              // whileTap={{ scale: 0.98 }}
               className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-colors text-center text-sm md:text-base"
               style={kakaoButtonStyle}
             >
