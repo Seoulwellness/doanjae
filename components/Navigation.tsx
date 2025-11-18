@@ -137,9 +137,9 @@ export default function Navigation({ fixed = true }: NavigationProps) {
             transition: "background-color 200ms ease-out",
           }}
         >
-          <div className="container mx-auto flex items-center justify-between">
+          <div className="mx-auto relative flex items-center">
             {/* Logo - Left */}
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 z-10">
               <div className="transition-opacity duration-200 ease-out">
                 <Image
                   src={bannerVisible ? "/logo.png" : "/logo4.png"}
@@ -152,8 +152,8 @@ export default function Navigation({ fixed = true }: NavigationProps) {
               </div>
             </Link>
 
-            {/* Navigation Links - Center */}
-            <div className="flex items-center gap-6 md:gap-8 lg:gap-10 absolute left-1/2 -translate-x-1/2">
+            {/* Navigation Links - Center (truly centered on screen) */}
+            <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6 md:gap-8 lg:gap-10">
               <Link
                 href="/#brand"
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
@@ -183,9 +183,6 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                 CONTACT
               </Link>
             </div>
-
-            {/* Spacer for balance - Right */}
-            <div className="flex-shrink-0 w-10" />
           </div>
         </div>
       </nav>
