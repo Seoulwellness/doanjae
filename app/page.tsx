@@ -58,7 +58,6 @@ export default function Home() {
       <Hero />
 
       {/* Landing Sections - Scrollable */}
-      <Banner />
       <Landing />
       <Footer />
       <ErrorBoundary>

@@ -55,14 +55,6 @@ export default function PriceSection() {
     color: "#000000",
   });
 
-  const bottomTextRegular = mergeStyles(textStyles.heading3, {
-    textAlign: "center" as const,
-    verticalAlign: "middle" as const,
-  });
-
-  const bottomTextBold = mergeStyles(textStyles.headingCentered, {
-    verticalAlign: "middle" as const,
-  });
   return (
     <section id="price" className="py-8 md:py-32 px-0 sm:px-0 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
@@ -136,23 +128,22 @@ export default function PriceSection() {
           className="w-full mb-8 md:mb-16 space-y-8 md:space-y-12 p-12 md:p-16 lg:p-24"
           style={{ backgroundColor: colors.beige.cream }}
         >
-          {/* Wellness Body Therapy 01 */}
+          {/* Slimming Program */}
           <div className="w-full p-4 md:p-6 lg:p-8 rounded-lg">
             <h3
-              className="text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 px-4 py-2 rounded-4xl inline-block"
+              className="text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 text-center"
               style={{
                 fontFamily: fonts.belleza,
                 fontWeight: 400,
                 lineHeight: "100%",
                 letterSpacing: "0%",
-                backgroundColor: "#392314",
-                color: colors.text.white,
+                color: colors.brown.primary,
               }}
             >
-              Wellness Body Therapy 01
+              Slimming Program
             </h3>
             <p
-              className="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6"
+              className="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-center"
               style={tableDescriptionStyle}
             >
               누워서 30분, 수면 다이어트 테라피
@@ -168,7 +159,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       횟수
@@ -177,7 +168,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       시간
@@ -186,10 +177,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       가격
+                    </th>
+                    <th
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      회당 가격
                     </th>
                   </tr>
                 </thead>
@@ -199,7 +199,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       1회
@@ -208,7 +208,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       30분
@@ -217,10 +217,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      100,000원 (회당 100,000원)
+                      100,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      100,000원
                     </td>
                   </tr>
                   <tr>
@@ -228,7 +237,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       1회
@@ -237,7 +246,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       60분
@@ -246,10 +255,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      145,000원 (회당 72,500원)
+                      145,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      72,500원
                     </td>
                   </tr>
                   <tr>
@@ -257,7 +275,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       1회
@@ -266,7 +284,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       90분
@@ -275,10 +293,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      179,000원 (회당 59,667원)
+                      179,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      59,000원
                     </td>
                   </tr>
                   <tr>
@@ -286,7 +313,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       5회
@@ -295,7 +322,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       회당 30분
@@ -304,10 +331,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      299,000원 (회당 59,800원)
+                      299,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      59,800원
                     </td>
                   </tr>
                   <tr>
@@ -315,7 +351,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       10회
@@ -324,7 +360,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       회당 30분
@@ -333,10 +369,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      550,000원 (회당 55,000원)
+                      550,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      55,000원
                     </td>
                   </tr>
                 </tbody>
@@ -344,23 +389,22 @@ export default function PriceSection() {
             </div>
           </div>
 
-          {/* Wellness Body Therapy 02 */}
+          {/* MuscleFit Program */}
           <div className="w-full p-4 md:p-6 lg:p-8 rounded-lg">
             <h3
-              className="text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 px-4 py-2 rounded-4xl inline-block"
+              className="text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 text-center"
               style={{
                 fontFamily: fonts.belleza,
                 fontWeight: 400,
                 lineHeight: "100%",
                 letterSpacing: "0%",
-                backgroundColor: "#392314",
-                color: colors.text.white,
+                color: colors.brown.primary,
               }}
             >
-              Wellness Body Therapy 02
+              MuscleFit Program
             </h3>
             <p
-              className="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6"
+              className="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-center"
               style={tableDescriptionStyle}
             >
               운동없이 완성하는, 고강도 머슬핏 케어
@@ -376,7 +420,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       횟수
@@ -385,7 +429,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       시간
@@ -394,10 +438,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       가격
+                    </th>
+                    <th
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      회당 가격
                     </th>
                   </tr>
                 </thead>
@@ -407,7 +460,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       1회
@@ -416,7 +469,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       30분
@@ -425,10 +478,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      100,000원 (회당 100,000원)
+                      100,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      100,000원
                     </td>
                   </tr>
                   <tr>
@@ -436,7 +498,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       1회
@@ -445,7 +507,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       60분
@@ -454,10 +516,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      145,000원 (회당 72,500원)
+                      145,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      72,500원
                     </td>
                   </tr>
                   <tr>
@@ -465,7 +536,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       5회
@@ -474,7 +545,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       회당 30분
@@ -483,10 +554,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      299,000원 (회당 59,800원)
+                      299,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      59,800원
                     </td>
                   </tr>
                   <tr>
@@ -494,7 +574,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       10회
@@ -503,7 +583,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       회당 30분
@@ -512,10 +592,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      550,000원 (회당 55,000원)
+                      550,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      55,000원
                     </td>
                   </tr>
                 </tbody>
@@ -523,23 +612,22 @@ export default function PriceSection() {
             </div>
           </div>
 
-          {/* Wellness Body Therapy 03 */}
+          {/* Slimming + MuscleFit Program */}
           <div className="w-full p-4 md:p-6 lg:p-8 rounded-lg">
             <h3
-              className="text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 px-4 py-2 rounded-4xl inline-block"
+              className="text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 text-center"
               style={{
                 fontFamily: fonts.belleza,
                 fontWeight: 400,
                 lineHeight: "100%",
                 letterSpacing: "0%",
-                backgroundColor: "#392314",
-                color: colors.text.white,
+                color: colors.brown.primary,
               }}
             >
-              Wellness Body Therapy 03
+              Slimming + MuscleFit Program
             </h3>
             <p
-              className="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6"
+              className="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-center"
               style={tableDescriptionStyle}
             >
               수면 다이어트 + 머슬핏 케어
@@ -555,7 +643,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       횟수
@@ -564,7 +652,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       시간
@@ -573,10 +661,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableHeaderCellStyle,
-                        backgroundColor: "#877866",
+                        backgroundColor: colors.brown.primary,
                       }}
                     >
                       가격
+                    </th>
+                    <th
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      회당 가격
                     </th>
                   </tr>
                 </thead>
@@ -586,7 +683,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       1회
@@ -595,19 +692,28 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      60분 (30분+30분)
+                      60분(30분+30분)
                     </td>
                     <td
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      145,000원 (회당 72,500원)
+                      145,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      72,500원
                     </td>
                   </tr>
                   <tr>
@@ -615,7 +721,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       1회
@@ -624,19 +730,28 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      90분 (30분+60분)
+                      90분(30분+60분)
                     </td>
                     <td
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      179,000원 (회당 59,667원)
+                      179,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      59,000원
                     </td>
                   </tr>
                   <tr>
@@ -644,7 +759,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       5회
@@ -653,7 +768,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       회당 60분
@@ -662,10 +777,19 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      550,000원 (회당 55,000원)
+                      550,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      55,000원
                     </td>
                   </tr>
                   <tr>
@@ -673,7 +797,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       10회
@@ -682,7 +806,7 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
                       회당 60분
@@ -691,39 +815,25 @@ export default function PriceSection() {
                       className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
                       style={{
                         ...tableBodyCellStyle,
-                        backgroundColor: "#ebe6dc",
+                        backgroundColor: "#FFFBF8",
                       }}
                     >
-                      990,000원 (회당 49,500원)
+                      990,000원
+                    </td>
+                    <td
+                      className="px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6 text-center text-sm md:text-base lg:text-lg"
+                      style={{
+                        ...tableHeaderCellStyle,
+                        backgroundColor: colors.brown.primary,
+                      }}
+                    >
+                      49,500원
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-        </motion.div>
-
-        {/* Bottom Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="text-center"
-        >
-          <p
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-            style={bottomTextRegular}
-          >
-            오픈 혜택 마감 전,
-          </p>
-          <br />
-          <p
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-            style={bottomTextBold}
-          >
-            지금 바로 예약하세요!
-          </p>
         </motion.div>
       </div>
     </section>

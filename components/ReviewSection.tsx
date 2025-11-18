@@ -46,7 +46,7 @@ function ReviewCard({
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-4xl"
+      className="relative w-full overflow-hidden rounded-4xl select-none"
       style={{ backgroundColor: colors.background.secondary }}
     >
       {/* Image Section with Overlay */}
@@ -55,9 +55,10 @@ function ReviewCard({
           src={imageSrc}
           alt={`${customerName} 후기`}
           fill
-          className="object-cover"
+          className="object-cover pointer-events-none"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           quality={90}
+          draggable={false}
         />
         {/* Circular Badge - Top Right */}
         <div
@@ -141,6 +142,10 @@ export default function ReviewSection() {
   const progressThumbRef = useRef<HTMLDivElement>(null);
   const rafIdRef = useRef<number | null>(null);
   const [isDraggingProgress, setIsDraggingProgress] = useState(false);
+  const isDraggingProgressRef = useRef<boolean>(false);
+  const dragStartXRef = useRef<number>(0);
+  const dragStartScrollRef = useRef<number>(0);
+  const dragRafRef = useRef<number | null>(null);
 
   const reviews = [
     {
@@ -250,12 +255,13 @@ export default function ReviewSection() {
     const handleProgressMouseDown = (e: MouseEvent) => {
       e.preventDefault();
       e.stopPropagation();
+      isDraggingProgressRef.current = true;
       setIsDraggingProgress(true);
       updateScrollFromPosition(e.clientX);
     };
 
     const handleProgressMouseMove = (e: MouseEvent) => {
-      if (!isDraggingProgress) return;
+      if (!isDraggingProgressRef.current) return;
       e.preventDefault();
       // Use requestAnimationFrame for smooth dragging
       if (rafIdRef.current !== null) {
@@ -267,6 +273,7 @@ export default function ReviewSection() {
     };
 
     const handleProgressMouseUp = () => {
+      isDraggingProgressRef.current = false;
       setIsDraggingProgress(false);
     };
 
@@ -286,7 +293,7 @@ export default function ReviewSection() {
       document.removeEventListener("mousemove", handleProgressMouseMove);
       document.removeEventListener("mouseup", handleProgressMouseUp);
     };
-  }, [isDraggingProgress]);
+  }, []);
 
   // Component-specific style constants
   const sectionTitleStyle = mergeStyles({
@@ -346,9 +353,54 @@ export default function ReviewSection() {
 
       {/* Review Cards - Horizontal Scroll */}
       <div className="relative">
-        <div
+        <motion.div
           ref={scrollContainerRef}
           className="flex gap-6 md:gap-8 overflow-x-auto overflow-y-hidden pb-8 pl-4 sm:pl-12 lg:pl-16 pr-4 sm:pr-12 lg:pr-16 scrollbar-hide"
+          style={{ cursor: "grab" }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.1}
+          onDragStart={(_, info) => {
+            if (scrollContainerRef.current) {
+              const container = scrollContainerRef.current;
+              scrollContainerRef.current.style.cursor = "grabbing";
+              dragStartXRef.current = info.point.x;
+              dragStartScrollRef.current = container.scrollLeft;
+            }
+          }}
+          onDrag={(_, info) => {
+            if (scrollContainerRef.current) {
+              // Cancel any pending animation frame
+              if (dragRafRef.current !== null) {
+                cancelAnimationFrame(dragRafRef.current);
+              }
+
+              // Use requestAnimationFrame for smooth updates
+              dragRafRef.current = requestAnimationFrame(() => {
+                if (scrollContainerRef.current) {
+                  const container = scrollContainerRef.current;
+                  const deltaX = dragStartXRef.current - info.point.x;
+                  const newScroll = dragStartScrollRef.current + deltaX;
+                  const maxScroll =
+                    container.scrollWidth - container.clientWidth;
+                  container.scrollLeft = Math.max(
+                    0,
+                    Math.min(maxScroll, newScroll)
+                  );
+                  dragRafRef.current = null;
+                }
+              });
+            }
+          }}
+          onDragEnd={() => {
+            if (scrollContainerRef.current) {
+              scrollContainerRef.current.style.cursor = "grab";
+            }
+            if (dragRafRef.current !== null) {
+              cancelAnimationFrame(dragRafRef.current);
+              dragRafRef.current = null;
+            }
+          }}
         >
           {allReviews.map((review, index) => (
             <motion.div
@@ -357,12 +409,13 @@ export default function ReviewSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className="flex-shrink-0 w-[75vw] sm:w-[45vw] lg:w-[30vw]"
+              className="flex-shrink-0 w-[68vw] sm:w-[40vw] lg:w-[22vw]"
+              drag={false}
             >
               <ReviewCard {...review} index={index} />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Scroll Progress Bar */}
         <div className="flex justify-center mt-4">

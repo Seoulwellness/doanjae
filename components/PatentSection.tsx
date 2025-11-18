@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { fadeInRight, fadeInUp } from "@/lib/animations";
 import { colors, textStyles } from "@/lib/constants";
 
+const patentImages = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2];
+
 export default function PatentSection() {
   // Use existing textStyles
   const headingStyle = textStyles.headingCentered;
@@ -14,6 +16,9 @@ export default function PatentSection() {
   const progressThumbRef = useRef<HTMLDivElement>(null);
   const rafIdRef = useRef<number | null>(null);
   const [isDraggingProgress, setIsDraggingProgress] = useState(false);
+  const dragStartXRef = useRef<number>(0);
+  const dragStartScrollRef = useRef<number>(0);
+  const dragRafRef = useRef<number | null>(null);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -156,32 +161,85 @@ export default function PatentSection() {
         </motion.div>
       </div>
 
-      <div className="relative">
-        <div
+      <div className="relative w-screen -ml-[50vw] left-1/2 bg-white">
+        <motion.div
           ref={scrollContainerRef}
-          className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto overflow-y-hidden pb-8 pl-4 sm:pl-12 lg:pl-16 pr-4 sm:pr-12 lg:pr-16 scrollbar-hide"
+          className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto overflow-y-hidden pb-8 scrollbar-hide"
+          style={{ cursor: "grab" }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.1}
+          onDragStart={(_, info) => {
+            if (scrollContainerRef.current) {
+              const container = scrollContainerRef.current;
+              scrollContainerRef.current.style.cursor = "grabbing";
+              dragStartXRef.current = info.point.x;
+              dragStartScrollRef.current = container.scrollLeft;
+            }
+          }}
+          onDrag={(_, info) => {
+            if (scrollContainerRef.current) {
+              // Cancel any pending animation frame
+              if (dragRafRef.current !== null) {
+                cancelAnimationFrame(dragRafRef.current);
+              }
+
+              // Use requestAnimationFrame for smooth updates
+              dragRafRef.current = requestAnimationFrame(() => {
+                if (scrollContainerRef.current) {
+                  const container = scrollContainerRef.current;
+                  const deltaX = dragStartXRef.current - info.point.x;
+                  const newScroll = dragStartScrollRef.current + deltaX;
+                  const maxScroll =
+                    container.scrollWidth - container.clientWidth;
+                  container.scrollLeft = Math.max(
+                    0,
+                    Math.min(maxScroll, newScroll)
+                  );
+                  dragRafRef.current = null;
+                }
+              });
+            }
+          }}
+          onDragEnd={() => {
+            if (scrollContainerRef.current) {
+              scrollContainerRef.current.style.cursor = "grab";
+            }
+            if (dragRafRef.current !== null) {
+              cancelAnimationFrame(dragRafRef.current);
+              dragRafRef.current = null;
+            }
+          }}
         >
-          {[1, 2, 3, 4, 1, 2, 3, 4, 1, 2].map((num, index) => (
-            <motion.div
-              key={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInRight}
-              className="relative flex-shrink-0 w-[75vw] sm:w-[45vw] lg:w-[25vw]"
-            >
-              <Image
-                src={`/images/landing/patent${num}.png`}
-                alt={`특허기술 ${num}`}
-                width={1200}
-                height={1500}
-                className="w-full h-auto"
-                sizes="(max-width: 640px) 75vw, (max-width: 1024px) 45vw, 25vw"
-                quality={90}
-              />
-            </motion.div>
-          ))}
-        </div>
+          {patentImages.map((num, index) => {
+            const isFirst = index === 0;
+            const isLast = index === patentImages.length - 1;
+            return (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInRight}
+                className={`relative flex-shrink-0 w-[68vw] sm:w-[40vw] lg:w-[22vw] ${
+                  isFirst ? "ml-4 sm:ml-12 md:ml-16 lg:ml-20" : ""
+                } ${isLast ? "mr-4 sm:mr-12 md:mr-16 lg:mr-20" : ""}`}
+                drag={false}
+              >
+                <Image
+                  src={`/images/landing/patent${num}.png`}
+                  alt={`특허기술 ${num}`}
+                  width={1200}
+                  height={1500}
+                  className="w-full h-auto select-none"
+                  sizes="(max-width: 640px) 68vw, (max-width: 1024px) 40vw, 22vw"
+                  quality={90}
+                  draggable={false}
+                />
+              </motion.div>
+            );
+          })}
+        </motion.div>
 
         {/* Scroll Progress Bar */}
         <div className="flex justify-center mt-4">
