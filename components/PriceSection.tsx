@@ -6,8 +6,9 @@ import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
 // Constants
 const GRID_GAP = "4px";
-const CELL_PADDING = "px-6 py-4 md:px-8 md:py-5 lg:px-10 lg:py-6";
-const CELL_TEXT = "text-center text-sm md:text-base lg:text-lg";
+const CELL_PADDING =
+  "px-2 py-2 sm:px-4 sm:py-3 md:px-8 md:py-5 lg:px-10 lg:py-6";
+const CELL_TEXT = "text-center text-xs sm:text-sm md:text-base lg:text-lg";
 
 // Styles (defined at module level for reuse)
 const tableHeaderCellStyle = mergeStyles(textStyles.headingWhite, {
@@ -195,7 +196,7 @@ export default function PriceSection() {
   });
 
   return (
-    <section id="price" className="py-8 md:py-32 px-0 sm:px-0 lg:px-8 bg-white">
+    <section id="price" className="pt-8 md:py-32 px-0 sm:px-0 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
         {/* Top Section */}
         <motion.div
@@ -264,16 +265,16 @@ export default function PriceSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="w-full mb-8 md:mb-16 space-y-8 md:space-y-12 p-12 md:p-16 lg:p-24"
+          className="w-full mb-0 md:mb-16 space-y-6 sm:space-y-8 md:space-y-12 px-4 py-8 sm:p-8 md:p-16 lg:p-24"
           style={{ backgroundColor: colors.beige.cream }}
         >
           {tablesData.map((table, tableIndex) => (
             <div
               key={tableIndex}
-              className="w-full p-4 md:p-6 lg:p-8 rounded-lg"
+              className="w-full p-2 sm:p-4 md:p-6 lg:p-8 rounded-lg"
             >
               <h3
-                className="text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 text-center"
+                className="text-lg sm:text-xl md:text-2xl lg:text-2xl mb-2 md:mb-3 text-center"
                 style={{
                   fontFamily: fonts.belleza,
                   fontWeight: 400,
@@ -285,7 +286,7 @@ export default function PriceSection() {
                 {table.title}
               </h3>
               <p
-                className="text-2xl md:text-3xl lg:text-4xl mb-4 md:mb-6 text-center"
+                className="text-lg sm:text-xl md:text-3xl lg:text-4xl mb-3 sm:mb-4 md:mb-6 text-center"
                 style={tableDescriptionStyle}
               >
                 {table.description}

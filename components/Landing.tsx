@@ -41,7 +41,7 @@ export default function Landing() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer}
-      className="relative py-8 md:py-12 lg:py-40"
+      className="relative pb-8 md:py-12 lg:py-40"
       style={{ backgroundColor: colors.beige.lighter }}
     >
       <div className="container mx-auto max-w-7xl w-full">

@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <div
-      className="w-full h-10 md:h-[54px] overflow-hidden flex items-center py-2 md:py-3"
+      className="w-full h-16 md:h-[54px] overflow-hidden flex items-center py-2 md:py-3"
       style={{ backgroundColor: colors.brown.primary }}
     >
       <div className="relative w-full">
