@@ -83,7 +83,11 @@ export default function LocationSection() {
           variants={fadeInUp}
           className="relative w-full mb-8 md:mb-12"
         >
-          <NaverMap className="w-full h-[300px] md:h-[400px] lg:h-[600px] rounded-lg overflow-hidden" />
+          <NaverMap
+            className="w-full h-[300px] md:h-[400px] lg:h-[600px] rounded-lg overflow-hidden"
+            latitude={37.550559}
+            longitude={127.06905}
+          />
         </motion.div>
 
         {/* Address Section */}
@@ -113,8 +117,11 @@ export default function LocationSection() {
               }}
             />
           </div>
-          <p
-            className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
+          <a
+            href="https://naver.me/x7jilCRR"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] hover:opacity-80 transition-opacity"
             style={bodyTextRegular}
           >
             서울특별시 광진구 동이로 212, <br />{" "}
@@ -124,7 +131,7 @@ export default function LocationSection() {
             >
               아늑호텔 앤 스파 서울 성수 건대점 B1
             </span>
-          </p>
+          </a>
         </motion.div>
 
         {/* Parking Information */}
