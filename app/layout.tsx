@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://doan.life/images/landing/image1.png",
-        width: 1200,
-        height: 630,
+        width: 1515,
+        height: 1020,
         alt: "도안재 - 프리미엄 다이어트 테라피",
       },
     ],
