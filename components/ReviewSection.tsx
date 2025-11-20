@@ -146,6 +146,9 @@ export default function ReviewSection() {
   const dragStartXRef = useRef<number>(0);
   const dragStartScrollRef = useRef<number>(0);
   const dragRafRef = useRef<number | null>(null);
+  const touchStartXRef = useRef<number>(0);
+  const touchStartScrollRef = useRef<number>(0);
+  const isSwipingRef = useRef<boolean>(false);
 
   const reviews = [
     {
@@ -295,6 +298,55 @@ export default function ReviewSection() {
     };
   }, []);
 
+  // Safari touch swipe handlers
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 1) {
+        touchStartXRef.current = e.touches[0].clientX;
+        touchStartScrollRef.current = container.scrollLeft;
+        isSwipingRef.current = true;
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isSwipingRef.current || e.touches.length !== 1) return;
+
+      const touchX = e.touches[0].clientX;
+      const deltaX = touchStartXRef.current - touchX;
+      const newScroll = touchStartScrollRef.current + deltaX;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+
+      // Only prevent default if we're actually scrolling horizontally
+      const scrollDelta = Math.abs(deltaX);
+      if (scrollDelta > 5) {
+        e.preventDefault();
+      }
+
+      container.scrollLeft = Math.max(0, Math.min(maxScroll, newScroll));
+    };
+
+    const handleTouchEnd = () => {
+      isSwipingRef.current = false;
+    };
+
+    container.addEventListener("touchstart", handleTouchStart, {
+      passive: false,
+    });
+    container.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
+    container.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    return () => {
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
+
   // Component-specific style constants
   const sectionTitleStyle = mergeStyles({
     fontFamily: fonts.belleza,
@@ -356,7 +408,11 @@ export default function ReviewSection() {
         <motion.div
           ref={scrollContainerRef}
           className="flex gap-6 md:gap-8 overflow-x-auto overflow-y-hidden pb-8 pl-4 sm:pl-12 lg:pl-16 pr-4 sm:pr-12 lg:pr-16 scrollbar-hide"
-          style={{ cursor: "grab" }}
+          style={{
+            cursor: "grab",
+            WebkitOverflowScrolling: "touch",
+            touchAction: "pan-x",
+          }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.1}
