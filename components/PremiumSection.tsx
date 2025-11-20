@@ -103,11 +103,12 @@ export default function PremiumSection() {
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
+              poster="/images/landing/video.png"
               autoPlay
               loop
               playsInline
               controls
-              preload="none"
+              preload="metadata"
               onPlay={handleVideoPlay}
               onLoadedData={() => setShowPoster(false)}
             >
