@@ -15,26 +15,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "도안재 - 환영합니다",
-  description: "현대적이고 반응형인 랜딩 페이지를 경험해보세요",
-  keywords: "랜딩 페이지, 한국어, 반응형",
+  title: "도안재 - 프리미엄 다이어트 테라피",
+  description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+  keywords: "도안재, 다이어트, 테라피, 프리미엄, 웰니스",
+  metadataBase: new URL("https://doan.life"),
   openGraph: {
-    title: "도안재 - 환영합니다",
-    description: "현대적이고 반응형인 랜딩 페이지를 경험해보세요",
+    title: "도안재 - 프리미엄 다이어트 테라피",
+    description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+    url: "https://doan.life",
+    siteName: "도안재",
     images: [
       {
-        url: "/images/landing/image1.png",
+        url: "https://doan.life/images/landing/image1.png",
         width: 1200,
         height: 630,
-        alt: "도안재",
+        alt: "도안재 - 프리미엄 다이어트 테라피",
       },
     ],
+    locale: "ko_KR",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "도안재 - 환영합니다",
-    description: "현대적이고 반응형인 랜딩 페이지를 경험해보세요",
-    images: ["/images/landing/image1.png"],
+    title: "도안재 - 프리미엄 다이어트 테라피",
+    description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+    images: ["https://doan.life/images/landing/image1.png"],
   },
 };
 
@@ -53,9 +58,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "도안재",
-    description: "현대적이고 반응형인 랜딩 페이지",
+    description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
     inLanguage: "ko",
-    url: "https://example.com",
+    url: "https://doan.life",
   };
 
   const naverMapClientId = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
