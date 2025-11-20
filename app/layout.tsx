@@ -16,12 +16,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "도안재 - 프리미엄 다이어트 테라피",
-  description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+  description:
+    "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
   keywords: "도안재, 다이어트, 테라피, 프리미엄, 웰니스",
   metadataBase: new URL("https://doan.life"),
   openGraph: {
     title: "도안재 - 프리미엄 다이어트 테라피",
-    description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+    description:
+      "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
     url: "https://doan.life",
     siteName: "도안재",
     images: [
@@ -38,7 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "도안재 - 프리미엄 다이어트 테라피",
-    description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+    description:
+      "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
     images: ["https://doan.life/images/landing/image1.png"],
   },
 };
@@ -58,7 +61,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "도안재",
-    description: "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+    description:
+      "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
     inLanguage: "ko",
     url: "https://doan.life",
   };

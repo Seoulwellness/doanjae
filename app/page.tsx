@@ -38,7 +38,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "도안재 - 프리미엄 다이어트 테라피",
     description:
-      "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+      "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션. 몸은 가볍게, 과정은 편안하게, 결과는 한층 아름답게.",
+    url: "https://doan.life",
+    siteName: "도안재",
+    images: [
+      {
+        url: "https://doan.life/images/landing/image1.png",
+        width: 1515,
+        height: 1020,
+        alt: "도안재 - 프리미엄 다이어트 테라피",
+      },
+    ],
     type: "website",
     locale: "ko_KR",
   },
@@ -46,7 +56,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "도안재 - 프리미엄 다이어트 테라피",
     description:
-      "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션",
+      "천년의 지혜와 현대의 기술을 접목한 가장 이상적인 다이어트 솔루션. 몸은 가볍게, 과정은 편안하게, 결과는 한층 아름답게.",
+    images: ["https://doan.life/images/landing/image1.png"],
   },
 };
 
