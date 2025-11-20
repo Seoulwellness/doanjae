@@ -19,6 +19,9 @@ export default function PatentSection() {
   const dragStartXRef = useRef<number>(0);
   const dragStartScrollRef = useRef<number>(0);
   const dragRafRef = useRef<number | null>(null);
+  const touchStartXRef = useRef<number>(0);
+  const touchStartScrollRef = useRef<number>(0);
+  const isSwipingRef = useRef<boolean>(false);
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -136,6 +139,55 @@ export default function PatentSection() {
     };
   }, [isDraggingProgress]);
 
+  // Safari touch swipe handlers
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 1) {
+        touchStartXRef.current = e.touches[0].clientX;
+        touchStartScrollRef.current = container.scrollLeft;
+        isSwipingRef.current = true;
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isSwipingRef.current || e.touches.length !== 1) return;
+
+      const touchX = e.touches[0].clientX;
+      const deltaX = touchStartXRef.current - touchX;
+      const newScroll = touchStartScrollRef.current + deltaX;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+
+      // Only prevent default if we're actually scrolling horizontally
+      const scrollDelta = Math.abs(deltaX);
+      if (scrollDelta > 5) {
+        e.preventDefault();
+      }
+
+      container.scrollLeft = Math.max(0, Math.min(maxScroll, newScroll));
+    };
+
+    const handleTouchEnd = () => {
+      isSwipingRef.current = false;
+    };
+
+    container.addEventListener("touchstart", handleTouchStart, {
+      passive: false,
+    });
+    container.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
+    container.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    return () => {
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
+
   return (
     <section className="py-8 md:py-32 bg-white">
       <div className="container mx-auto max-w-[95%] lg:max-w-[90%] px-4 sm:px-6 lg:px-8">
@@ -165,7 +217,11 @@ export default function PatentSection() {
         <motion.div
           ref={scrollContainerRef}
           className="flex gap-6 md:gap-8 lg:gap-12 overflow-x-auto overflow-y-hidden pb-8 scrollbar-hide"
-          style={{ cursor: "grab" }}
+          style={{
+            cursor: "grab",
+            WebkitOverflowScrolling: "touch",
+            touchAction: "pan-x",
+          }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.1}
