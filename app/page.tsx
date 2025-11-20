@@ -24,6 +24,7 @@ const ProcessSection = dynamic(() => import("@/components/ProcessSection"));
 const LocationSection = dynamic(() => import("@/components/LocationSection"));
 const CTASection = dynamic(() => import("@/components/CTASection"));
 const ScrollToTop = dynamic(() => import("@/components/ScrollToTop"));
+const WelcomePopup = dynamic(() => import("@/components/WelcomePopup"));
 
 // Keep ReviewSection import for future use
 const ReviewSection = dynamic(() => import("@/components/ReviewSection"));
@@ -98,6 +99,7 @@ export default function Home() {
         <CTASection />
       </ErrorBoundary>
       <ScrollToTop />
+      <WelcomePopup />
     </ErrorBoundary>
   );
 }

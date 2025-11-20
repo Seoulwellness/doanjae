@@ -37,6 +37,7 @@ export default function LocationSection() {
   });
   return (
     <section
+      id="location"
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
       style={{ backgroundColor: colors.beige.primary }}
     >
@@ -73,23 +74,29 @@ export default function LocationSection() {
           </div>
         </motion.div>
 
-        {/* Map Image */}
+        {/* Kakao Map */}
         <motion.div
+          // id="map"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
           className="relative w-full mb-8 md:mb-12"
         >
-          <Image
-            src="/images/landing/image18.png"
-            alt="Location Map"
-            width={1200}
-            height={800}
-            className="w-full h-auto mx-auto"
-            sizes="100vw"
-            quality={90}
-          />
+          <div
+            id="map"
+            className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden"
+          >
+            <iframe
+              src="https://map.kakao.com/link/map/아늑호텔 앤 스파 서울 성수 건대점,37.5425,127.0697"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="도안재 위치"
+            />
+          </div>
         </motion.div>
 
         {/* Address Section */}

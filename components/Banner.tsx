@@ -72,12 +72,12 @@ export default function Banner() {
   return (
     <div
       id="top-banner"
-      className="w-full overflow-hidden"
+      className="w-full overflow-hidden relative z-50"
       style={{ backgroundColor: colors.brown.primary }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="flex items-center justify-center h-10 md:h-[54px] text-sm md:text-base cursor-grab active:cursor-grabbing"
+          className="flex items-center justify-center h-12 md:h-[54px] text-sm md:text-base cursor-grab active:cursor-grabbing"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.2}

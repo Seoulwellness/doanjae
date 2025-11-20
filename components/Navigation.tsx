@@ -16,6 +16,25 @@ export default function Navigation({ fixed = true }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [bannerVisible, setBannerVisible] = useState(true);
 
+  // Smooth scroll to section
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const behavior: ScrollBehavior = prefersReducedMotion()
+        ? "auto"
+        : "smooth";
+      element.scrollIntoView({
+        behavior,
+        block: "start",
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   // Reusable style objects
   const navLinkStyle = {
     fontFamily: fonts.pretendard,
@@ -78,7 +97,7 @@ export default function Navigation({ fixed = true }: NavigationProps) {
         className={`${
           fixed ? "fixed" : "absolute"
         } left-0 right-0 z-[100] transition-all duration-200 ease-out ${
-          fixed ? (bannerVisible ? "top-10" : "top-0") : "top-0"
+          fixed ? (bannerVisible ? "top-12" : "top-0") : "top-0"
         } md:hidden`}
         style={{
           backgroundColor: bannerVisible ? "transparent" : colors.brown.primary,
@@ -154,34 +173,38 @@ export default function Navigation({ fixed = true }: NavigationProps) {
 
             {/* Navigation Links - Center (truly centered on screen) */}
             <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6 md:gap-8 lg:gap-10">
-              <Link
-                href="/#brand"
+              <a
+                href="#brand"
+                onClick={(e) => scrollToSection(e, "brand")}
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
                 style={desktopNavLinkStyle(bannerVisible)}
               >
                 BRAND
-              </Link>
-              <Link
-                href="/#program"
+              </a>
+              <a
+                href="#program"
+                onClick={(e) => scrollToSection(e, "program")}
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
                 style={desktopNavLinkStyle(bannerVisible)}
               >
                 PROGRAM
-              </Link>
-              <Link
-                href="/#price"
+              </a>
+              <a
+                href="#price"
+                onClick={(e) => scrollToSection(e, "price")}
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
                 style={desktopNavLinkStyle(bannerVisible)}
               >
                 PRICE
-              </Link>
-              <Link
-                href="/#contact"
+              </a>
+              <a
+                href="#map"
+                onClick={(e) => scrollToSection(e, "map")}
                 className="font-bold text-sm md:text-base uppercase hover:opacity-70 transition-opacity cursor-pointer"
                 style={desktopNavLinkStyle(bannerVisible)}
               >
                 CONTACT
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -277,38 +300,38 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                 {/* Navigation Links */}
                 <div className="flex-1 px-6 py-4">
                   <nav className="space-y-0">
-                    <Link
-                      href="/#brand"
+                    <a
+                      href="#brand"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
                       style={mobileNavLinkStyle}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => scrollToSection(e, "brand")}
                     >
                       BRAND
-                    </Link>
-                    <Link
-                      href="/#program"
+                    </a>
+                    <a
+                      href="#program"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
                       style={mobileNavLinkStyle}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => scrollToSection(e, "program")}
                     >
                       PROGRAM
-                    </Link>
-                    <Link
-                      href="/#price"
+                    </a>
+                    <a
+                      href="#price"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
                       style={mobileNavLinkStyle}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => scrollToSection(e, "price")}
                     >
                       PRICE
-                    </Link>
-                    <Link
-                      href="/#contact"
+                    </a>
+                    <a
+                      href="#map"
                       className="block py-4 font-bold text-sm md:text-base uppercase border-b border-black/10 cursor-pointer"
                       style={mobileNavLinkStyle}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => scrollToSection(e, "map")}
                     >
                       CONTACT
-                    </Link>
+                    </a>
                   </nav>
                 </div>
               </div>

@@ -15,7 +15,7 @@ interface HeroSlide {
   image: string;
   mobileImage: string;
   imageType: "jpg" | "avif" | "png";
-  mobileImageType: "jpg" | "avif" | "png";
+  mobileImageType: "jpg" | "avif" | "png" | "webp";
   title: string;
   subtitle: string;
   description: string;
@@ -28,7 +28,7 @@ const heroSlides: HeroSlide[] = [
     image: "/images/hero/image1",
     mobileImage: "/images/hero/mobile_image1",
     imageType: "jpg",
-    mobileImageType: "png",
+    mobileImageType: "webp",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -40,7 +40,7 @@ const heroSlides: HeroSlide[] = [
     image: "/images/hero/image3",
     mobileImage: "/images/hero/mobile_image2",
     imageType: "png",
-    mobileImageType: "png",
+    mobileImageType: "webp",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -52,7 +52,7 @@ const heroSlides: HeroSlide[] = [
     image: "/images/hero/image4",
     mobileImage: "/images/hero/mobile_image3",
     imageType: "png",
-    mobileImageType: "png",
+    mobileImageType: "webp",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -178,7 +178,7 @@ export default function Hero() {
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
-      className="relative flex items-center px-8 sm:px-8 lg:px-8 overflow-hidden h-[calc(100vh-2.5rem)] md:h-[calc(100vh-3rem)]"
+      className="relative flex items-center px-8 sm:px-8 lg:px-8 overflow-hidden h-screen md:h-[calc(100vh-3rem)] -mt-10 md:mt-0"
       style={{ backgroundColor: colors.beige.light }}
     >
       {/* Carousel Container */}
@@ -305,7 +305,7 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href="#about"
+              href="http://pf.kakao.com/_ZkMxkn"
               // whileHover={{ scale: 1.02 }}
               // whileTap={{ scale: 0.98 }}
               className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-colors text-center text-sm md:text-base"
