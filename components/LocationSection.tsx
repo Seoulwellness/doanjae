@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
+import NaverMap from "./NaverMap";
 
 export default function LocationSection() {
   // Extend base styles - Belleza font for section titles
@@ -37,7 +38,7 @@ export default function LocationSection() {
   });
   return (
     <section
-      id="location"
+      id="map"
       className="py-8 md:py-32 px-4 sm:px-6 lg:px-8"
       style={{ backgroundColor: colors.beige.primary }}
     >
@@ -74,29 +75,15 @@ export default function LocationSection() {
           </div>
         </motion.div>
 
-        {/* Kakao Map */}
+        {/* Naver Map */}
         <motion.div
-          // id="map"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
           className="relative w-full mb-8 md:mb-12"
         >
-          <div
-            id="map"
-            className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden"
-          >
-            <iframe
-              src="https://map.kakao.com/link/map/아늑호텔 앤 스파 서울 성수 건대점,37.5425,127.0697"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="도안재 위치"
-            />
-          </div>
+          <NaverMap className="w-full h-[300px] md:h-[400px] lg:h-[600px] rounded-lg overflow-hidden" />
         </motion.div>
 
         {/* Address Section */}

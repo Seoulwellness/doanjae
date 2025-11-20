@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import AmplitudeProvider from "@/components/AmplitudeProvider";
 
@@ -20,11 +21,20 @@ export const metadata: Metadata = {
   openGraph: {
     title: "도안재 - 환영합니다",
     description: "현대적이고 반응형인 랜딩 페이지를 경험해보세요",
+    images: [
+      {
+        url: "/images/landing/image1.png",
+        width: 1200,
+        height: 630,
+        alt: "도안재",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "도안재 - 환영합니다",
     description: "현대적이고 반응형인 랜딩 페이지를 경험해보세요",
+    images: ["/images/landing/image1.png"],
   },
 };
 
@@ -48,6 +58,8 @@ export default function RootLayout({
     url: "https://example.com",
   };
 
+  const naverMapClientId = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
+
   return (
     <html lang="ko">
       <head>
@@ -67,6 +79,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${naverMapClientId}`}
+          strategy="beforeInteractive"
+        />
         <AmplitudeProvider>{children}</AmplitudeProvider>
       </body>
     </html>
