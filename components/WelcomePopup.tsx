@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
 import { prefersReducedMotion } from "@/lib/animations";
 import { colors, fonts } from "@/lib/constants";
 
@@ -38,11 +37,6 @@ export default function WelcomePopup() {
     setIsOpen(false);
   };
 
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
-    }
-  };
 
   return (
     <AnimatePresence>
@@ -57,7 +51,6 @@ export default function WelcomePopup() {
               : { duration: 0.3, ease: "easeOut" }
           }
           className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60"
-          onClick={handleBackdropClick}
         >
           <motion.div
             initial={
@@ -80,97 +73,43 @@ export default function WelcomePopup() {
                 ? { duration: 0.01 }
                 : { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }
             }
-            className="relative w-full max-w-[340px] md:max-w-md rounded-2xl overflow-hidden shadow-2xl"
-            style={{ backgroundColor: colors.beige.primary }}
+            className="relative w-full max-w-[340px] md:max-w-lg lg:max-w-xl rounded-2xl overflow-hidden shadow-2xl bg-white"
           >
-            {/* Close Button */}
-            <button
-              onClick={handleClose}
-              className="absolute top-3 right-3 z-10 p-1.5 rounded-full hover:bg-black/10 transition-colors"
-              aria-label="Close popup"
-            >
-              <X className="w-5 h-5 md:w-6 md:h-6" style={{ color: colors.brown.primary }} />
-            </button>
+            {/* Background Image - Upper part only */}
+            <div className="relative w-full aspect-video">
+              <Image
+                src="/images/advertisement.avif"
+                alt="Welcome"
+                fill
+                className="object-cover"
+              />
+            </div>
 
-            {/* Popup Content */}
-            <div className="p-5 md:p-8">
-              {/* Logo */}
-              <div className="flex justify-center mb-4 md:mb-6">
-                <Image
-                  src="/logo2.png"
-                  alt="DOANJAE"
-                  width={80}
-                  height={80}
-                  className="h-auto w-auto"
-                />
-              </div>
-
-              {/* Title */}
-              <h2
-                className="text-lg md:text-2xl text-center mb-3 md:mb-4"
-                style={{
-                  fontFamily: fonts.pretendard,
-                  fontWeight: 700,
-                  color: colors.brown.primary,
-                }}
-              >
-                도안재에 오신 것을 환영합니다
-              </h2>
-
-              {/* Description */}
-              <p
-                className="text-xs md:text-base text-center mb-4 md:mb-6 leading-relaxed"
-                style={{
-                  fontFamily: fonts.pretendard,
-                  fontWeight: 400,
-                  color: colors.brown.primary,
-                }}
-              >
-                11월 17일 GRAND OPEN
-                <br />
-                신규 회원 특별 할인 진행중
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="space-y-2 md:space-y-3">
-                <a
-                  href="#contact"
-                  onClick={handleClose}
-                  className="block w-full py-2.5 md:py-3 px-4 rounded-lg text-center text-xs md:text-base font-bold transition-opacity hover:opacity-90"
-                  style={{
-                    backgroundColor: colors.brown.primary,
-                    color: colors.text.white,
-                    fontFamily: fonts.pretendard,
-                  }}
-                >
-                  예약하기
-                </a>
-                <a
-                  href="http://pf.kakao.com/_ZkMxkn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleClose}
-                  className="block w-full py-2.5 md:py-3 px-4 rounded-lg text-center text-xs md:text-base font-bold transition-opacity hover:opacity-90"
-                  style={{
-                    backgroundColor: colors.accent.kakao,
-                    color: colors.brown.primary,
-                    fontFamily: fonts.pretendard,
-                  }}
-                >
-                  카카오 채널 추가
-                </a>
-              </div>
-
-              {/* Don't show again option */}
+            {/* Bottom Buttons */}
+            <div className="flex gap-0">
               <button
                 onClick={handleDontShowForDay}
-                className="w-full mt-3 md:mt-4 py-1.5 md:py-2 text-[10px] md:text-xs text-center opacity-60 hover:opacity-100 transition-opacity"
+                className="flex-1 py-4 md:py-5 text-xs md:text-sm font-bold text-center transition-opacity hover:opacity-90 border-t border-r"
                 style={{
+                  backgroundColor: colors.brown.primary,
+                  color: colors.text.white,
                   fontFamily: fonts.pretendard,
-                  color: colors.brown.primary,
+                  borderColor: "rgba(255, 255, 255, 0.2)",
                 }}
               >
                 오늘 하루 보지 않기
+              </button>
+              <button
+                onClick={handleClose}
+                className="flex-1 py-4 md:py-5 text-xs md:text-sm font-bold text-center transition-opacity hover:opacity-90 border-t"
+                style={{
+                  backgroundColor: colors.brown.primary,
+                  color: colors.text.white,
+                  fontFamily: fonts.pretendard,
+                  borderColor: "rgba(255, 255, 255, 0.2)",
+                }}
+              >
+                닫기
               </button>
             </div>
           </motion.div>
