@@ -13,7 +13,9 @@ import { colors, fonts } from "@/lib/constants";
 interface HeroSlide {
   id: number;
   image: string;
+  mobileImage: string;
   imageType: "jpg" | "avif" | "png";
+  mobileImageType: "jpg" | "avif" | "png";
   title: string;
   subtitle: string;
   description: string;
@@ -24,7 +26,9 @@ const heroSlides: HeroSlide[] = [
   {
     id: 1,
     image: "/images/hero/image1",
+    mobileImage: "/images/hero/mobile_image1",
     imageType: "jpg",
+    mobileImageType: "png",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -34,7 +38,9 @@ const heroSlides: HeroSlide[] = [
   {
     id: 2,
     image: "/images/hero/image3",
+    mobileImage: "/images/hero/mobile_image2",
     imageType: "png",
+    mobileImageType: "png",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -44,7 +50,9 @@ const heroSlides: HeroSlide[] = [
   {
     id: 3,
     image: "/images/hero/image4",
+    mobileImage: "/images/hero/mobile_image3",
     imageType: "png",
+    mobileImageType: "png",
     title: "누워서 30분\n수면 다이어트 테라피, 도안재",
     subtitle: "가볍게, 편안하게, 아름답게",
     description:
@@ -58,7 +66,19 @@ const AUTO_PLAY_INTERVAL = 5000; // 5 seconds
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Detect mobile screen
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Reusable style objects
   const titleStyle = {
@@ -195,7 +215,11 @@ export default function Hero() {
             className="absolute inset-0"
           >
             <Image
-              src={`${currentSlide.image}.${currentSlide.imageType}`}
+              src={
+                isMobile
+                  ? `${currentSlide.mobileImage}.${currentSlide.mobileImageType}`
+                  : `${currentSlide.image}.${currentSlide.imageType}`
+              }
               alt="도안자 수면 다이어트 테라피"
               fill
               className="object-cover"
