@@ -117,21 +117,30 @@ export default function LocationSection() {
               }}
             />
           </div>
-          <a
-            href="https://naver.me/x7jilCRR"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] hover:opacity-80 transition-opacity"
-            style={bodyTextRegular}
-          >
-            서울특별시 광진구 동이로 212, <br />{" "}
-            <span
-              className="text-base md:text-lg lg:text-xl"
-              style={bodyTextBold}
+          <div className="flex flex-col items-center gap-0">
+            <a
+              href="https://naver.me/x7jilCRR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] hover:opacity-80 transition-opacity"
+              style={bodyTextRegular}
             >
-              아늑호텔 앤 스파 서울 성수 건대점 B1
-            </span>
-          </a>
+              서울특별시 광진구 동이로 212, <br />{" "}
+              <span
+                className="text-base md:text-lg lg:text-xl"
+                style={bodyTextBold}
+              >
+                아늑호텔 앤 스파 서울 성수 건대점 B1
+              </span>
+            </a>
+            <a
+              href="tel:07088221110"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] hover:opacity-80 transition-opacity"
+              style={bodyTextRegular}
+            >
+              070-8822-1110
+            </a>
+          </div>
         </motion.div>
 
         {/* Parking Information */}
