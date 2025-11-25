@@ -9,7 +9,7 @@ export default function Landing() {
   // Reusable style objects
   const headingStyle = {
     ...textStyles.heading1,
-    lineHeight: "40px",
+    lineHeight: "28px",
   };
 
   const subheadingStyle = {
