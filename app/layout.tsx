@@ -50,6 +50,7 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  themeColor: "#3b82f6",
 };
 
 export default function RootLayout({
@@ -72,12 +73,6 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <meta name="theme-color" content="#3b82f6" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
-          as="style"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
