@@ -289,13 +289,18 @@ export default function Navigation({ fixed = true }: NavigationProps) {
                 </div>
 
                 {/* Promotional Banner */}
-                <div className="px-6 py-6 bg-[#ffd800]">
+                <a
+                  href="https://pf.kakao.com/_ZkMxkn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-6 py-6 bg-[#ffd800] hover:bg-[#ffdd33] transition-colors cursor-pointer"
+                >
                   <p className="text-black font-semibold text-sm leading-relaxed">
                     카카오톡 채널 추가하고
                     <br />
                     3,000원 혜택 받아가세요!
                   </p>
-                </div>
+                </a>
 
                 {/* Navigation Links */}
                 <div className="flex-1 px-6 py-4">

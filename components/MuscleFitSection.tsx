@@ -207,19 +207,16 @@ export default function MuscleFitSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center mt-8 md:mt-32 space-y-2"
+          className="text-center mt-8 md:mt-32 space-y-0 md:space-y-3"
         >
           <p
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-            style={{
-              ...largeTextBold,
-              lineHeight: "40px",
-            }}
+            className="text-xl md:text-xl lg:text-2xl xl:text-3xl ![line-height:24px] md:[line-height:40px]"
+            style={largeTextBold}
           >
             운동 후 지친 근육을 위한
           </p>
           <p
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+            className="text-xl md:text-xl lg:text-2xl xl:text-3xl ![line-height:24px] md:[line-height:40px]"
             style={largeTextBold}
           >
             도안재만의 힐링 케어

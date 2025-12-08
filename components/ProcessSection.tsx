@@ -17,10 +17,6 @@ export default function ProcessSection() {
     color: colors.brown.primary,
   });
 
-  const largeTextBold = mergeStyles(textStyles.headingCentered, {
-    lineHeight: "100%",
-  });
-
   const stepBadgeTextStyle = mergeStyles({
     fontFamily: "Daehan, sans-serif",
     fontWeight: 700,
@@ -72,24 +68,30 @@ export default function ProcessSection() {
           >
             Process
           </h2>
-          <div>
+          <>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={largeTextBold}
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[4px] md:leading-[40px] font-bold text-center"
+              style={{
+                fontFamily: fonts.pretendard,
+                color: colors.brown.primary,
+              }}
             >
               도안재만의
             </p>
             <br />
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              style={largeTextBold}
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[4px] md:leading-[40px] font-bold text-center"
+              style={{
+                fontFamily: fonts.pretendard,
+                color: colors.brown.primary,
+              }}
             >
               특별한 관리 프로세스
             </p>
-          </div>
+          </>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-4 md:space-y-12">
           {/* First Row: Image Left, Text Right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
             {/* Image Section - Left */}
@@ -131,13 +133,13 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="mb-4 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={headingStyle}
               >
                 나를 알다.
               </h2>
               <h3
-                className="text-base md:text-lg lg:text-xl"
+                className="mb-4 text-base md:text-lg lg:text-xl"
                 style={subheadingStyle}
               >
                 체질분석 및 상담
@@ -176,13 +178,13 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="mb-4 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={headingStyle}
               >
                 몸을 비우다.
               </h2>
               <h3
-                className="text-base md:text-lg lg:text-xl"
+                className="mb-4 text-base md:text-lg lg:text-xl"
                 style={subheadingStyle}
               >
                 웰니스 바디 테라피
@@ -258,13 +260,13 @@ export default function ProcessSection() {
                 </span>
               </div>
               <h2
-                className="mb-8 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="mb-4 md:mb-16 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={headingStyle}
               >
                 변화를 만나다.
               </h2>
               <h3
-                className="text-base md:text-lg lg:text-xl"
+                className="mb-4 text-base md:text-lg lg:text-xl"
                 style={subheadingStyle}
               >
                 맞춤형 솔루션

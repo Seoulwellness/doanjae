@@ -244,7 +244,7 @@ export default function PriceSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center mb-12 md:mb-16"
+          className="text-center pb-12 md:pb-0"
         >
           <h2
             className="mb-8 md:mb-12 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"

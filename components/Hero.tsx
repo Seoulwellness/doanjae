@@ -254,31 +254,31 @@ export default function Hero() {
                 ? { duration: 0.01 }
                 : { duration: 0.4, ease: "easeOut" }
             }
-            className="text-left space-y-4 md:space-y-6 lg:space-y-8 mt-[10vh] md:mt-[25vh]"
+            className="text-left space-y-10 md:space-y-6 lg:space-y-8 mt-[10vh] md:mt-[25vh]"
           >
             <h1
-              className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white md:text-[#3B2415] whitespace-pre-line"
+              className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#3B2415] whitespace-pre-line"
               style={titleStyle}
             >
               {currentSlide.title}
             </h1>
 
             <p
-              className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-white md:text-[#3B2415]"
+              className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#3B2415]"
               style={subtitleStyle}
             >
               {currentSlide.subtitle}
             </p>
 
             <p
-              className="font-medium text-base md:text-lg lg:text-xl text-white md:text-[#3B2415] whitespace-pre-line"
+              className="font-medium text-base md:text-lg lg:text-xl text-[#3B2415] whitespace-pre-line"
               style={descriptionStyle}
             >
               {currentSlide.description}
             </p>
 
             <p
-              className="font-bold text-base md:text-lg lg:text-xl text-white md:text-[#3B2415]"
+              className="font-bold text-base md:text-lg lg:text-xl text-[#3B2415]"
               style={ctaTextStyle}
             >
               {currentSlide.cta}

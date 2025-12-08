@@ -23,13 +23,11 @@ export default function SlimmingProgramSection() {
   });
 
   const bodyTextMedium = mergeStyles(textStyles.heading3, {
-    lineHeight: "26px",
     textAlign: "center" as const,
     verticalAlign: "middle" as const,
   });
 
   const bodyTextBold = mergeStyles(textStyles.headingCentered, {
-    lineHeight: "26px",
     verticalAlign: "middle" as const,
   });
 
@@ -124,13 +122,13 @@ export default function SlimmingProgramSection() {
         >
           {/* Main Title */}
           <h3
-            className="text-base md:text-lg lg:text-xl"
+            className="text-base md:text-lg lg:text-xl ![line-height:20px] md:![line-height:26px]"
             style={bodyTextMedium}
           >
             인생에서 가장 빛나야 할 순간을 위해
-            <br /> 도안재의 기술이{" "}
+            <br /> 도안재의 기술이 <br className="md:hidden" />
             <span
-              className="text-base md:text-lg lg:text-xl"
+              className="text-base md:text-lg lg:text-xl ![line-height:20px] md:![line-height:26px]"
               style={bodyTextBold}
             >
               &apos;체지방&apos;과 &apos;독소&apos;
@@ -139,14 +137,16 @@ export default function SlimmingProgramSection() {
           </h3>
 
           {/* Descriptive Paragraphs */}
-          <div className="space-y-2">
+          <div className="space-y-6">
             <p className="text-xs md:text-sm" style={smallTextMedium}>
-              특수 파동이 정체된 림프 순환을 촉진하여 평소 고민이던 부위의
-              부종을 빠르게 완화하고,
+              특수 파동이 정체된 림프 순환을 촉진하여
+              <br className="md:hidden" />
+              평소 고민이던 부위의 부종을 빠르게 완화하고,
             </p>
             <p className="text-xs md:text-sm" style={smallTextMedium}>
-              근적외선으로 체지방을 집중 분해하여 숨어있던 바디 라인을 선명하게
-              되찾아 드립니다.
+              근적외선으로 체지방을 집중 분해하여
+              <br className="md:hidden" /> 숨어있던 바디 라인을 선명하게 되찾아
+              드립니다.
             </p>
           </div>
 
