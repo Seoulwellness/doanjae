@@ -11,9 +11,9 @@ interface BannerItem {
 }
 
 const bannerItems: BannerItem[] = [
-  { id: 1, text: "11월 17일 GRAND OPEN" },
-  { id: 2, text: "신규 회원 특별 할인 진행중" },
-  { id: 3, text: "무료 체험 예약 받습니다" },
+  { id: 1, text: "오픈특가 프로모션 진행중" },
+  { id: 2, text: "도안재 서울성수건대점 OPEN" },
+  { id: 3, text: "누워서 30분 수면다이어트 테라피" },
 ];
 
 const AUTO_PLAY_INTERVAL = 4000; // 4 seconds

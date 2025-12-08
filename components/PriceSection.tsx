@@ -166,101 +166,197 @@ export default function PriceSection() {
     color: colors.brown.primary,
   });
 
-  const largeTextBold = mergeStyles(textStyles.headingCentered, {
-    verticalAlign: "middle" as const,
-  });
-
-  const largeTextSemiBold = mergeStyles(textStyles.heading2, {
-    textAlign: "center" as const,
-    verticalAlign: "middle" as const,
-    color: colors.text.white,
-  });
-
-  const mediumTextRegular = mergeStyles(textStyles.heading3, {
-    textAlign: "center" as const,
-    verticalAlign: "middle" as const,
-    color: "#000000",
-  });
-
-  const mediumTextBold = mergeStyles(textStyles.headingCentered, {
-    verticalAlign: "middle" as const,
-    color: "#000000",
-  });
-
-  const tableDescriptionStyle = mergeStyles({
+  const eventHeaderStyle = mergeStyles({
     fontFamily: fonts.pretendard,
-    fontWeight: 600,
-    lineHeight: "150%",
-    letterSpacing: "0%",
+    fontWeight: 700,
+    fontSize: "24px",
+    lineHeight: "100%",
+    textAlign: "center" as const,
     color: colors.brown.primary,
   });
 
+  const eventTextStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 700,
+    fontSize: "32px",
+    lineHeight: "100%",
+    textAlign: "center" as const,
+    color: "#000000",
+  });
+
+  const descriptionStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "150%",
+    textAlign: "center" as const,
+    color: "#000000",
+  });
+
+  const cardTitleStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 600,
+    fontSize: "20px",
+    lineHeight: "140%",
+    textAlign: "center" as const,
+  });
+
+  const cardPriceStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 700,
+    fontSize: "48px",
+    lineHeight: "120%",
+    textAlign: "center" as const,
+  });
+
+  const cardLabelStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "150%",
+    textAlign: "center" as const,
+  });
+
+  const finalMessageStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "150%",
+    textAlign: "center" as const,
+    color: "#000000",
+  });
+
+  const buttonStyle = mergeStyles({
+    fontFamily: fonts.pretendard,
+    fontWeight: 700,
+    fontSize: "18px",
+    lineHeight: "100%",
+    textAlign: "center" as const,
+    color: colors.text.white,
+  });
+
   return (
-    <section id="price" className="pt-8 md:py-32 px-0 sm:px-0 lg:px-8 bg-white">
-      <div className="container mx-auto max-w-7xl">
+    <section id="price" className="pt-8 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="container mx-auto max-w-4xl">
         {/* Top Section */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center mb-8 md:mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2
-            className="mb-6 md:mb-24 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+            className="mb-8 md:mb-12 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
             style={sectionTitleStyle}
           >
             Price
           </h2>
-          <div>
-            <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={largeTextBold}
-            >
-              2025년 11월
-            </p>
-            <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={largeTextBold}
-            >
-              도안재 GRAND OPEN!
-            </p>
-            <br />
 
-            <div
-              className="inline-block px-6 md:px-12 py-3 md:py-4 rounded-full"
-              style={{ backgroundColor: colors.brown.primary }}
+          <p className="mb-2" style={eventHeaderStyle}>
+            오픈특가 체험권
+          </p>
+          <p className="mb-8" style={eventTextStyle}>
+            EVENT
+          </p>
+
+          <p className="mb-2" style={descriptionStyle}>
+            누워서 경험하는
+            <br />
+            <span className="font-bold">수면 다이어트 테라피</span>
+          </p>
+
+          {/* First Price Card - Beige */}
+          <div
+            className="max-w-xs mx-auto mb-12 px-8 pt-8 pb-3 md:px-12 md:pt-12 md:pb-6"
+            style={{ backgroundColor: colors.beige.lighter }}
+          >
+            <p
+              className="mb-1"
+              style={{
+                ...cardTitleStyle,
+                fontSize: "26px",
+                fontWeight: 400,
+                color: "#000000",
+              }}
             >
-              <p
-                className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-                style={largeTextSemiBold}
-              >
-                첫방문 49,500원
+              슬림핏 1회 체험권
+            </p>
+            <p className="mb-6" style={{ ...cardPriceStyle, color: "#000000" }}>
+              49,500원
+            </p>
+            <div
+              className="border-t-2 border-dashed pt-4"
+              style={{ borderColor: "#000000" }}
+            >
+              <p style={{ ...cardLabelStyle, color: "#000000" }}>
+                Welcome coupon
               </p>
             </div>
-            <br />
-            <br />
-            <br />
-            <p
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={mediumTextRegular}
-            >
-              런칭을 기념하여 오직 지금만 드리는
-            </p>
-            <br />
-            <p
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
-              style={mediumTextBold}
-            >
-              특별한 혜택을 놓치지 마세요!
-            </p>
-            <br />
-            <br />
           </div>
+
+          <p className="mb-2" style={descriptionStyle}>
+            운동 없이 완성하는
+            <br />
+            <span className="font-bold">기술집약형 체험관리</span>
+          </p>
+
+          {/* Second Price Card - Dark Brown */}
+          <div
+            className="max-w-xs mx-auto mb-12 px-8 pt-8 pb-3 md:px-12 md:pt-12 md:pb-6"
+            style={{ backgroundColor: colors.brown.primary }}
+          >
+            <p
+              className="mb-1"
+              style={{
+                ...cardTitleStyle,
+                fontSize: "26px",
+                fontWeight: 400,
+                color: colors.text.white,
+                lineHeight: "120%",
+              }}
+            >
+              슬림핏 + 머슬핏
+              <br />
+              1회 체험권
+            </p>
+            <p
+              className="mb-6"
+              style={{ ...cardPriceStyle, color: colors.text.white }}
+            >
+              99,000원
+            </p>
+            <div
+              className="border-t-2 border-dashed pt-4"
+              style={{ borderColor: colors.text.white }}
+            >
+              <p style={{ ...cardLabelStyle, color: colors.text.white }}>
+                Welcome coupon
+              </p>
+            </div>
+          </div>
+
+          <p className="mb-0" style={finalMessageStyle}>
+            런칭을 기념하여 오직 지금만 드리는
+          </p>
+          <p className="mb-6" style={{ ...finalMessageStyle, fontWeight: 700 }}>
+            특별한 혜택을 놓치지 마세요!
+          </p>
+
+          {/* CTA Button */}
+          <a
+            href="https://naver.me/xjUE2WjY"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-12 py-4 rounded-full transition-opacity hover:opacity-90"
+            style={{ backgroundColor: colors.brown.primary }}
+          >
+            <span style={buttonStyle}>오픈특가 예약하기</span>
+          </a>
         </motion.div>
 
-        {/* Price Tables */}
-        <motion.div
+        {/* Price Tables - Commented Out */}
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -300,7 +396,6 @@ export default function PriceSection() {
                     gap: GRID_GAP,
                   }}
                 >
-                  {/* Header Row */}
                   {table.headers.map((header, colIndex) => (
                     <PriceTableCell
                       key={`header-${colIndex}`}
@@ -315,7 +410,6 @@ export default function PriceSection() {
                     </PriceTableCell>
                   ))}
 
-                  {/* Data Rows */}
                   {table.rows.map((row, rowIndex) =>
                     row.map((cell, colIndex) => (
                       <PriceTableCell
@@ -335,7 +429,7 @@ export default function PriceSection() {
               </div>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

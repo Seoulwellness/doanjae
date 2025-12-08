@@ -57,7 +57,7 @@ export default function MuscleFitSection() {
             Muscle fit Program
           </h2>
 
-          <div className="space-y-2 md:space-y-3">
+          <div>
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={bodyTextMedium}
@@ -71,7 +71,7 @@ export default function MuscleFitSection() {
               </span>
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px] mt-2 md:mt-3"
               style={largeTextBold}
             >
               운동없이 완성하는

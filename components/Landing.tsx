@@ -9,7 +9,7 @@ export default function Landing() {
   // Reusable style objects
   const headingStyle = {
     ...textStyles.heading1,
-    lineHeight: "28px",
+    lineHeight: "32x",
   };
 
   const subheadingStyle = {
@@ -84,14 +84,7 @@ export default function Landing() {
               style={subheadingStyle}
             >
               땀만 뻘뻘 흘리던 기존의 관리와는 달라요.
-            </motion.p>
-
-            <motion.div
-              variants={fadeInLeft}
-              className="text-xs md:text-sm"
-              style={bodyTextStyle}
-            >
-              도안재의 30분은{" "}
+              <br /> 도안재의 30분은{" "}
               <span className="text-xs md:text-sm" style={boldTextStyle}>
                 천년의 지혜
               </span>
@@ -101,7 +94,13 @@ export default function Landing() {
                 7종의 특허 기술
               </span>
               이 집약된 시간입니다.
-            </motion.div>
+            </motion.p>
+
+            {/* <motion.div
+              variants={fadeInLeft}
+              className="text-xs md:text-sm"
+              style={bodyTextStyle}
+            ></motion.div> */}
           </motion.div>
         </div>
       </div>

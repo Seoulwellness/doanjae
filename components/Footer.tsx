@@ -23,7 +23,7 @@ export default function Footer() {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="flex items-center gap-8 md:gap-12 whitespace-nowrap"
+          className="flex items-center gap-16 md:gap-24 whitespace-nowrap"
           style={{ willChange: "transform" }} // GPU acceleration hint
         >
           {Array.from({ length: logoCount }).map((_, i) => (

@@ -69,8 +69,11 @@ export default function CTASection() {
             >
               예약하세요.
             </p>
-            <button
-              className="px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 py-2 sm:py-3 md:py-5 lg:py-6 rounded-full text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold cursor-pointer transition-opacity hover:opacity-90 active:opacity-75 whitespace-nowrap"
+            <a
+              href="https://naver.me/xjUE2WjY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 py-2 sm:py-3 md:py-5 lg:py-6 rounded-full text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold cursor-pointer transition-opacity hover:opacity-90 active:opacity-75 whitespace-nowrap"
               style={{
                 backgroundColor: colors.brown.primary,
                 color: colors.text.white,
@@ -78,7 +81,7 @@ export default function CTASection() {
               }}
             >
               예약하기
-            </button>
+            </a>
           </div>
         </div>
       </motion.div>

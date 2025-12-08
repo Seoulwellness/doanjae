@@ -94,9 +94,9 @@ export default function Home() {
       <ErrorBoundary>
         <WellnessBodyTherapySection />
       </ErrorBoundary>
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <ReviewSection />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
       <ErrorBoundary>
         <PriceSection />
       </ErrorBoundary>
@@ -110,7 +110,7 @@ export default function Home() {
         <CTASection />
       </ErrorBoundary>
       <ScrollToTop />
-      <WelcomePopup />
+      {/* <WelcomePopup /> */}
     </ErrorBoundary>
   );
 }

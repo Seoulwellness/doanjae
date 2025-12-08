@@ -40,7 +40,7 @@ export default function SlimmingProgramSection() {
   });
 
   const quoteTextStyle = mergeStyles(textStyles.headingCentered, {
-    lineHeight: "100%",
+    lineHeight: "36px",
   });
   return (
     <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative">
@@ -73,7 +73,7 @@ export default function SlimmingProgramSection() {
           </h2>
 
           {/* Text below title */}
-          <div className="space-y-2 md:space-y-3">
+          <div>
             <p
               className="text-base md:text-lg lg:text-xl"
               style={mediumTextBold}
@@ -81,7 +81,7 @@ export default function SlimmingProgramSection() {
               당신의 몸에 가장 &apos;편안한 변화&apos;
             </p>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px] mt-2 md:mt-3"
               style={largeTextBold}
             >
               누워서 30분
@@ -128,11 +128,7 @@ export default function SlimmingProgramSection() {
             style={bodyTextMedium}
           >
             인생에서 가장 빛나야 할 순간을 위해
-          </h3>
-
-          {/* Focus Statement */}
-          <p className="text-base md:text-lg lg:text-xl" style={bodyTextMedium}>
-            도안재의 기술이{" "}
+            <br /> 도안재의 기술이{" "}
             <span
               className="text-base md:text-lg lg:text-xl"
               style={bodyTextBold}
@@ -140,10 +136,10 @@ export default function SlimmingProgramSection() {
               &apos;체지방&apos;과 &apos;독소&apos;
             </span>
             에 집중합니다.
-          </p>
+          </h3>
 
           {/* Descriptive Paragraphs */}
-          <div className="space-y-4">
+          <div className="space-y-2">
             <p className="text-xs md:text-sm" style={smallTextMedium}>
               특수 파동이 정체된 림프 순환을 촉진하여 평소 고민이던 부위의
               부종을 빠르게 완화하고,

@@ -104,21 +104,21 @@ export default function WellnessBodyTherapySection() {
         </motion.div>
 
         {/* Images with Overlays */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-16 items-stretch">
           {/* Image 12 */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInLeft}
-            className="relative w-full"
+            className="relative w-full h-full"
           >
             <Image
-              src="/images/landing/image12.png"
+              src="/images/landing/image12.jpeg"
               alt="인바디 재측정"
               width={1200}
               height={800}
-              className="w-full h-auto"
+              className="w-full h-full object-cover"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
               quality={90}
             />
@@ -154,14 +154,14 @@ export default function WellnessBodyTherapySection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInRight}
-            className="relative w-full"
+            className="relative w-full h-full"
           >
             <Image
               src="/images/landing/image13.png"
               alt="맞춤 한방 애프터티"
               width={1200}
               height={800}
-              className="w-full h-auto"
+              className="w-full h-full object-cover"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
               quality={90}
             />

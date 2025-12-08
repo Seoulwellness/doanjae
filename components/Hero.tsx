@@ -23,18 +23,18 @@ interface HeroSlide {
 }
 
 const heroSlides: HeroSlide[] = [
-  {
-    id: 1,
-    image: "/images/hero/image1",
-    mobileImage: "/images/hero/mobile_image1",
-    imageType: "jpg",
-    mobileImageType: "webp",
-    title: "누워서 30분\n수면 다이어트 테라피, 도안재",
-    subtitle: "가볍게, 편안하게, 아름답게",
-    description:
-      "천년의 지혜와 7종의 특허 기술로\n당신의 몸에 가장 '편안한 변화'를 약속합니다",
-    cta: "지금, 가장 먼저 '편안한 변화'를 경험하세요.",
-  },
+  // {
+  //   id: 1,
+  //   image: "/images/hero/image1",
+  //   mobileImage: "/images/hero/mobile_image1",
+  //   imageType: "jpg",
+  //   mobileImageType: "webp",
+  //   title: "누워서 30분\n수면 다이어트 테라피, 도안재",
+  //   subtitle: "가볍게, 편안하게, 아름답게",
+  //   description:
+  //     "천년의 지혜와 7종의 특허 기술로\n당신의 몸에 가장 '편안한 변화'를 약속합니다",
+  //   cta: "지금, 가장 먼저 '편안한 변화'를 경험하세요.",
+  // },
   {
     id: 2,
     image: "/images/hero/image3",

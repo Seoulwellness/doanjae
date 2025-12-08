@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { fadeInRight, fadeInUp } from "@/lib/animations";
 import { colors, textStyles } from "@/lib/constants";
 
-const patentImages = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2];
+const patentImages = [1, 2, 3, 4, 5, 6];
 
 export default function PatentSection() {
   // Use existing textStyles
@@ -199,7 +199,7 @@ export default function PatentSection() {
           className="text-center mb-8 md:mb-24"
         >
           <h2
-            className="font-bold mb-2 md:mb-4 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+            className="font-bold mb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
             style={headingStyle}
           >
             아름다운 체형 관리를 위한
@@ -283,7 +283,7 @@ export default function PatentSection() {
                 drag={false}
               >
                 <Image
-                  src={`/images/landing/patent${num}.png`}
+                  src={`/images/landing/patent${num}.jpg`}
                   alt={`특허기술 ${num}`}
                   width={1200}
                   height={1500}
