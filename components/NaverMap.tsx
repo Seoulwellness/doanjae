@@ -46,7 +46,7 @@ export default function NaverMap({
   longitude,
 }: NaverMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
-  const naverMapUrl = "https://naver.me/x7jilCRR";
+  const naverMapUrl = "https://naver.me/xjUE2WjY";
 
   useEffect(() => {
     // Initialize map
