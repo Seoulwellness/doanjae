@@ -141,7 +141,7 @@ export default function ProcessSection() {
                 나를 알다.
               </h2>
               <h3
-                className="mb-2 text-base md:text-lg lg:text-xl"
+                className="mb-4 text-base md:text-lg lg:text-xl"
                 style={subheadingStyle}
               >
                 체질분석 및 상담
@@ -186,7 +186,7 @@ export default function ProcessSection() {
                 몸을 비우다.
               </h2>
               <h3
-                className="mb-2 text-base md:text-lg lg:text-xl"
+                className="mb-4 text-base md:text-lg lg:text-xl"
                 style={subheadingStyle}
               >
                 웰니스 바디 테라피
@@ -268,7 +268,7 @@ export default function ProcessSection() {
                 변화를 만나다.
               </h2>
               <h3
-                className="mb-2 text-base md:text-lg lg:text-xl"
+                className="mb-4 text-base md:text-lg lg:text-xl"
                 style={subheadingStyle}
               >
                 맞춤형 솔루션
