@@ -74,13 +74,13 @@ export default function WellnessBodyTherapySection() {
 
           <div>
             <p
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
+              className="text-base md:text-lg lg:text-xl leading-[1.2]"
               style={bodyTextMedium}
             >
               당신의 &apos;오늘&apos;을 확인하고
             </p>
             <p
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
+              className="text-base md:text-lg lg:text-xl leading-[1.2]"
               style={bodyTextMedium}
             >
               &apos;내일&apos;의 균형을 준비합니다.
@@ -88,14 +88,14 @@ export default function WellnessBodyTherapySection() {
             <br />
 
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.2]"
               style={largeTextBold}
             >
               단순한 체형관리에서
             </p>
 
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.2]"
               style={largeTextBold}
             >
               끝나지 않는 도안재의 웰니스 테라피

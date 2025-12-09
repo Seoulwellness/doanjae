@@ -37,7 +37,7 @@ export default function SlimmingProgramSection() {
   });
 
   const quoteTextStyle = mergeStyles(textStyles.headingCentered, {
-    lineHeight: "115%",
+    lineHeight: "120%",
   });
   return (
     <section className="py-8 md:py-32 px-4 sm:px-6 lg:px-8 relative">
