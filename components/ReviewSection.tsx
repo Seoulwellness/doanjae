@@ -43,7 +43,7 @@ function ReviewCard({
   });
 
   const reviewTextStyle = mergeStyles(textStyles.bodyWhite, {
-    fontWeight: 700,
+    fontWeight: 500,
     lineHeight: "100%",
   });
 
