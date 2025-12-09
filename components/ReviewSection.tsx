@@ -153,7 +153,7 @@ export default function ReviewSection() {
       stars: 5,
       date: "naver review",
       reviewText:
-        "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
+        "결혼식이 있어 급하게 몸 상태를 정리해야했는데, 도안재에서 두세 번 관리받고 팔뚝살이 쏙 빠졌네요 :)",
     },
     {
       imageSrc: "/images/landing/image23.png",
