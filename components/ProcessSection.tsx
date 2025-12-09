@@ -72,7 +72,7 @@ export default function ProcessSection() {
           </h2>
           <>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[4px] md:leading-[40px] font-bold text-center"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px] font-bold text-center"
               style={{
                 fontFamily: fonts.pretendard,
                 color: colors.brown.primary,
@@ -80,9 +80,8 @@ export default function ProcessSection() {
             >
               도안재만의
             </p>
-            <br />
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[4px] md:leading-[40px] font-bold text-center"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px] font-bold text-center"
               style={{
                 fontFamily: fonts.pretendard,
                 color: colors.brown.primary,
