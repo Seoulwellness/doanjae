@@ -156,7 +156,7 @@ export default function ReviewSection() {
         "결혼식이 있어 급하게 몸 상태를 정리해야했는데, 도안재에서 두세 번 관리받고 팔뚝살이 쏙 빠졌네요 :)",
     },
     {
-      imageSrc: "/images/landing/image23.png",
+      imageSrc: "/images/landing/image23.jpg",
       customerName: "김** 고객님",
       stars: 3,
       date: "google review",
