@@ -122,7 +122,7 @@ export default function LocationSection() {
               href="https://naver.me/x7jilCRR"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] hover:opacity-80 transition-opacity"
+              className="text-base md:text-lg lg:text-xl leading-[1.2] md:[line-height:120%] hover:opacity-80 transition-opacity"
               style={bodyTextRegular}
             >
               서울특별시 광진구 동일로 212, <br />{" "}
@@ -135,7 +135,7 @@ export default function LocationSection() {
             </a>
             <a
               href="tel:07088221110"
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] hover:opacity-80 transition-opacity"
+              className="text-base md:text-lg lg:text-xl leading-[1.2] md:[line-height:120%] hover:opacity-80 transition-opacity"
               style={bodyTextRegular}
             >
               070-8822-1110
