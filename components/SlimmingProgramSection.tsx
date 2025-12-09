@@ -136,9 +136,9 @@ export default function SlimmingProgramSection() {
           </h3>
 
           {/* Descriptive Paragraphs */}
-          <div className="space-y-1 md:space-y-2">
+          <div className="space-y-0.5 md:space-y-1">
             <p
-              className="text-xs md:text-sm ![line-height:160%] md:![line-height:180%]"
+              className="text-xs md:text-sm ![line-height:140%] md:![line-height:150%]"
               style={smallTextMedium}
             >
               특수 파동이 정체된 림프 순환을 촉진하여
@@ -146,7 +146,7 @@ export default function SlimmingProgramSection() {
               평소 고민이던 부위의 부종을 빠르게 완화하고,
             </p>
             <p
-              className="text-xs md:text-sm ![line-height:160%] md:![line-height:180%]"
+              className="text-xs md:text-sm ![line-height:140%] md:![line-height:150%]"
               style={{ ...smallTextMedium }}
             >
               근적외선으로 체지방을 집중 분해하여
