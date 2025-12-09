@@ -62,7 +62,7 @@ function ReviewCard({
         />
         {/* Circular Badge - Top Right */}
         <div
-          className="absolute top-8 right-8 sm:top-13 sm:right-13 w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full flex flex-col items-center justify-center z-10"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full flex flex-col items-center justify-center z-10"
           style={{ backgroundColor: colors.brown.primary }}
         >
           <span
