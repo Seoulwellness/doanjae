@@ -38,7 +38,7 @@ export default function WellnessBodyTherapySection() {
   });
 
   const quoteTextStyle = mergeStyles(textStyles.headingCentered, {
-    lineHeight: "100%",
+    lineHeight: "120%",
   });
 
   const overlayBackground = themeColors.overlay.darkBrown;
