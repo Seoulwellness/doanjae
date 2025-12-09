@@ -125,7 +125,7 @@ export default function LocationSection() {
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] hover:opacity-80 transition-opacity"
               style={bodyTextRegular}
             >
-              서울특별시 광진구 동이로 212, <br />{" "}
+              서울특별시 광진구 동일로 212, <br />{" "}
               <span
                 className="text-base md:text-lg lg:text-xl"
                 style={bodyTextBold}
