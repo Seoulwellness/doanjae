@@ -102,7 +102,8 @@ export default function Banner() {
                   ? { duration: 0.01 }
                   : { duration: 0.3, ease: "easeInOut" }
               }
-              className="text-white font-medium whitespace-nowrap"
+              className="text-white font-bold whitespace-nowrap"
+              style={{ fontFamily: "Pretendard, sans-serif" }}
             >
               {bannerItems[currentIndex].text}
             </motion.span>
