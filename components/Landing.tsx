@@ -91,11 +91,16 @@ export default function Landing() {
               className="text-base md:text-lg lg:text-xl mt-6"
               style={bodyTextStyle}
             >
-              도안재의 30분은 <span style={boldTextStyle}>천년의 지혜</span>
-              와
+              <span className="inline-flex items-end flex-wrap">
+                <span>도안재의 30분은 </span>
+                <span style={boldTextStyle}>천년의 지혜</span>
+                <span>와</span>
+              </span>
               <br />
-              <span style={boldTextStyle}>7종의 특허 기술</span>이 집약된
-              시간입니다.
+              <span className="inline-flex items-end flex-wrap">
+                <span style={boldTextStyle}>7종의 특허 기술</span>
+                <span>이 집약된 시간입니다.</span>
+              </span>
             </motion.div>
           </motion.div>
         </div>
