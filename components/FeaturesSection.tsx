@@ -72,21 +72,16 @@ export default function FeaturesSection() {
               className="text-base md:text-lg lg:text-xl"
               style={{ ...bodyTextStyle, fontWeight: 400 }}
             >
-              피부 표면이 아닌,{" "}
-              <span
-                className="text-base md:text-lg lg:text-xl"
-                style={bodyTextBoldStyle}
-              >
-                깊은 곳의
+              <span className="inline-flex items-center flex-wrap justify-center lg:justify-start">
+                <span>피부 표면이 아닌, </span>
+                <span style={bodyTextBoldStyle}>깊은 곳의</span>
               </span>
               <br />
-              <span
-                className="text-base md:text-lg lg:text-xl"
-                style={bodyTextBoldStyle}
-              >
-                &apos;체지방&apos;에 직접 도달
+              <span className="inline-flex items-center flex-wrap justify-center lg:justify-start">
+                <span style={bodyTextBoldStyle}>&apos;체지방&apos;에 직접 도달</span>
+                <span>하여</span>
               </span>
-              하여 <br />
+              <br />
               스스로 타오르는 힘을 만듭니다.
             </p>
           </motion.div>
