@@ -134,7 +134,7 @@ export default function ProgramSection() {
         </motion.div>
 
         {/* First Pair: Images 5 and 6 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-16 mb-12 md:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mt-8 md:mt-16 mb-20 md:mb-32">
           <motion.div
             initial="hidden"
             whileInView="visible"
