@@ -170,7 +170,7 @@ export default function ReviewSection() {
       date: "google review",
       reviewText:
         "단순히 관리만 하는 줄 알았는데, 인바디와 생활습관을 분석해서 제 체질에 맞는 티까지 매칭해 주는 상담이 인상 깊었어요.",
-      badgeLine1: "-0.7kg",
+      badgeLine1: "3kg",
       badgeLine2: "감량",
     },
   ];
