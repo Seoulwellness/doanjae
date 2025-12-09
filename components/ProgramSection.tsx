@@ -85,7 +85,7 @@ export default function ProgramSection() {
           {/* Second Text Block */}
           <div className="mb-6 md:mb-24">
             <p
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
+              className="text-base md:text-lg lg:text-xl leading-[1.15]"
               style={bodyTextRegular}
             >
               개인의 체질과 체성분은 물론 <br /> 라이프스타일까지 모두 고려한{" "}
@@ -120,7 +120,7 @@ export default function ProgramSection() {
                   한의학을 접목한 1:1 컨설팅
                 </h3>
                 <p
-                  className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
+                  className="text-base md:text-lg lg:text-xl leading-[1.15]"
                   style={bodyTextMedium}
                 >
                   인바디 체성분 분석은 물론, 한의사와 공동 개발한 <br />
@@ -220,7 +220,7 @@ export default function ProgramSection() {
                 데이터 기반의 체계적인 분석
               </h3>
               <p
-                className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
+                className="text-base md:text-lg lg:text-xl leading-[1.15]"
                 style={{
                   fontFamily: fonts.pretendard,
                   fontWeight: 400,
