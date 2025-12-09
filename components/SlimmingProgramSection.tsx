@@ -121,13 +121,13 @@ export default function SlimmingProgramSection() {
         >
           {/* Main Title */}
           <h3
-            className="text-base md:text-lg lg:text-xl ![line-height:20px] md:![line-height:26px]"
+            className="text-sm md:text-base lg:text-lg ![line-height:20px] md:![line-height:26px] text-center mx-auto"
             style={bodyTextMedium}
           >
             인생에서 가장 빛나야 할 순간을 위해
             <br /> 도안재의 기술이 <br className="md:hidden" />
             <span
-              className="text-base md:text-lg lg:text-xl ![line-height:20px] md:![line-height:26px]"
+              className="text-sm md:text-base lg:text-lg ![line-height:20px] md:![line-height:26px]"
               style={bodyTextBold}
             >
               &apos;체지방&apos;과 &apos;독소&apos;
