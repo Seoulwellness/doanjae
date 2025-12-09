@@ -178,10 +178,10 @@ export default function PriceSection() {
   const eventTextStyle = mergeStyles({
     fontFamily: fonts.pretendard,
     fontWeight: 700,
-    fontSize: "32px",
+    fontSize: "24px",
     lineHeight: "100%",
     textAlign: "center" as const,
-    color: "#000000",
+    color: "#3B2415",
   });
 
   const descriptionStyle = mergeStyles({
@@ -190,7 +190,7 @@ export default function PriceSection() {
     fontSize: "16px",
     lineHeight: "120%",
     textAlign: "center" as const,
-    color: "#000000",
+    color: "#3B2415",
   });
 
   const cardTitleStyle = mergeStyles({
@@ -223,7 +223,7 @@ export default function PriceSection() {
     fontSize: "16px",
     lineHeight: "120%",
     textAlign: "center" as const,
-    color: "#000000",
+    color: "#3B2415",
   });
 
   const buttonStyle = mergeStyles({
@@ -277,19 +277,19 @@ export default function PriceSection() {
                 ...cardTitleStyle,
                 fontSize: "26px",
                 fontWeight: 400,
-                color: "#000000",
+                color: "#3B2415",
               }}
             >
               슬림핏 1회 체험권
             </p>
-            <p className="mb-6" style={{ ...cardPriceStyle, color: "#000000" }}>
+            <p className="mb-6" style={{ ...cardPriceStyle, color: "#3B2415" }}>
               49,500원
             </p>
             <div
               className="border-t-2 border-dashed pt-4"
-              style={{ borderColor: "#000000" }}
+              style={{ borderColor: "#3B2415" }}
             >
-              <p style={{ ...cardLabelStyle, color: "#000000" }}>
+              <p style={{ ...cardLabelStyle, color: "#3B2415" }}>
                 Welcome coupon
               </p>
             </div>
