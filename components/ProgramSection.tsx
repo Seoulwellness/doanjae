@@ -114,7 +114,7 @@ export default function ProgramSection() {
               </div>
               <div>
                 <h3
-                  className="mb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                  className="mb-4 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                   style={headingStyle}
                 >
                   한의학을 접목한 1:1 컨설팅
