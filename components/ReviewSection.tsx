@@ -179,7 +179,7 @@ export default function ReviewSection() {
   const allReviews = [
     ...reviews,
     { ...reviews[0], imageSrc: "/images/landing/image24.jpg", customerName: "사** 고객님", reviewText: "누워 있는 동안 배와 허벅지 쪽에서 서서히 따뜻해지며 땀이 맺히거든요 근데 이게 은근하게 열이 올라와 몸이 풀리는 느낌?!", badgeLine2: "-0.7kg 감량" },
-    { ...reviews[1], badgeLine2: "2.1kg 감량" },
+    { ...reviews[1], customerName: "최** 고객님", badgeLine2: "2.1kg 감량" },
   ];
 
   useEffect(() => {
