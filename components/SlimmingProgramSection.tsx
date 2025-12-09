@@ -121,14 +121,14 @@ export default function SlimmingProgramSection() {
         >
           {/* Main Title */}
           <h3
-            className="text-sm md:text-base lg:text-lg ![line-height:120%] text-center mx-auto"
-            style={bodyTextMedium}
+            className="![line-height:120%] text-center mx-auto"
+            style={{ ...bodyTextMedium, fontSize: "20px" }}
           >
             인생에서 가장 빛나야 할 순간을 위해
             <br /> 도안재의 기술이 <br className="md:hidden" />
             <span
-              className="text-sm md:text-base lg:text-lg ![line-height:120%]"
-              style={bodyTextBold}
+              className="![line-height:120%]"
+              style={{ ...bodyTextBold, fontSize: "20px" }}
             >
               &apos;체지방&apos;과 &apos;독소&apos;
             </span>
@@ -138,14 +138,14 @@ export default function SlimmingProgramSection() {
           {/* Descriptive Paragraphs */}
           <div className="space-y-0.5 md:space-y-1">
             <p
-              className="text-xs md:text-sm ![line-height:120%]"
-              style={smallTextMedium}
+              className="![line-height:120%]"
+              style={{ ...smallTextMedium, fontSize: "18px" }}
             >
               특수 파동이 정체된 림프 순환을 촉진하여 평소 고민이던 부위의 부종을 빠르게 완화하고,
             </p>
             <p
-              className="text-xs md:text-sm ![line-height:120%]"
-              style={{ ...smallTextMedium }}
+              className="![line-height:120%]"
+              style={{ ...smallTextMedium, fontSize: "18px" }}
             >
               근적외선으로 체지방을 집중 분해하여
               <br className="md:hidden" /> 숨어있던 바디 라인을 선명하게 되찾아
