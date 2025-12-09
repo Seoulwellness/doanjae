@@ -178,7 +178,7 @@ export default function ReviewSection() {
   // Reuse reviews to create 5 cards
   const allReviews = [
     ...reviews,
-    { ...reviews[0], customerName: "사** 고객님" },
+    { ...reviews[0], customerName: "사** 고객님", reviewText: "누워 있는 동안 배와 허벅지 쪽에서 서서히 따뜻해지며 땀이 맺히거든요 근데 이게 은근하게 열이 올라와 몸이 풀리는 느낌?!" },
     reviews[1],
   ];
 
