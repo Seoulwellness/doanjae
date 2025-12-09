@@ -125,7 +125,7 @@ export default function PremiumSection() {
           variants={fadeInUp}
           className="text-center space-y-4 md:space-y-6"
         >
-          <div className="space-y-1 md:space-y-3">
+          <div className="space-y-0">
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={textStyles.headingCentered}
