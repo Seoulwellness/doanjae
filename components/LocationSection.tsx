@@ -130,7 +130,7 @@ export default function LocationSection() {
                 className="text-base md:text-lg lg:text-xl"
                 style={bodyTextBold}
               >
-                아늑호텔 앤 스파 서울 성수 건대점 B1
+                아늑 호텔 앤 스파 서울 성수 건대점 B1 도안재
               </span>
             </a>
             <a
