@@ -143,7 +143,7 @@ export default function ReviewSection() {
       imageSrc: "/images/landing/image21.jpg",
       customerName: "장** 고객님",
       stars: 5,
-      date: "10.24",
+      date: "naver review",
       reviewText:
         "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
     },
@@ -151,7 +151,7 @@ export default function ReviewSection() {
       imageSrc: "/images/landing/image22.png",
       customerName: "박** 고객님",
       stars: 5,
-      date: "11.04",
+      date: "naver review",
       reviewText:
         "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
     },
@@ -159,7 +159,7 @@ export default function ReviewSection() {
       imageSrc: "/images/landing/image23.png",
       customerName: "김** 고객님",
       stars: 3,
-      date: "09.26",
+      date: "naver review",
       reviewText:
         "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
     },
