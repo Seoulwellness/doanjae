@@ -59,7 +59,7 @@ export default function CTASection() {
           <div className="text-center">
             <p
               className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={{ ...ctaTextBold, marginBottom: "8px" }}
+              style={{ ...ctaTextBold, marginBottom: "0px" }}
             >
               지금 바로 &apos;가장 편안한 변화&apos;를
             </p>
