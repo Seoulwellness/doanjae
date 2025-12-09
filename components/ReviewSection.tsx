@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
 import { fadeInUp } from "@/lib/animations";
 import { colors, textStyles, mergeStyles, fonts } from "@/lib/constants";
 
@@ -112,24 +111,13 @@ function ReviewCard({
             {date}
           </p>
 
-          {/* Review Text with ChevronRight on Right */}
-          <div className="flex items-start gap-2 sm:gap-3">
-            {/* Review Text - 70% width, left-aligned */}
-            <p
-              className="line-clamp-2 w-[70%] text-left whitespace-pre-line text-[10px] sm:text-xs md:text-sm"
-              style={reviewTextStyle}
-            >
-              {reviewText}
-            </p>
-
-            {/* Navigation Arrow - Right Side */}
-            <button
-              className="rounded-full p-1 sm:p-2 hover:bg-white/10 transition-colors flex-shrink-0 ml-auto mt-2 sm:mt-4"
-              aria-label="더보기"
-            >
-              <ChevronRight className="w-5 h-5 sm:w-8 sm:h-8 text-white" />
-            </button>
-          </div>
+          {/* Review Text */}
+          <p
+            className="line-clamp-2 w-full text-left whitespace-pre-line text-[10px] sm:text-xs md:text-sm"
+            style={reviewTextStyle}
+          >
+            {reviewText}
+          </p>
         </div>
       </div>
     </div>
