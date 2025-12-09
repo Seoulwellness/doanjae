@@ -121,7 +121,7 @@ export default function MuscleFitSection() {
               고강도 머슬핏 케어
             </h3> */}
             <p
-              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
+              className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px] inline-flex items-end flex-wrap"
               style={bodyTextMediumLeft}
             >
               <span
@@ -130,7 +130,7 @@ export default function MuscleFitSection() {
               >
                 근육 강화, 림프 순환, 지방 감소 3종 프로그램
               </span>
-              으로 탄탄한 바디라인을 완성합니다.
+              <span>으로 탄탄한 바디라인을 완성합니다.</span>
             </p>
           </motion.div>
         </div>
