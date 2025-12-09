@@ -166,7 +166,6 @@ export default function LocationSection() {
             >
               아늑 호텔 지하 주차장 이용 가능
             </p>
-            <br />
             <p
               className="text-base md:text-lg lg:text-xl leading-[1.15] md:[line-height:26px]"
               style={bodyTextBold}
