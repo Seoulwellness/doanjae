@@ -12,6 +12,8 @@ interface ReviewCardProps {
   stars: number;
   date: string;
   reviewText: string;
+  badgeLine1: string;
+  badgeLine2: string;
   index: number;
 }
 
@@ -21,6 +23,8 @@ function ReviewCard({
   stars,
   date,
   reviewText,
+  badgeLine1,
+  badgeLine2,
 }: ReviewCardProps) {
   // Component-specific style constants
   const badgeTextStyle = mergeStyles(textStyles.headingWhite, {
@@ -68,8 +72,8 @@ function ReviewCard({
             className="text-xs sm:text-base md:text-lg lg:text-xl"
             style={badgeTextStyle}
           >
-            <span className="block">체지방</span>
-            <span className="block">10% 감량</span>
+            <span className="block">{badgeLine1}</span>
+            <span className="block">{badgeLine2}</span>
           </span>
         </div>
 
@@ -146,6 +150,8 @@ export default function ReviewSection() {
       date: "naver review",
       reviewText:
         "처음에는 \"30분 누워 있는다고 살이 빠질까?\" 반신반의하면서 시작했는데, 어느새 주 4~5회는 꼭 들르게 되는 루틴이 됐어요!",
+      badgeLine1: "체지방",
+      badgeLine2: "10% 감량",
     },
     {
       imageSrc: "/images/landing/image22.png",
@@ -154,6 +160,8 @@ export default function ReviewSection() {
       date: "naver review",
       reviewText:
         "결혼식이 있어 급하게 몸 상태를 정리해야했는데, 도안재에서 두세 번 관리받고 팔뚝살이 쏙 빠졌네요 :)",
+      badgeLine1: "체지방",
+      badgeLine2: "10% 감량",
     },
     {
       imageSrc: "/images/landing/image23.jpg",
@@ -162,6 +170,8 @@ export default function ReviewSection() {
       date: "google review",
       reviewText:
         "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
+      badgeLine1: "-0.7kg",
+      badgeLine2: "감량",
     },
   ];
 
