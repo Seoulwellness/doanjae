@@ -151,17 +151,17 @@ export default function ReviewSection() {
       reviewText:
         "처음에는 \"30분 누워 있는다고 살이 빠질까?\" 반신반의하면서 시작했는데, 어느새 주 4~5회는 꼭 들르게 되는 루틴이 됐어요!",
       badgeLine1: "체지방",
-      badgeLine2: "10% 감량",
+      badgeLine2: "-3kg 감량",
     },
     {
       imageSrc: "/images/landing/image22.png",
       customerName: "박** 고객님",
       stars: 5,
-      date: "naver review",
+      date: "google review",
       reviewText:
         "결혼식이 있어 급하게 몸 상태를 정리해야했는데, 도안재에서 두세 번 관리받고 팔뚝살이 쏙 빠졌네요 :)",
       badgeLine1: "체지방",
-      badgeLine2: "10% 감량",
+      badgeLine2: "-1.3kg 감량",
     },
     {
       imageSrc: "/images/landing/image23.jpg",
@@ -170,8 +170,8 @@ export default function ReviewSection() {
       date: "google review",
       reviewText:
         "단순히 관리만 하는 줄 알았는데, 인바디와 생활습관을 분석해서 제 체질에 맞는 티까지 매칭해 주는 상담이 인상 깊었어요.",
-      badgeLine1: "3kg",
-      badgeLine2: "감량",
+      badgeLine1: "체지방",
+      badgeLine2: "-2.4kg감량",
     },
   ];
 
