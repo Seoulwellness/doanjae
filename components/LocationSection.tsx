@@ -135,7 +135,7 @@ export default function LocationSection() {
             </a>
             <a
               href="tel:07088221110"
-              className="text-base md:text-lg lg:text-xl leading-[1.2] md:[line-height:120%] hover:opacity-80 transition-opacity"
+              className="text-base md:text-lg lg:text-xl leading-[1.2] md:[line-height:120%] hover:opacity-80 transition-opacity mt-2 md:mt-3"
               style={bodyTextRegular}
             >
               070-8822-1110
