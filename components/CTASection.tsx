@@ -54,8 +54,8 @@ export default function CTASection() {
           sizes="100vw"
           quality={90}
         />
-        {/* Black overlay with 40% opacity */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Black overlay with 25% opacity */}
+        <div className="absolute inset-0 bg-black/25"></div>
         {/* Overlaid Text */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
