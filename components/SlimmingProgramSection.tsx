@@ -141,13 +141,13 @@ export default function SlimmingProgramSection() {
               className="![line-height:120%]"
               style={{ ...smallTextMedium, fontSize: "18px" }}
             >
-              특수 파동이 정체된 림프 순환을 촉진하여 평소 고민이던 부위의 부종을 빠르게 완화하고,
+              특수 파동이 <span style={{ fontWeight: 700 }}>정체된 림프 순환을 촉진</span>하여 평소 고민이던 부위의 <span style={{ fontWeight: 700 }}>부종을 빠르게 완화</span>하고,
             </p>
             <p
               className="![line-height:120%]"
               style={{ ...smallTextMedium, fontSize: "18px" }}
             >
-              근적외선으로 체지방을 집중 분해하여
+              <span style={{ fontWeight: 700 }}>근적외선으로 체지방을 집중 분해</span>하여
               <br className="md:hidden" /> 숨어있던 바디 라인을 선명하게 되찾아
               드립니다.
             </p>
