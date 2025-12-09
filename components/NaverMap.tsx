@@ -74,14 +74,14 @@ export default function NaverMap({
       const marker = new naver.maps.Marker({
         position: location,
         map: map,
-        title: "아늑호텔 앤 스파 서울 성수 건대점 B1 도안재",
+        title: "도안재",
       });
 
       // Create info window with clickable link
       const infoWindow = new naver.maps.InfoWindow({
         content: `<div style="padding:10px 15px;font-size:14px;font-weight:600;text-align:center;white-space:nowrap;color:#3B2415 !important;background:white;">
           <a href="${naverMapUrl}" target="_blank" rel="noopener noreferrer" style="color:#3B2415;text-decoration:none;">
-            아늑호텔 앤 스파<br/>서울 성수 건대점 B1 도안재<br/>
+            도안재<br/>
             <span style="font-size:11px;color:#666;">네이버 지도에서 보기</span>
           </a>
         </div>`,
