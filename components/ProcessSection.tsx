@@ -29,6 +29,7 @@ export default function ProcessSection() {
   const headingStyle = mergeStyles(textStyles.heading1, { lineHeight: "100%" });
 
   const subheadingStyle = mergeStyles(textStyles.heading1, {
+    fontFamily: fonts.pretendard,
     lineHeight: "100%",
     fontWeight: 700,
   });
