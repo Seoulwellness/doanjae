@@ -141,9 +141,7 @@ export default function SlimmingProgramSection() {
               className="text-xs md:text-sm ![line-height:120%]"
               style={smallTextMedium}
             >
-              특수 파동이 정체된 림프 순환을 촉진하여
-              <br className="md:hidden" />
-              평소 고민이던 부위의 부종을 빠르게 완화하고,
+              특수 파동이 정체된 림프 순환을 촉진하여 평소 고민이던 부위의 부종을 빠르게 완화하고,
             </p>
             <p
               className="text-xs md:text-sm ![line-height:120%]"
