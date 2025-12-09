@@ -329,7 +329,7 @@ export default function ProgramSection() {
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "100%",
+                lineHeight: "115%",
                 letterSpacing: "0%",
                 textAlign: "center",
               }}
@@ -342,7 +342,7 @@ export default function ProgramSection() {
               style={{
                 fontFamily: "Pretendard, sans-serif",
                 fontWeight: 700,
-                lineHeight: "100%",
+                lineHeight: "115%",
                 letterSpacing: "0%",
                 textAlign: "center",
               }}
