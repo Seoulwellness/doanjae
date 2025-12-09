@@ -169,7 +169,7 @@ export default function PriceSection() {
   const eventHeaderStyle = mergeStyles({
     fontFamily: fonts.pretendard,
     fontWeight: 700,
-    fontSize: "24px",
+    fontSize: "30px",
     lineHeight: "100%",
     textAlign: "center" as const,
     color: colors.brown.primary,
@@ -178,7 +178,7 @@ export default function PriceSection() {
   const eventTextStyle = mergeStyles({
     fontFamily: fonts.pretendard,
     fontWeight: 700,
-    fontSize: "24px",
+    fontSize: "30px",
     lineHeight: "100%",
     textAlign: "center" as const,
     color: "#3B2415",
@@ -220,7 +220,7 @@ export default function PriceSection() {
   const finalMessageStyle = mergeStyles({
     fontFamily: fonts.pretendard,
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: "20px",
     lineHeight: "120%",
     textAlign: "center" as const,
     color: "#3B2415",
