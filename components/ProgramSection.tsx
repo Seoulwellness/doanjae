@@ -214,7 +214,7 @@ export default function ProgramSection() {
             </div>
             <div>
               <h3
-                className="mb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="mb-4 text-lg md:text-xl lg:text-2xl xl:text-3xl"
                 style={headingStyle}
               >
                 데이터 기반의 체계적인 분석
