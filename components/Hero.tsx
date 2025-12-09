@@ -295,7 +295,7 @@ export default function Hero() {
             className="flex w-full md:w-1/2 md:rounded-4xl overflow-hidden shadow-lg"
           >
             <motion.a
-              href="#contact"
+              href="https://naver.me/xjUE2WjY"
               // whileHover={{ scale: 1.02 }}
               // whileTap={{ scale: 0.98 }}
               className="flex-1 px-4 md:px-8 py-6 md:py-4 transition-shadow text-center text-sm md:text-base"

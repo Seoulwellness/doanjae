@@ -188,7 +188,7 @@ export default function PriceSection() {
     fontFamily: fonts.pretendard,
     fontWeight: 400,
     fontSize: "16px",
-    lineHeight: "150%",
+    lineHeight: "120%",
     textAlign: "center" as const,
     color: "#000000",
   });
@@ -221,7 +221,7 @@ export default function PriceSection() {
     fontFamily: fonts.pretendard,
     fontWeight: 400,
     fontSize: "16px",
-    lineHeight: "150%",
+    lineHeight: "120%",
     textAlign: "center" as const,
     color: "#000000",
   });

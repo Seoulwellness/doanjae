@@ -53,11 +53,11 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInRight}
-            className="space-y-6 mx-16 text-center lg:text-left"
+            className="flex flex-col mx-16 text-center lg:text-left"
           >
             <h2
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={textStyles.heading3}
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl mb-3"
+              style={{ ...textStyles.heading3, fontWeight: 400 }}
             >
               인체에 가장 유효한 <br />
               <span
@@ -70,7 +70,7 @@ export default function FeaturesSection() {
 
             <p
               className="text-base md:text-lg lg:text-xl"
-              style={bodyTextStyle}
+              style={{ ...bodyTextStyle, fontWeight: 400 }}
             >
               피부 표면이 아닌,{" "}
               <span
@@ -100,11 +100,11 @@ export default function FeaturesSection() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeInLeft}
-            className="space-y-6 order-2 lg:order-1 mx-16 text-center lg:text-left"
+            className="flex flex-col order-2 lg:order-1 mx-16 text-center lg:text-left"
           >
             <h2
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
-              style={textStyles.heading3}
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl mb-3"
+              style={{ ...textStyles.heading3, fontWeight: 400 }}
             >
               동의보감의 <br />
               <span
@@ -117,7 +117,7 @@ export default function FeaturesSection() {
 
             <p
               className="text-base md:text-lg lg:text-xl"
-              style={bodyTextStyle}
+              style={{ ...bodyTextStyle, fontWeight: 400 }}
             >
               몸 속 깊은 곳부터 따뜻하게 데워 <br />
               <span

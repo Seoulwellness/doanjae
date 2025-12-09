@@ -32,7 +32,6 @@ export default function SlimmingProgramSection() {
   });
 
   const smallTextMedium = mergeStyles(textStyles.heading3, {
-    lineHeight: "16px",
     textAlign: "center" as const,
     verticalAlign: "middle" as const,
   });
@@ -118,7 +117,7 @@ export default function SlimmingProgramSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="text-center max-w-4xl mx-auto space-y-6"
+          className="text-center max-w-4xl mx-auto space-y-3 md:space-y-6"
         >
           {/* Main Title */}
           <h3
@@ -137,13 +136,19 @@ export default function SlimmingProgramSection() {
           </h3>
 
           {/* Descriptive Paragraphs */}
-          <div className="space-y-6">
-            <p className="text-xs md:text-sm" style={smallTextMedium}>
+          <div className="space-y-3 md:space-y-6">
+            <p
+              className="text-xs md:text-sm ![line-height:120%] md:![line-height:0]"
+              style={smallTextMedium}
+            >
               특수 파동이 정체된 림프 순환을 촉진하여
               <br className="md:hidden" />
               평소 고민이던 부위의 부종을 빠르게 완화하고,
             </p>
-            <p className="text-xs md:text-sm" style={smallTextMedium}>
+            <p
+              className="text-xs md:text-sm ![line-height:120%] md:![line-height:0]"
+              style={{ ...smallTextMedium }}
+            >
               근적외선으로 체지방을 집중 분해하여
               <br className="md:hidden" /> 숨어있던 바디 라인을 선명하게 되찾아
               드립니다.
