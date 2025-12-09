@@ -117,7 +117,7 @@ function ReviewCard({
 
           {/* Review Text */}
           <p
-            className="line-clamp-2 w-full text-left whitespace-pre-line text-[10px] sm:text-xs md:text-sm"
+            className="line-clamp-3 w-full text-left whitespace-pre-line text-[10px] sm:text-xs md:text-sm"
             style={reviewTextStyle}
           >
             {reviewText}
