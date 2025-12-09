@@ -187,7 +187,7 @@ export default function PriceSection() {
   const descriptionStyle = mergeStyles({
     fontFamily: fonts.pretendard,
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: "20px",
     lineHeight: "120%",
     textAlign: "center" as const,
     color: "#3B2415",
