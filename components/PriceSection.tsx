@@ -260,17 +260,22 @@ export default function PriceSection() {
             EVENT
           </p>
 
-          <p className="mb-2" style={descriptionStyle}>
-            누워서 경험하는
-            <br />
-            <span className="font-bold">수면 다이어트 테라피</span>
-          </p>
-
           {/* First Price Card - Beige */}
           <div
             className="max-w-xs mx-auto mb-12 px-8 pt-8 pb-3 md:px-12 md:pt-12 md:pb-6"
             style={{ backgroundColor: colors.beige.lighter }}
           >
+            <p
+              className="mb-4"
+              style={{
+                ...descriptionStyle,
+                fontSize: "16px",
+              }}
+            >
+              누워서 경험하는
+              <br />
+              <span className="font-bold">수면 다이어트 테라피</span>
+            </p>
             <p
               className="mb-1"
               style={{
@@ -295,17 +300,23 @@ export default function PriceSection() {
             </div>
           </div>
 
-          <p className="mb-2" style={descriptionStyle}>
-            운동 없이 완성하는
-            <br />
-            <span className="font-bold">기술집약형 체험관리</span>
-          </p>
-
           {/* Second Price Card - Dark Brown */}
           <div
             className="max-w-xs mx-auto mb-12 px-8 pt-8 pb-3 md:px-12 md:pt-12 md:pb-6"
             style={{ backgroundColor: colors.brown.primary }}
           >
+            <p
+              className="mb-4"
+              style={{
+                ...descriptionStyle,
+                fontSize: "16px",
+                color: colors.text.white,
+              }}
+            >
+              운동 없이 완성하는
+              <br />
+              <span className="font-bold">기술집약형 체험관리</span>
+            </p>
             <p
               className="mb-1"
               style={{
