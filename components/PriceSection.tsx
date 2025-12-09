@@ -281,7 +281,7 @@ export default function PriceSection() {
               style={{
                 ...cardTitleStyle,
                 fontSize: "26px",
-                fontWeight: 400,
+                fontWeight: 700,
                 color: "#3B2415",
               }}
             >
@@ -322,7 +322,7 @@ export default function PriceSection() {
               style={{
                 ...cardTitleStyle,
                 fontSize: "26px",
-                fontWeight: 400,
+                fontWeight: 700,
                 color: colors.text.white,
                 lineHeight: "120%",
               }}
