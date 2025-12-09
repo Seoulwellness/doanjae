@@ -387,14 +387,14 @@ export default function ReviewSection() {
 
           <div>
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.2] md:[line-height:120%]"
               style={largeTextBold}
             >
               도안재 경험 고객분들의
             </p>
             <br />
             <p
-              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.15] md:[line-height:40px]"
+              className="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-[1.2] md:[line-height:120%]"
               style={largeTextBold}
             >
               특별한 후기
