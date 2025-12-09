@@ -94,9 +94,9 @@ export default function Home() {
       <ErrorBoundary>
         <WellnessBodyTherapySection />
       </ErrorBoundary>
-      {/* <ErrorBoundary>
+      <ErrorBoundary>
         <ReviewSection />
-      </ErrorBoundary> */}
+      </ErrorBoundary>
       <ErrorBoundary>
         <PriceSection />
       </ErrorBoundary>
