@@ -166,7 +166,7 @@ export default function ReviewSection() {
     {
       imageSrc: "/images/landing/image23.jpg",
       customerName: "김** 고객님",
-      stars: 3,
+      stars: 5,
       date: "google review",
       reviewText:
         "단순히 관리만 하는 줄 알았는데, 인바디와 생활습관을 분석해서 제 체질에 맞는 티까지 매칭해 주는 상담이 인상 깊었어요.",
