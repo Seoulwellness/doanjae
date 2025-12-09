@@ -146,7 +146,7 @@ export default function PremiumSection() {
             </p>
           </div>
 
-          <div className="pt-4 md:pt-6 space-y-1 md:space-y-2">
+          <div className="pt-4 md:pt-6 space-y-0">
             <h2
               className="text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-[1.15] md:[line-height:40px]"
               style={textStyles.headingCentered}
