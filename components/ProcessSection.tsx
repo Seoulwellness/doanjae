@@ -146,11 +146,11 @@ export default function ProcessSection() {
                 체질분석 및 상담
               </h3>
               <div>
-                <p className="text-xs md:text-sm" style={smallTextStyle}>
+                <p style={{ ...smallTextStyle, fontSize: "18px", lineHeight: "120%" }}>
                   편안한 분위기에서 10년 경력의 전문가와 함께
                 </p>
 
-                <p className="text-xs md:text-sm" style={smallTextStyle}>
+                <p style={{ ...smallTextStyle, fontSize: "18px", lineHeight: "120%" }}>
                   나의 체질과 라이프스타일을 분석합니다.
                 </p>
               </div>
@@ -191,10 +191,10 @@ export default function ProcessSection() {
                 웰니스 바디 테라피
               </h3>
               <div>
-                <p className="text-xs md:text-sm" style={smallTextStyle}>
+                <p style={{ ...smallTextStyle, fontSize: "18px", lineHeight: "120%" }}>
                   나에게 꼭 맞는 프로그램으로
                 </p>
-                <p className="text-xs md:text-sm" style={smallTextStyle}>
+                <p style={{ ...smallTextStyle, fontSize: "18px", lineHeight: "120%" }}>
                   30분간 가장 편안한 휴식을 경험합니다.
                 </p>
               </div>
@@ -273,10 +273,10 @@ export default function ProcessSection() {
                 맞춤형 솔루션
               </h3>
               <div>
-                <p className="text-xs md:text-sm" style={smallTextStyle}>
+                <p style={{ ...smallTextStyle, fontSize: "18px", lineHeight: "120%" }}>
                   관리 후 가벼워진 몸의 변화를 수치로 확인하고,
                 </p>
-                <p className="text-xs md:text-sm" style={smallTextStyle}>
+                <p style={{ ...smallTextStyle, fontSize: "18px", lineHeight: "120%" }}>
                   도안재의 스페셜 티와 함께 마무리 합니다.
                 </p>
               </div>
