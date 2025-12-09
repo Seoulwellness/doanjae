@@ -169,7 +169,7 @@ export default function ReviewSection() {
       stars: 3,
       date: "google review",
       reviewText:
-        "결혼식 앞 두고 관리차 몇번 해봤는데 제발 다들 꼭 해보셨으면 좋겠어요.\n효과가 정말 남다릅니다! 제가 경험해본 ....",
+        "단순히 관리만 하는 줄 알았는데, 인바디와 생활습관을 분석해서 제 체질에 맞는 티까지 매칭해 주는 상담이 인상 깊었어요.",
       badgeLine1: "-0.7kg",
       badgeLine2: "감량",
     },
