@@ -101,7 +101,7 @@ export default function SlimmingProgramSection() {
           className="relative w-full mb-8 md:mb-32"
         >
           <Image
-            src="/images/landing/image9.png"
+            src="/images/landing/image9.jpg"
             alt="Slimming Program"
             width={1200}
             height={800}
