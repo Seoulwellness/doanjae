@@ -176,7 +176,11 @@ export default function ReviewSection() {
   ];
 
   // Reuse reviews to create 5 cards
-  const allReviews = [...reviews, reviews[0], reviews[1]];
+  const allReviews = [
+    ...reviews,
+    { ...reviews[0], customerName: "사** 고객님" },
+    reviews[1],
+  ];
 
   useEffect(() => {
     const container = scrollContainerRef.current;
