@@ -152,7 +152,7 @@ export default function ReviewSection() {
 
   const reviews = [
     {
-      imageSrc: "/images/landing/image21.png",
+      imageSrc: "/images/landing/image21.jpg",
       customerName: "장** 고객님",
       stars: 5,
       date: "10.24",
