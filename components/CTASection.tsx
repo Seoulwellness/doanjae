@@ -247,7 +247,7 @@ export default function CTASection() {
             <div className="flex flex-col gap-3">
               <p
                 className="text-sm md:text-base lg:text-lg"
-                style={labelTextStyle}
+                style={{ ...labelTextStyle, letterSpacing: "0.1em" }}
               >
                 Social Media
               </p>
