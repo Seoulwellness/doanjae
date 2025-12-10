@@ -300,7 +300,7 @@ export default function CTASection() {
                   className="text-sm md:text-base lg:text-lg"
                   style={valueTextStyle}
                 >
-                  AM 10:00 - PM 23:00(*토, 일요일 및 공휴일 휴무)
+                  AM 10:00 - PM 23:00(*공휴일 휴무)
                 </span>
               </div>
             </div>
