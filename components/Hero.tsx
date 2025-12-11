@@ -254,7 +254,7 @@ export default function Hero() {
                 ? { duration: 0.01 }
                 : { duration: 0.4, ease: "easeOut" }
             }
-            className="text-left space-y-10 md:space-y-6 lg:space-y-8 mt-[10vh] md:mt-[25vh] pb-[100px]"
+            className="text-left space-y-10 md:space-y-6 lg:space-y-8 mt-[10vh] md:mt-[25vh] pb-[40px] md:pb-[100px]"
           >
             <h1
               className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#3B2415] whitespace-pre-line"
