@@ -271,7 +271,7 @@ export default function Hero() {
             </p>
 
             <p
-              className="font-medium text-base md:text-lg lg:text-xl text-[#3B2415] whitespace-pre-line mt-[20px] md:mt-6 leading-[1.15] md:leading-[26px]"
+              className="font-medium text-base md:text-lg lg:text-xl text-[#3B2415] whitespace-pre-line mt-[20px] md:mt-6 leading-[1.0] md:leading-[26px]"
               style={descriptionStyle}
             >
               {currentSlide.description}
