@@ -236,7 +236,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Text Content */}
-      <div className="container mx-auto max-w-full md:max-w-[80%] relative z-10">
+      <div className="container mx-auto max-w-full md:max-w-[80%] absolute md:relative bottom-[100px] md:bottom-auto left-0 right-0 z-10 px-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -254,7 +254,7 @@ export default function Hero() {
                 ? { duration: 0.01 }
                 : { duration: 0.4, ease: "easeOut" }
             }
-            className="text-left space-y-10 md:space-y-6 lg:space-y-8 mt-[calc(10vh+60px)] md:mt-[calc(25vh+60px)] pb-[100px]"
+            className="text-left space-y-10 md:space-y-6 lg:space-y-8 mt-0 md:mt-[calc(25vh+60px)] pb-[20px] md:pb-[100px]"
           >
             <h1
               className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#3B2415] whitespace-pre-line"
