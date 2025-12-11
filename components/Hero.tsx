@@ -254,7 +254,7 @@ export default function Hero() {
                 ? { duration: 0.01 }
                 : { duration: 0.4, ease: "easeOut" }
             }
-            className="text-left space-y-10 md:space-y-6 lg:space-y-8 mt-0 md:mt-[calc(25vh+60px)] pb-[20px] md:pb-[100px]"
+            className="text-left mt-0 md:mt-[calc(25vh+60px)] pb-[20px] md:pb-[100px]"
           >
             <h1
               className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#3B2415] whitespace-pre-line"
@@ -264,21 +264,21 @@ export default function Hero() {
             </h1>
 
             <p
-              className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#3B2415]"
+              className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#3B2415] mt-[20px] md:mt-6"
               style={subtitleStyle}
             >
               {currentSlide.subtitle}
             </p>
 
             <p
-              className="font-medium text-base md:text-lg lg:text-xl text-[#3B2415] whitespace-pre-line"
+              className="font-medium text-base md:text-lg lg:text-xl text-[#3B2415] whitespace-pre-line mt-[20px] md:mt-6"
               style={descriptionStyle}
             >
               {currentSlide.description}
             </p>
 
             <p
-              className="font-bold text-base md:text-lg lg:text-xl text-[#3B2415]"
+              className="font-bold text-base md:text-lg lg:text-xl text-[#3B2415] mt-[20px] md:mt-6"
               style={ctaTextStyle}
             >
               {currentSlide.cta}
