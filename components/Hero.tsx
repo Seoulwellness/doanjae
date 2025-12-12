@@ -23,17 +23,6 @@ interface HeroSlide {
 }
 
 const heroSlides: HeroSlide[] = [
-  {
-    id: 1,
-    image: "/images/hero/hero-pc",
-    mobileImage: "/images/hero/hero-mobile",
-    imageType: "png",
-    mobileImageType: "png",
-    title: "",
-    subtitle: "",
-    description: "",
-    cta: "",
-  },
   // {
   //   id: 1,
   //   image: "/images/hero/image1",
@@ -246,59 +235,57 @@ export default function Hero() {
         </AnimatePresence>
       </motion.div>
 
-      {/* Text Content - Only show if there's text content */}
-      {(currentSlide.title || currentSlide.subtitle || currentSlide.description || currentSlide.cta) && (
-        <div className="container mx-auto max-w-full md:max-w-[80%] absolute md:relative bottom-[100px] md:bottom-auto left-0 right-0 z-10 px-8">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={
-                prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 20 }
-              }
-              animate={
-                prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0 }
-              }
-              exit={
-                prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -20 }
-              }
-              transition={
-                prefersReducedMotion()
-                  ? { duration: 0.01 }
-                  : { duration: 0.4, ease: "easeOut" }
-              }
-              className="text-left mt-0 md:mt-[calc(25vh+60px)] pb-[20px] md:pb-[100px]"
+      {/* Text Content */}
+      <div className="container mx-auto max-w-full md:max-w-[80%] absolute md:relative bottom-[100px] md:bottom-auto left-0 right-0 z-10 px-8">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={
+              prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: 20 }
+            }
+            animate={
+              prefersReducedMotion() ? { opacity: 1 } : { opacity: 1, y: 0 }
+            }
+            exit={
+              prefersReducedMotion() ? { opacity: 0 } : { opacity: 0, y: -20 }
+            }
+            transition={
+              prefersReducedMotion()
+                ? { duration: 0.01 }
+                : { duration: 0.4, ease: "easeOut" }
+            }
+            className="text-left mt-0 md:mt-[calc(25vh+60px)] pb-[20px] md:pb-[100px]"
+          >
+            <h1
+              className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#3B2415] whitespace-pre-line"
+              style={titleStyle}
             >
-              <h1
-                className="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#3B2415] whitespace-pre-line"
-                style={titleStyle}
-              >
-                {currentSlide.title}
-              </h1>
+              {currentSlide.title}
+            </h1>
 
-              <p
-                className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#3B2415] mt-[20px] md:mt-6"
-                style={subtitleStyle}
-              >
-                {currentSlide.subtitle}
-              </p>
+            <p
+              className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#3B2415] mt-[20px] md:mt-6"
+              style={subtitleStyle}
+            >
+              {currentSlide.subtitle}
+            </p>
 
-              <p
-                className="font-medium text-base md:text-lg lg:text-xl text-[#3B2415] whitespace-pre-line mt-[20px] md:mt-6 leading-[1.0] md:leading-[26px]"
-                style={descriptionStyle}
-              >
-                {currentSlide.description}
-              </p>
+            <p
+              className="font-medium text-base md:text-lg lg:text-xl text-[#3B2415] whitespace-pre-line mt-[20px] md:mt-6 leading-[1.0] md:leading-[26px]"
+              style={descriptionStyle}
+            >
+              {currentSlide.description}
+            </p>
 
-              <p
-                className="font-bold text-base md:text-lg lg:text-xl text-[#3B2415] mt-[20px] md:mt-6"
-                style={ctaTextStyle}
-              >
-                {currentSlide.cta}
-              </p>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      )}
+            <p
+              className="font-bold text-base md:text-lg lg:text-xl text-[#3B2415] mt-[20px] md:mt-6"
+              style={ctaTextStyle}
+            >
+              {currentSlide.cta}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
       {/* Buttons - Fixed at bottom */}
       <div className="fixed bottom-0 md:bottom-16 left-0 right-0 z-40 w-full">
