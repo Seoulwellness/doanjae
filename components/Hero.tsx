@@ -37,7 +37,7 @@ const heroSlides: HeroSlide[] = [
   {
     id: 2,
     image: "/images/hero/event2_pc",
-    mobileImage: "/images/hero/event2_mobile",
+    mobileImage: "/images/hero/event2_mobile_v2",
     imageType: "png",
     mobileImageType: "png",
     title: "",
