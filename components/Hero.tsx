@@ -36,6 +36,17 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 2,
+    image: "/images/hero/event2_pc",
+    mobileImage: "/images/hero/event2_mobile",
+    imageType: "png",
+    mobileImageType: "png",
+    title: "",
+    subtitle: "",
+    description: "",
+    cta: "",
+  },
+  {
+    id: 3,
     image: "/images/hero/image3",
     mobileImage: "/images/hero/mobile_image2",
     imageType: "png",
@@ -47,7 +58,7 @@ const heroSlides: HeroSlide[] = [
     cta: "지금, 가장 먼저 '편안한 변화'를 경험하세요.",
   },
   {
-    id: 3,
+    id: 4,
     image: "/images/hero/image4",
     mobileImage: "/images/hero/mobile_image3",
     imageType: "png",
