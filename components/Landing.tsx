@@ -92,8 +92,8 @@ export default function Landing() {
               style={bodyTextStyle}
             >
               <span className="inline-flex items-center flex-wrap">
-                <span>도안재의 30분은</span>
-                <span style={boldTextStyle}> 천년의 지혜</span>
+                <span>도안재의 30분은 </span>
+                <span style={boldTextStyle}>천년의 지혜</span>
                 <span>와</span>
               </span>
               <br />
