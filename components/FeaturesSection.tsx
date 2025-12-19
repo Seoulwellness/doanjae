@@ -73,8 +73,8 @@ export default function FeaturesSection() {
               style={{ ...bodyTextStyle, fontWeight: 400 }}
             >
               <span className="inline-flex items-center flex-wrap justify-center lg:justify-start">
-                <span>피부 표면이 아닌,</span>
-                <span style={bodyTextBoldStyle}> 깊은 곳의</span>
+                <span>피부 표면이 아닌,&nbsp;</span>
+                <span style={bodyTextBoldStyle}>깊은 곳의</span>
               </span>
               <br />
               <span className="inline-flex items-center flex-wrap justify-center lg:justify-start">
